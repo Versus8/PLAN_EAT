@@ -5,4 +5,5 @@ class Recipe < ApplicationRecord
   has_many :recipe_categories, dependent: :destroy
 
   validates :name, :description, :preparation, presence: true
+  has_one_attached :photo
 end
