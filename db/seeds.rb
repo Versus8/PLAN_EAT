@@ -12,6 +12,7 @@ require "faker"
 
 puts "cleaning database"
 
+Planning.delete_all
 Ingredient.delete_all
 Recipe.delete_all
 User.delete_all
@@ -21,8 +22,6 @@ puts "creating users"
 veronique = User.create(name: "Veronique", email: "veronique@gmail.com", password: "123456")
 francoise = User.create(name: "Francoise", email: "francoise@gmail.com", password: "123456")
 michael = User.create(name: "Michael", email: "michael@gmail.com", password: "123456")
-
-puts "Some important users created"
 
 puts "Creating 10 recipes and their ingredients"
 
@@ -46,7 +45,7 @@ recipe_two = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
   preparation: "Cook with love",
-  user: veronique
+  user: francoise
 )
 
 10.times do
@@ -78,7 +77,7 @@ recipe_four = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
   preparation: "Cook with love",
-  user: veronique
+  user: michael
 )
 
 3.times do
@@ -94,7 +93,7 @@ recipe_five = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
   preparation: "Cook with love",
-  user: veronique
+  user: francoise
 )
 
 4.times do
@@ -110,7 +109,7 @@ recipe_six = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
   preparation: "Cook with love",
-  user: veronique
+  user: francoise
 )
 
 6.times do
@@ -126,7 +125,7 @@ recipe_seven = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
   preparation: "Cook with love",
-  user: veronique
+  user: michael
 )
 
 8.times do
@@ -158,7 +157,7 @@ recipe_nine = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
   preparation: "Cook with love",
-  user: veronique
+  user: michael
 )
 
 6.times do
@@ -183,5 +182,45 @@ recipe_ten = Recipe.create(
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
     recipe: recipe_ten
+  )
+end
+
+puts "creating 5 plannings"
+
+Planning.create(
+  date: Date.today,
+  recipe: recipe_three,
+  user: francoise
+)
+
+Planning.create(
+  date: Date.today,
+  recipe: recipe_one,
+  user: michael
+)
+
+Planning.create(
+  date: Date.today,
+  recipe: recipe_eight,
+  user: francoise
+)
+
+Planning.create(
+  date: Date.today,
+  recipe: recipe_two,
+  user: francoise
+)
+
+Planning.create(
+  date: Date.today,
+  recipe: recipe_nine,
+  user: francoise
+)
+
+puts "creating 10 categories"
+
+10.times do
+  Category.create(
+    name: Faker::Food.ethnic_category
   )
 end
