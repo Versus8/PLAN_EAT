@@ -1,1 +1,15 @@
-<h1>Edit</h1>
+<h1>Update my own recipe</h1>
+
+
+   <%= simple_form_for(@recipe) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :preparation %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+
+
+<div>
+  <%= link_to "Back", recipe_path %>
+</div>
