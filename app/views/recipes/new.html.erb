@@ -1,12 +1,18 @@
-<div class="container p-4">
-  <h2>Add a new Recipe</h2>
+<div class="container">
+
+  <div class="text-center">
+  <h1>Add a new Recipe</h1>
+  </div>
+
   <div class="form-new-book py-4">
     <%= simple_form_for(@recipe) do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>
       <%= f.input :preparation %>
       <%= f.input :photo, as: :file %>
-      <%= f.submit "Create", class: "btn button-6 my-3" %>
+      <div class="card-category">
+      <%= f.submit "Create", class: "btn btn-primary btn-lg" %>
+      </div>
     <% end %>
   </div>
 </div>
