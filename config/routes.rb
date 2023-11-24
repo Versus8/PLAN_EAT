@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   # root "articles#index"
+  get 'owner_plannings', to: 'plannings#owner_planning', as: :owner_plannings
 end

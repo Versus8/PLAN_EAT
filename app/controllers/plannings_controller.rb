@@ -3,6 +3,7 @@ class PlanningsController < ApplicationController
 
   def index
     @plannings = Planning.where(user: current_user)
+    @owner_plannings = current_user.owner_plannings
   end
 
   def new
@@ -10,7 +11,7 @@ class PlanningsController < ApplicationController
   end
 
   def create
-    @planning.new()
+    @planning = Planning.new()
     @planning.user = current_user
     @planning.recipe = @recipe
 
@@ -28,7 +29,7 @@ class PlanningsController < ApplicationController
   def update
     @planning = Planning.find(params[:id])
 
-    if @planning.update
+    if @planning.update(planning_params)
       redirect_to recipe_planning_path(@recipe), notice: "Updated !"
     else
       render :edit
@@ -39,7 +40,7 @@ class PlanningsController < ApplicationController
     @planning.find(params(:id))
     @planning.destroy
 
-    redirect_to recipe_planning_path(@recipe)
+    redirect_to recipe_planning_path(@recipe), status: :see_other
   end
 
   private
