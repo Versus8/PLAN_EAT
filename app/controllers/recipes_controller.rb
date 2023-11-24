@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
   def index
     @user = current_user
     @recipes = Recipe.all
+    @categories = Category.all
     if params[:query].present?
     @recipes = Recipe.search_by_name_and_description(params[:query])
     end

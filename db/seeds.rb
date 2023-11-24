@@ -220,7 +220,11 @@ Planning.create(
 puts "creating 10 categories"
 
 10.times do
-  Category.create(
-    name: Faker::Food.ethnic_category
+  category = Category.create(
+    name: Faker::Food.ethnic_category,
+    description: Faker::Quote.yoda,
+    preparation: Faker::Quote.robin
   )
+  recipes = Recipe.all
+  RecipeCategory.create(recipe_id: recipes.sample.id, category_id: category.id)
 end
