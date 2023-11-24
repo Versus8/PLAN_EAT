@@ -14,8 +14,8 @@ puts "cleaning database"
 
 Planning.delete_all
 Ingredient.delete_all
-Category.delete_all
 RecipeCategory.delete_all
+Category.delete_all
 Recipe.delete_all
 User.delete_all
 
