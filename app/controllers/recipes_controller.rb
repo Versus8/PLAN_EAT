@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
     @categories = Category.all
     if params[:query].present?
-    @recipes = Recipe.search_by_name_and_description(params[:query])
+      @recipes = Recipe.search_by_name_and_description(params[:query])
     end
   end
 
@@ -27,7 +27,6 @@ class RecipesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
 
   def edit
     @recipe = Recipe.find(params[:id])

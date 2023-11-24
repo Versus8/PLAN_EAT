@@ -14,6 +14,8 @@ puts "cleaning database"
 
 Planning.delete_all
 Ingredient.delete_all
+Category.delete_all
+RecipeCategory.delete_all
 Recipe.delete_all
 User.delete_all
 
@@ -219,12 +221,29 @@ Planning.create(
 
 puts "creating 10 categories"
 
-10.times do
-  category = Category.create(
-    name: Faker::Food.ethnic_category,
-    description: Faker::Quote.yoda,
-    preparation: Faker::Quote.robin
-  )
-  recipes = Recipe.all
-  RecipeCategory.create(recipe_id: recipes.sample.id, category_id: category.id)
-end
+vegetarian = Category.create(name: "Vegetarian")
+italian = Category.create(name: "Italian")
+healthy = Category.create(name: "Healthy")
+french = Category.create(name: "French")
+soup = Category.create(name: "Soup")
+salad = Category.create(name: "Salad")
+breakfirst = Category.create(name: "Breakfirst")
+lunch = Category.create(name: "Lunch")
+easy = Category.create(name: "Easy")
+cheap = Category.create(name: "Cheap")
+
+puts "Linking recipes to their categories"
+
+RecipeCategory.create(recipe: recipe_one, category: vegetarian)
+RecipeCategory.create(recipe: recipe_two, category: vegetarian)
+RecipeCategory.create(recipe: recipe_three, category: easy)
+RecipeCategory.create(recipe: recipe_one, category: easy)
+RecipeCategory.create(recipe: recipe_three, category: vegetarian)
+RecipeCategory.create(recipe: recipe_four, category: salad)
+RecipeCategory.create(recipe: recipe_ten, category: cheap)
+RecipeCategory.create(recipe: recipe_ten, category: italian)
+RecipeCategory.create(recipe: recipe_one, category: healthy)
+RecipeCategory.create(recipe: recipe_five, category: french)
+RecipeCategory.create(recipe: recipe_six, category: lunch)
+RecipeCategory.create(recipe: recipe_one, category: soup)
+RecipeCategory.create(recipe: recipe_eight, category: breakfirst)
