@@ -6,6 +6,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= javascript_include_tag 'application' %>
+    <script>
+      document.addEventListener("turbolinks:load", function () {
+        // Initialize cocoon for nested forms
+        $('#ingredients').cocoon();
+      });
+    </script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>

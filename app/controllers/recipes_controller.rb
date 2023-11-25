@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  # skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @user = current_user
@@ -16,12 +16,16 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @ingredient = @recipe.ingredients.new
   end
 
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
+
     if @recipe.save
+      recipe_category_creation
+
       redirect_to recipes_path(@recipe)
     else
       render :new, status: :unprocessable_entity
@@ -51,6 +55,20 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:book).permit(:name, :description, :preparation, :category, :photo)
+    params.require(:recipe).permit(:name, :description, :preparation, :photo, { category_ids: [] }, {ingredients_attributes: ingredient_attributes})
+  end
+
+  def recipe_category_creation
+    recipe_params[:category_ids].each do |category_id|
+      @recipe_category = RecipeCategory.new(recipe_id: @recipe.id, category_id: category_id)
+    end
+  end
+
+  def ingredients_params
+    params.require(:ingredients).permit(ingredient_attributes)
+  end
+
+  def ingredient_attributes
+    [:id, :name, :unit, :quantity]
   end
 end
