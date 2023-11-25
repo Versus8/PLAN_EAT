@@ -7,6 +7,6 @@ class Recipe < ApplicationRecord
   accepts_nested_attributes_for :recipe_categories
   accepts_nested_attributes_for :ingredients
 
-  # validates :name, :description, :preparation, presence: true
+  validates :name, :description, :preparation, :ingredients, :categories, presence: true
   has_one_attached :photo
 end

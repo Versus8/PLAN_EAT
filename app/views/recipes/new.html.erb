@@ -1,24 +1,27 @@
 <div class="containernew">
 
   <div class="text-center">
-  <h1>Add a new Recipe</h1>
+  <h1>Create your recipe</h1>
   </div>
 
-  <div class="form-new-book py-4">
+  <div class="form-new-recipe py-4">
     <%= simple_form_for(@recipe) do |f| %>
+      <%= f.input :photo, as: :file %>
       <%= f.input :name %>
       <%= f.input :description %>
       <%= f.input :preparation %>
-      <%= f.input :photo, as: :file %>
       <%= f.association :categories, as: :check_boxes, include_hidden: false %>
-      <div> Ingredients </div>
+
+      <div>Ingredients list</div>
+
       <%= f.simple_fields_for :ingredients do |r| %>
 
         <%= render "recipes/ingredient_fields", :f => r %>
 
       <% end %>
+      <%# Ne pas renommer la classe links pour un autre nom car la gem Cocoon en dépend (Permet d'ajouter plusieurs ingrédients à la suite) %>
       <div class="links">
-        <%= link_to_add_association "Ingredient", f, :ingredients, force_non_association_create: true %>
+        <%= link_to_add_association "+ Add ingredient", f, :ingredients, force_non_association_create: true %>
       </div>
 
       <%= f.submit "Create", class: "btn btn-primary btn-lg" %>
