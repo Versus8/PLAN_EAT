@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :recipes  do
     resources :plannings
   end
+
+  resources :plannings
+
   # Defines the root path route ("/")
   # root "articles#index"
   get 'owner_plannings', to: 'plannings#owner_planning', as: :owner_plannings
