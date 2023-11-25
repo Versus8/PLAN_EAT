@@ -32,6 +32,8 @@
 # Ignore .env file containing credentials.
 .env*
 
+# Ignore Rubymine
+.idea/*
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store

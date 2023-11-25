@@ -11,15 +11,15 @@
       <%= f.input :preparation %>
       <%= f.input :photo, as: :file %>
       <%= f.association :categories, as: :check_boxes, include_hidden: false %>
-
+      <div> Ingredients </div>
       <%= f.simple_fields_for :ingredients do |r| %>
 
-        <%= render "recipes/ingredients_form", :f => r %>
+        <%= render "recipes/ingredient_fields", :f => r %>
 
       <% end %>
-
-      <%# <%= link_to_add_association "Ingredient", f, :ingredients, %>
-                                        <%# force_non_association_create: true %> %>
+      <div class="links">
+        <%= link_to_add_association "Ingredient", f, :ingredients, force_non_association_create: true %>
+      </div>
 
       <%= f.submit "Create", class: "btn btn-primary btn-lg" %>
     <% end %>
