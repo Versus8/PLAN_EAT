@@ -6,13 +6,6 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= javascript_include_tag 'application' %>
-    <script>
-      document.addEventListener("turbolinks:load", function () {
-        // Initialize cocoon for nested forms
-        $('#ingredients').cocoon();
-      });
-    </script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
