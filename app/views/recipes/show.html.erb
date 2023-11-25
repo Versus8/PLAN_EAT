@@ -1,1 +1,10 @@
 <h1>Show</h1>
+<div>
+  <%= image_tag "", alt: "Le Wagon", class: "img-book" %>
+  <h2><%= @recipe.name %></h2>
+  <h2><%= @recipe.description %></h2>
+  <h2><%= @recipe.preparation %></h2>
+  <% if current_user != @recipe.user %>
+  <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn button-6" %>
+  <% end %>
+</div>
