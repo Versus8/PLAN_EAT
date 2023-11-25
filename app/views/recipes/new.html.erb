@@ -10,9 +10,18 @@
       <%= f.input :description %>
       <%= f.input :preparation %>
       <%= f.input :photo, as: :file %>
-      <div class="card-category">
+      <%= f.association :categories, as: :check_boxes, include_hidden: false %>
+
+      <%= f.simple_fields_for :ingredients do |r| %>
+
+        <%= render "recipes/ingredients_form", :f => r %>
+
+      <% end %>
+
+      <%# <%= link_to_add_association "Ingredient", f, :ingredients, %>
+                                        <%# force_non_association_create: true %> %>
+
       <%= f.submit "Create", class: "btn btn-primary btn-lg" %>
-      </div>
     <% end %>
   </div>
 </div>
