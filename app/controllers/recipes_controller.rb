@@ -2,6 +2,7 @@ class RecipesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:index]
 
   def index
+    @date = params[:date]
     @user = current_user
     @recipes = Recipe.all
     @categories = Category.all
