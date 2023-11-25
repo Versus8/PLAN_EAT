@@ -12,6 +12,8 @@
       <%= f.input :preparation %>
       <%= f.association :categories, as: :check_boxes, include_hidden: false %>
 
+      <div>Ingredients list</div>
+
       <%= f.simple_fields_for :ingredients do |r| %>
 
         <%= render "recipes/ingredient_fields", :f => r %>
