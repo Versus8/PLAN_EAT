@@ -1,6 +1,6 @@
 
 
-<div class="container">
+<div class="containerindex">
   <div class="cards">
     <div class="card1">
       <div class="card2">
@@ -11,6 +11,7 @@
             <h5 class="card-title"><%= category.name %></h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
+            <%= link_to "See all recipes",recipies_index_path(category.name) , class: "nav-link" %>
         </div>
       <% end %>
       </div>
