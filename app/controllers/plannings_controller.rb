@@ -16,7 +16,7 @@ class PlanningsController < ApplicationController
     @planning.recipe = @recipe
 
     if @planning.save
-      redirect_to recipe_planning_path(@recipe)
+      redirect_to recipe_plannings_path(@recipe)
     else
       render :new, status: :unprocessable_entity
     end
@@ -50,6 +50,6 @@ class PlanningsController < ApplicationController
   end
 
   def planning_params
-    params.require(:planning).permit(:date);
+    params.require(:planning).permit(:date, :accepted);
   end
 end

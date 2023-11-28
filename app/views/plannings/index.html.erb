@@ -1,3 +1,3 @@
-<div class="container-fluid">
-  <div id="calendar"></div>
-</div>
+<% @plannings.each do |planning| %>
+  <p><%= planning.recipe.name %></p>
+<% end %>
