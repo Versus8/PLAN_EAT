@@ -1,10 +1,13 @@
 <h1>Salut</h1>
-<div>
-    <% @recipes.each do |recipe| %>
-  <div>
-    <%= image_tag "", alt: "Le Wagon", class: "img-book" %>
-    <h2><%= recipe.name %></h2>
-    <%= link_to "See recipe", recipe_path(recipe), class: "btn button-6" %>
-    <% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12" style="border: 1px solid red">
+      <% @recipes.each do |recipe| %>
+      <%= image_tag "", alt: "Le Wagon", class: "img-book" %>
+      <h2><%= recipe.name %></h2>
+      <%= link_to "See recipe", recipe_path(recipe), class: "btn button-6" %>
+      <% end %>
+    </div>
   </div>
 </div>
