@@ -21,6 +21,7 @@ class RecipesController < ApplicationController
   end
 
   def recipes_index
+    @user = current_user
     @category = Category.find_by(name: params[:category])
     # @recipes = RecipeCategory.where(category: @category)
     @recipes = Recipe.joins(:categories).where(categories: {name: @category.name})
