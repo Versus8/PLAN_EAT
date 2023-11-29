@@ -39,7 +39,7 @@ recipe_one = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_one
+    recipe: recipe_one.id
   )
 end
 
@@ -55,7 +55,7 @@ recipe_two = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_two
+    recipe: recipe_two.id
   )
 end
 
@@ -71,7 +71,7 @@ recipe_three = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_three
+    recipe: recipe_three.id
   )
 end
 
@@ -87,7 +87,7 @@ recipe_four = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_four
+    recipe: recipe_four.id
   )
 end
 
@@ -103,7 +103,7 @@ recipe_five = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_five
+    recipe: recipe_five.id
   )
 end
 
@@ -119,7 +119,7 @@ recipe_six = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_six
+    recipe: recipe_six.id
   )
 end
 
@@ -135,7 +135,7 @@ recipe_seven = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_seven
+    recipe: recipe_seven.id
   )
 end
 
@@ -151,7 +151,7 @@ recipe_eight = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_eight
+    recipe: recipe_eight.id
   )
 end
 
@@ -167,7 +167,7 @@ recipe_nine = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_nine
+    recipe: recipe_nine.id
   )
 end
 
@@ -183,7 +183,7 @@ recipe_ten = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_ten
+    recipe: recipe_ten.id
   )
 end
 
@@ -191,31 +191,31 @@ puts "creating 5 plannings"
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_three,
+  recipe: recipe_three.id,
   user: francoise
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_one,
+  recipe: recipe_one.id,
   user: michael
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_eight,
+  recipe: recipe_eight.id,
   user: francoise
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_two,
+  recipe: recipe_two.id,
   user: francoise
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_nine,
+  recipe: recipe_nine.id,
   user: francoise
 )
 
@@ -232,20 +232,21 @@ lunch = Category.create(name: "Lunch")
 easy = Category.create(name: "Easy")
 cheap = Category.create(name: "Cheap")
 
-
+vegetarian_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222463/development/tuzgkzzi5zxzirxmedhz.jpg")
+vegetarian.photo.attach(io: vegetarian_photo, filename: "vegetarian.png", content_type: "image/png")
 
 puts "Linking recipes to their categories"
 
-RecipeCategory.create(recipe: recipe_one, category: vegetarian)
-RecipeCategory.create(recipe: recipe_two, category: vegetarian)
-RecipeCategory.create(recipe: recipe_three, category: easy)
-RecipeCategory.create(recipe: recipe_one, category: easy)
-RecipeCategory.create(recipe: recipe_three, category: vegetarian)
-RecipeCategory.create(recipe: recipe_four, category: salad)
-RecipeCategory.create(recipe: recipe_ten, category: cheap)
-RecipeCategory.create(recipe: recipe_ten, category: italian)
-RecipeCategory.create(recipe: recipe_one, category: healthy)
-RecipeCategory.create(recipe: recipe_five, category: french)
-RecipeCategory.create(recipe: recipe_six, category: lunch)
-RecipeCategory.create(recipe: recipe_one, category: soup)
-RecipeCategory.create(recipe: recipe_eight, category: breakfirst)
+RecipeCategory.create(recipe: recipe_one.id, category: vegetarian)
+RecipeCategory.create(recipe: recipe_two.id, category: vegetarian)
+RecipeCategory.create(recipe: recipe_three.id, category: easy)
+RecipeCategory.create(recipe: recipe_one.id, category: easy)
+RecipeCategory.create(recipe: recipe_three.id, category: vegetarian)
+RecipeCategory.create(recipe: recipe_four.id, category: salad)
+RecipeCategory.create(recipe: recipe_ten.id, category: cheap)
+RecipeCategory.create(recipe: recipe_ten.id, category: italian)
+RecipeCategory.create(recipe: recipe_one.id, category: healthy)
+RecipeCategory.create(recipe: recipe_five.id, category: french)
+RecipeCategory.create(recipe: recipe_six.id, category: lunch)
+RecipeCategory.create(recipe: recipe_one.id, category: soup)
+RecipeCategory.create(recipe: recipe_eight.id, category: breakfirst)
