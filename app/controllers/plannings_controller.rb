@@ -11,12 +11,12 @@ class PlanningsController < ApplicationController
   end
 
   def create
-    @planning = Planning.new()
+    @planning = Planning.new(planning_params)
     @planning.user = current_user
     @planning.recipe = @recipe
 
     if @planning.save
-      redirect_to recipe_plannings_path(@recipe)
+      redirect_to plannings_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,7 +30,7 @@ class PlanningsController < ApplicationController
     @planning = Planning.find(params[:id])
 
     if @planning.update(planning_params)
-      redirect_to recipe_planning_path(@recipe), notice: "Updated !"
+      redirect_to planning_path(@planning), notice: "Updated !"
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class PlanningsController < ApplicationController
     @planning.find(params(:id))
     @planning.destroy
 
-    redirect_to recipe_planning_path(@recipe), status: :see_other
+    redirect_to planning_path(@planning), status: :see_other
   end
 
   private
@@ -50,6 +50,6 @@ class PlanningsController < ApplicationController
   end
 
   def planning_params
-    params.require(:planning).permit(:date, :accepted);
+    params.require(:planning).permit(:date)
   end
 end

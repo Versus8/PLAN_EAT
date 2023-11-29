@@ -1,3 +1,4 @@
 <% @plannings.each do |planning| %>
-  <p><%= planning.recipe.name %></p>
+  <p><%= link_to "#{planning.recipe.name} #{planning.date}", recipe_path(planning.recipe) %></p>
+
 <% end %>
