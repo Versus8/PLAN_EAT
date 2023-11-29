@@ -13,3 +13,22 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.card2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 30px;
+}
+
+@media(max-width: 992px) {
+  .card2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .card2 {
+    grid-template-columns: 1fr;
+  }
+}

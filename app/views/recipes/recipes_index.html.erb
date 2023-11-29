@@ -2,13 +2,15 @@
 
 <%= link_to "Create a recipe", new_recipe_path %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12" style="border: 1px solid red">
+<div class="containerindex">
+  <div class="cards">
+    <div class="card2">
       <% @recipes.each do |recipe| %>
-      <%= image_tag "", alt: "Le Wagon", class: "img-book" %>
-      <h2><%= recipe.name %></h2>
-      <%= link_to "See recipe", recipe_path(recipe), class: "btn button-6" %>
+      <div class="card3">
+          <%= image_tag "", alt: "Le Wagon", class: "img-book" %>
+          <h2><%= recipe.name %></h2>
+          <%= link_to "See recipe", recipe_path(recipe), class: "btn button-6" %>
+      </div>
       <% end %>
     </div>
   </div>
