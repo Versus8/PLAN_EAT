@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :recipes do
-    resources :plannings
+    resources :plannings, only: [:new, :create]
   end
   resources :users, only: [:show, :edit, :update]
-  resources :plannings
+  resources :plannings, only: [:index, :edit, :update, :destroy]
 
   # Defines the root path route ("/")
   # root "articles#index"
