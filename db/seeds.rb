@@ -227,10 +227,12 @@ healthy = Category.create(name: "Healthy")
 french = Category.create(name: "French")
 soup = Category.create(name: "Soup")
 salad = Category.create(name: "Salad")
-breakfirst = Category.create(name: "Breakfirst")
+breakfirst = Category.create(name: "Breakfast")
 lunch = Category.create(name: "Lunch")
 easy = Category.create(name: "Easy")
 cheap = Category.create(name: "Cheap")
+
+
 
 puts "Linking recipes to their categories"
 

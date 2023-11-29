@@ -7,4 +7,7 @@
   <% if current_user != @recipe.user %>
   <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn button-6" %>
   <% end %>
+  <% if @recipe.user == current_user %>
+  <%= link_to "Update", edit_recipe_path(@recipe), class: "btn button-6 m-3" %>
+  <% end %>
 </div>
