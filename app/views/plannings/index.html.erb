@@ -1,4 +1,7 @@
 <% @plannings.each do |planning| %>
   <p><%= link_to "#{planning.recipe.name} #{planning.date}", recipe_path(planning.recipe) %></p>
+  <% if planning.user == current_user %>
+    <%= link_to "Delete", planning_path(planning), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-6 m-3" %>
+  <% end %>
 
 <% end %>

@@ -37,7 +37,7 @@ class PlanningsController < ApplicationController
   end
 
   def destroy
-    @planning.find(params(:id))
+    @planning = Planning.find(params[:id])
     @planning.destroy
 
     redirect_to planning_path(@planning), status: :see_other
