@@ -235,6 +235,35 @@ cheap = Category.create(name: "Cheap")
 vegetarian_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222463/development/tuzgkzzi5zxzirxmedhz.jpg")
 vegetarian.photo.attach(io: vegetarian_photo, filename: "vegetarian.png", content_type: "image/png")
 
+italian_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222740/development/cgn038lbuu6tglpibcj9.jpg")
+italian.photo.attach(io: italian_photo, filename: "italian.png", content_type: "image/png")
+
+healthy_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701293600/healthy_frosqp.jpg")
+healthy.photo.attach(io: healthy_photo, filename: "healthy.png", content_type: "image/png")
+
+french_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701223761/development/vftxkgvxeis46xjm7i9b.jpg")
+french.photo.attach(io: french_photo, filename: "french.png", content_type: "image/png")
+
+soup_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222536/development/z8iarcjhjhn8l5fyz3j7.jpg")
+soup.photo.attach(io: soup_photo, filename: "soup.png", content_type: "image/png")
+
+salad_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222333/development/nhy00jp5mwyqrhnqote7.jpg")
+salad.photo.attach(io: salad_photo, filename: "salad.png", content_type: "image/png")
+
+breakfirst_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222616/development/vw1wqkbdqpzqjgoxqugc.jpg")
+breakfirst.photo.attach(io: breakfirst_photo, filename: "breakfirst.png", content_type: "image/png")
+
+lunch_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222750/development/stzqphvub7f7hservcpf.jpg")
+lunch.photo.attach(io: lunch_photo, filename: "lunch.png", content_type: "image/png")
+
+easy_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701223760/development/nv6bjzzrfq7yxwueixmk.jpg")
+easy.photo.attach(io: easy_photo, filename: "easy.png", content_type: "image/png")
+
+cheap_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701223760/development/bvpueivmwst0n8pjusak.jpg")
+cheap.photo.attach(io: cheap_photo, filename: "cheap.png", content_type: "image/png")
+
+
+
 puts "Linking recipes to their categories"
 
 RecipeCategory.create(recipe: recipe_one.id, category: vegetarian)
