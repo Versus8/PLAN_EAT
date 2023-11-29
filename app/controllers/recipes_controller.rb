@@ -26,6 +26,14 @@ class RecipesController < ApplicationController
     @recipes = Recipe.joins(:categories).where(categories: {name: @category.name})
   end
 
+  def recipe_ingredients_index
+    @recipe = Recipe.find(params[:id])
+    @ingredients = @recipe.ingredients.all
+  end
+
+  def ingredients_list
+    @ingredients = Ingredient.all
+  end
 
   def create
     @recipe = Recipe.new(recipe_params)
@@ -63,7 +71,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :preparation, :photo, { category_ids: [] }, {ingredients_attributes: ingredient_attributes})
+    params.require(:recipe).permit(:name, :description, :preparation, :photo, { category_ids: [] }, { ingredients_attributes: ingredient_attributes })
   end
 
   def recipe_category_creation
