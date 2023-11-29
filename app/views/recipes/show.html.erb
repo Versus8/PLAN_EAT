@@ -9,4 +9,7 @@
   <% if @recipe.user == current_user %>
     <%= link_to "Delete", recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-6 m-3" %>
   <% end %>
+  <% if @recipe.user == current_user %>
+  <%= link_to "Update", edit_recipe_path(@recipe), class: "btn button-6 m-3" %>
+  <% end %>
 </div>
