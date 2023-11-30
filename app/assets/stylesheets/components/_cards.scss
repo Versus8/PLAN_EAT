@@ -41,3 +41,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+.cards-recipe {
+  display: grid;
+  place-items: center;
+}

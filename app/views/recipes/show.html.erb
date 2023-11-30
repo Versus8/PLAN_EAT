@@ -1,15 +1,17 @@
-<h1>Show</h1>
-<div>
-  <%= image_tag "", alt: "Le Wagon", class: "img-book" %>
-  <h2><%= @recipe.name %></h2>
-  <h2><%= @recipe.description %></h2>
-  <h2><%= @recipe.preparation %></h2>
-  <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn button-6" %>
+<%= link_to "Back", recipes_path %>
+<div class="container-show">
+  <div class="cards-recipe">
+    <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701342761/assiette_q1j5pc.jpg", alt: "Le Wagon", class: "img-recipe" %>
+    <h1><strong><%= @recipe.name %></strong></h1>
+    <h3><%= @recipe.description %></h3>
+    <p><%= @recipe.preparation %></p>
+    <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn btn-primary btn-lg" %>
 
-  <% if @recipe.user == current_user %>
-    <%= link_to "Delete", recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-6 m-3" %>
-  <% end %>
-  <% if @recipe.user == current_user %>
-  <%= link_to "Update", edit_recipe_path(@recipe), class: "btn button-6 m-3" %>
-  <% end %>
+    <% if @recipe.user == current_user %>
+      <%= link_to "Delete", recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-6 m-3" %>
+    <% end %>
+    <% if @recipe.user == current_user %>
+    <%= link_to "Update", edit_recipe_path(@recipe), class: "btn button-6 m-3" %>
+    <% end %>
+  </div>
 </div>
