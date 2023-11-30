@@ -1,7 +1,7 @@
-.card-category {
-  display: flex;
-  justify-content: center;
-}
+// .card-category {
+//   display: flex;
+//   justify-content: center;
+// }
 
 .cards{
   display: flex;
@@ -16,9 +16,15 @@
 
 .card2{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
   margin-top: 30px;
+}
+
+.card3{
+  background-color: #FEC0A0;
+  border-radius: 15px;
+  margin: 20px;
+  height: 20em;
 }
 
 @media(max-width: 992px) {

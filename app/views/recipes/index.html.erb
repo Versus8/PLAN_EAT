@@ -1,20 +1,28 @@
-
-
+<div class="row d-flex justify-content-center search_bar">
+    <form class="d-flex col-md-6" role="search">
+        <span type="submit" class="input-group-text search-btn" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search"
+        %>
+      <%# <button class="search-btn btn btn-success mx-3" ></button> %>
+    </form>
+  </div>
 <div class="containerindex">
   <div class="cards">
     <div class="card1">
       <div class="card2">
-      <% @categories.each do |category| %>
-        <div class="card3">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"><%= category.name %></h5>
-            <h2>Date : <%= @date %></h2>
-            <p class="card-text"> This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <% @categories.each do |category| %>
+          <div class="card3">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= category.name %></h5>
+              <p class="card-text"> This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+              <%= link_to "See all recipes",recipes_index_path(category.name) , class: "nav-link" %>
           </div>
-            <%= link_to "See all recipes",recipes_index_path(category.name) , class: "nav-link" %>
-        </div>
-      <% end %>
+        <% end %>
       </div>
     </div>
   </div>
