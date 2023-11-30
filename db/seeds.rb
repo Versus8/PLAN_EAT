@@ -30,7 +30,14 @@ puts "Creating 10 recipes and their ingredients"
 recipe_one = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées",
   user: veronique
 )
 
@@ -39,14 +46,21 @@ recipe_one = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_one.id
+    recipe: recipe_one
   )
 end
 
 recipe_two = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: francoise
 )
 
@@ -55,14 +69,21 @@ recipe_two = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_two.id
+    recipe: recipe_two
   )
 end
 
 recipe_three = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: veronique
 )
 
@@ -71,14 +92,21 @@ recipe_three = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_three.id
+    recipe: recipe_three
   )
 end
 
 recipe_four = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: michael
 )
 
@@ -87,14 +115,21 @@ recipe_four = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_four.id
+    recipe: recipe_four
   )
 end
 
 recipe_five = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: francoise
 )
 
@@ -103,14 +138,21 @@ recipe_five = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_five.id
+    recipe: recipe_five
   )
 end
 
 recipe_six = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: francoise
 )
 
@@ -119,14 +161,21 @@ recipe_six = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_six.id
+    recipe: recipe_six
   )
 end
 
 recipe_seven = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: michael
 )
 
@@ -135,14 +184,21 @@ recipe_seven = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_seven.id
+    recipe: recipe_seven
   )
 end
 
 recipe_eight = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: veronique
 )
 
@@ -151,14 +207,21 @@ recipe_eight = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_eight.id
+    recipe: recipe_eight
   )
 end
 
 recipe_nine = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: michael
 )
 
@@ -167,14 +230,21 @@ recipe_nine = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_nine.id
+    recipe: recipe_nine
   )
 end
 
 recipe_ten = Recipe.create(
   name: Faker::Food.dish,
   description: Faker::Food.description,
-  preparation: "Cook with love",
+  preparation: "Aubergines
+3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+180 ml (¾ tasse) d’huile d’olive
+Sauce tomate
+1 oignon, haché finement
+2 gousses d’ail, hachées
+30 ml (2 c. à soupe) d’huile d’olive
+1 boîte de 796 ml (28 oz) de tomates broyées.",
   user: veronique
 )
 
@@ -183,7 +253,7 @@ recipe_ten = Recipe.create(
     name: Faker::Food.ingredient,
     unit: Faker::Food.measurement.split.last,
     quantity: Faker::Food.measurement.split.first,
-    recipe: recipe_ten.id
+    recipe: recipe_ten
   )
 end
 
@@ -191,31 +261,31 @@ puts "creating 5 plannings"
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_three.id,
+  recipe: recipe_three,
   user: francoise
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_one.id,
+  recipe: recipe_one,
   user: michael
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_eight.id,
+  recipe: recipe_eight,
   user: francoise
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_two.id,
+  recipe: recipe_two,
   user: francoise
 )
 
 Planning.create(
   date: Date.today,
-  recipe: recipe_nine.id,
+  recipe: recipe_nine,
   user: francoise
 )
 
@@ -266,16 +336,16 @@ cheap.photo.attach(io: cheap_photo, filename: "cheap.png", content_type: "image/
 
 puts "Linking recipes to their categories"
 
-RecipeCategory.create(recipe: recipe_one.id, category: vegetarian)
-RecipeCategory.create(recipe: recipe_two.id, category: vegetarian)
-RecipeCategory.create(recipe: recipe_three.id, category: easy)
-RecipeCategory.create(recipe: recipe_one.id, category: easy)
-RecipeCategory.create(recipe: recipe_three.id, category: vegetarian)
-RecipeCategory.create(recipe: recipe_four.id, category: salad)
-RecipeCategory.create(recipe: recipe_ten.id, category: cheap)
-RecipeCategory.create(recipe: recipe_ten.id, category: italian)
-RecipeCategory.create(recipe: recipe_one.id, category: healthy)
-RecipeCategory.create(recipe: recipe_five.id, category: french)
-RecipeCategory.create(recipe: recipe_six.id, category: lunch)
-RecipeCategory.create(recipe: recipe_one.id, category: soup)
-RecipeCategory.create(recipe: recipe_eight.id, category: breakfirst)
+RecipeCategory.create(recipe: recipe_one, category: vegetarian)
+RecipeCategory.create(recipe: recipe_two, category: vegetarian)
+RecipeCategory.create(recipe: recipe_three, category: easy)
+RecipeCategory.create(recipe: recipe_one, category: easy)
+RecipeCategory.create(recipe: recipe_three, category: vegetarian)
+RecipeCategory.create(recipe: recipe_four, category: salad)
+RecipeCategory.create(recipe: recipe_ten, category: cheap)
+RecipeCategory.create(recipe: recipe_ten, category: italian)
+RecipeCategory.create(recipe: recipe_one, category: healthy)
+RecipeCategory.create(recipe: recipe_five, category: french)
+RecipeCategory.create(recipe: recipe_six, category: lunch)
+RecipeCategory.create(recipe: recipe_one, category: soup)
+RecipeCategory.create(recipe: recipe_eight, category: breakfirst)

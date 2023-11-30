@@ -7,7 +7,7 @@
     <div class="card2">
       <% @recipes.each do |recipe| %>
       <div class="card3">
-          <%= image_tag "", alt: "Le Wagon", class: "img-book" %>
+          <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
           <h2><%= recipe.name %></h2>
           <%= link_to "See recipe", recipe_path(recipe), class: "btn button-6" %>
       </div>
