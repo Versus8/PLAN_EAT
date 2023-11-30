@@ -14,3 +14,18 @@
 .text-center {
   text-align: center;
 }
+
+.container-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Cette propriété est ajoutée pour centrer le texte à l'intérieur des éléments h2. Vous pouvez la modifier selon vos besoins. */
+  height: 100vh;
+}
+
+.img-recipe {
+  max-width: 30%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+  border-radius: 20px;
+  background-size: cover;
+}

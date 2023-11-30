@@ -25,7 +25,11 @@
   border-radius: 15px;
   margin: 20px;
   height: 20em;
+  padding: 10px; /* Espace interne dans les cellules */
+  text-align: center;
 }
+
+
 
 @media(max-width: 992px) {
   .card2 {
@@ -37,4 +41,9 @@
   .card2 {
     grid-template-columns: 1fr;
   }
+}
+
+.cards-recipe {
+  display: grid;
+  place-items: center;
 }
