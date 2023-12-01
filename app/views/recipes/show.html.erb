@@ -5,7 +5,7 @@
     <h1><strong><%= @recipe.name %></strong></h1>
     <h3><%= @recipe.description %></h3>
     <p><%= @recipe.preparation %></p>
-    <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn btn-primary btn-lg" %>
+    <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn btn-primary btn-lg mb-5" %>
 
     <% if @recipe.user == current_user %>
       <%= link_to "Delete", recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-6 m-3" %>
