@@ -5,7 +5,6 @@
       <li><%= link_to(image_tag('home-logo.png', alt: 'Texte alternatif', class: "active"), recipes_path) %></li>
       <li><%= link_to(image_tag('cart-logo.png', alt: 'Texte alternatif'), ingredients_list_path) %></li>
       <% if current_user %>
-        <li><%= link_to image_tag('cart-logo.png', alt: 'Texte alternatif'), user_path(current_user) %></li>
         <li><%= link_to "", user_path(current_user), class: "fa-solid fa-user" %></li>
       <% end %>
     </ul>
