@@ -7,6 +7,6 @@
       <% if current_user %>
         <li><%= link_to image_tag('cart-logo.png', alt: 'Texte alternatif'), user_path(current_user) %></li>
         <li><%= link_to "", user_path(current_user), class: "fa-solid fa-user" %></li>
-      <% end %
+      <% end %>
     </ul>
   </nav>
