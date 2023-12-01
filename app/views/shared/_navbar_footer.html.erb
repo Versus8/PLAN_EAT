@@ -6,6 +6,8 @@
       <li><%= link_to(image_tag('cart-logo.png', alt: 'Texte alternatif'), ingredients_list_path) %></li>
       <% if current_user %>
         <li><%= link_to "", user_path(current_user), class: "fa-solid fa-user" %></li>
+      <% else %>
+        <li> <%= link_to "",  new_user_session_path(current_user), class: "fa-solid fa-user" %> </li>
       <% end %>
     </ul>
   </nav>
