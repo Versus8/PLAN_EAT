@@ -13,17 +13,17 @@
   <div class="cards">
     <div class="card1">
       <div class="card2">
-        <% @categories.each do |category| %>
-          <div class="card3">
-            <% if category.photo.key? %>
-              <%= cl_image_tag category.photo.key, height: 100, class: "category" %>
-            <% end %>
-            <div class="card-body">
+      <% @categories.each do |category| %>
+        <div class="card3">
+          <% if category.photo.key? %>
+          <%= cl_image_tag category.photo.key, height: 100, class: "category" %>
+          <% end %>
+          <div class="card-body">
             <h5 class="card-title"><strong><%= category.name %></strong></h5>
-            <p class="card-text"> Select your category of meal.</p>
           </div>
-         <%= link_to "See all recipes",recipes_index_path(category.name) , class: "nav-link" %>
-        <% end %>
+            <%= link_to "See all recipes",recipes_index_path(category.name) , class: "nav-link" %>
+        </div>
+      <% end %>
       </div>
     </div>
   </div>
