@@ -28,10 +28,9 @@ michael = User.create(name: "Michael", email: "michael@gmail.com", password: "12
 puts "Creating 10 recipes and their ingredients"
 
 recipe_one = Recipe.create(
-  name: Faker::Food.dish,
-  description: Faker::Food.description,
-  preparation: "Aubergines
-3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
+  name: "Aubergine premium",
+  description: "aubergine a la sauce tomate pour deguster chez vous",
+  preparation: "Aubergines 3 grosses aubergines coupées en longues tranches d’environ 1 cm (1/2 po) d’épaisseur
 180 ml (¾ tasse) d’huile d’olive
 Sauce tomate
 1 oignon, haché finement
