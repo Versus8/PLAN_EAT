@@ -1,11 +1,12 @@
   <nav>
     <ul id="navbar">
-      <li><%= link_to image_tag('calendar-logo.png', alt: 'Texte alternatif'), plannings_path %></i></li>
-      <li><%= image_tag('recipe-logo.png', alt: 'Texte alternatif') %></li>
-      <li><%= link_to image_tag('home-logo.png', alt: 'Texte alternatif', class: "active"), recipes_path %></li>
+      <li><%= link_to(image_tag('calendar-logo.png', alt: 'Texte alternatif'), plannings_path) %></i></li>
+      <li><%= link_to(image_tag('recipe-logo.png', alt: 'Texte alternatif'), '#') %></li>
+      <li><%= link_to(image_tag('home-logo.png', alt: 'Texte alternatif', class: "active"), recipes_path) %></li>
+      <li><%= link_to(image_tag('cart-logo.png', alt: 'Texte alternatif'), ingredients_list_path) %></li>
       <% if current_user %>
-      <li><%= link_to image_tag('cart-logo.png', alt: 'Texte alternatif'), user_path(current_user) %></li>
-      <li><%= link_to "", user_path(current_user), class: "fa-solid fa-user" %></li>
-      <% end %>
+        <li><%= link_to image_tag('cart-logo.png', alt: 'Texte alternatif'), user_path(current_user) %></li>
+        <li><%= link_to "", user_path(current_user), class: "fa-solid fa-user" %></li>
+      <% end %
     </ul>
   </nav>

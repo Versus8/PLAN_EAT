@@ -1,9 +1,13 @@
+<h2>Which ingredients do you already have?</h2>
+
 <ul>
     <% @ingredients.each do |ingredient| %>
-      <li>
+      <li class="ingredients">
       <p> <%= ingredient.quantity %>
-      <%= ingredient.unit %>
-      of <%= ingredient.name %> </p>
+          <%= ingredient.unit %>
+          of <%= ingredient.name %>
+          <%= link_to "", recipe_ingredients_index_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fas fa-check-square" %>
+      </p>
     <% end %>
       </li>
 
