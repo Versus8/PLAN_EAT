@@ -3,7 +3,7 @@
   <div class="cards-recipe">
 
     <% if @recipe.photo.key? %>
-          <%= cl_image_tag recipe.photo.key, height: 100, class: "img-recipe" %>
+          <%= cl_image_tag @recipe.photo.key, height: 100, class: "img-recipe" %>
     <% else %>
           <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
     <% end %>
