@@ -1,11 +1,11 @@
-<div data-controller="calendar">
+<div data-controller="calendar" data-calendar-recipe-id-value="<%= @recipe.id %>" data-calendar-user-id-value="<%= current_user.id %>">
   <%= simple_form_for [@recipe, @planning] do |f| %>
     <%= f.input :date %>
     <%= f.submit "Create", class: "btn button-6 my-3" %>
   <% end %>
 
 
-  <div class="container-fluid" data-user-id="24" data-calendar-recipe-id-value="<%= @recipe.id %>">
+  <div class="container-fluid" data-user-id="24" >
     <div id="calendar"></div>
   </div>
 

@@ -2,21 +2,28 @@ import { Controller } from "@hotwired/stimulus"
 import { Calendar } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from '@fullcalendar/interaction';
+import moment from "moment";
 
 export default class extends Controller {
   static values = {
-    userID: Number,
-    recipeID: Number
+    userId: Number,
+    recipeId: Number
   }
    connect() {
     this.initializeCalendar();
-    console.log(this.data.get("userId"))
+    console.log(this.recipeIdValue)
   }
 
   initializeCalendar() {
     const calendarEl = this.element.querySelector("#calendar");
 
     this.calendar = new Calendar(calendarEl, {
+      titleFormat: {
+        month: "short",
+        year: "numeric",
+        day: "numeric",
+        weekday: "short"
+      },
       plugins: [dayGridPlugin, interactionPlugin],
       initialView: "dayGridMonth",
       // Other FullCalendar options can be added here...
@@ -27,9 +34,10 @@ export default class extends Controller {
   }
 
   addPlanning(event) {
+    console.log(event)
     const user = this.userIdValue;
     const recipe = this.recipeIdValue;
-    const date = event.dateStr;
+    const date = moment(event.date).format("ddd, DD MMM YYYY")
 
     // Perform an AJAX request or any necessary action to add the planning to the database
     // For example:
@@ -44,9 +52,9 @@ export default class extends Controller {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        user_id: user,
-        recipe_id: recipe,
-        date: date,
+        "user_id": 8,
+        "recipe_id": 21,
+        "date": date,
         // Add other necessary fields for your planning
       }),
     })
@@ -58,6 +66,7 @@ export default class extends Controller {
         // You might need to handle other responses accordingly
       } else {
         // Handle error responses
+        console.log(response)
       }
     })
     .catch(error => {
