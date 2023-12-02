@@ -12,7 +12,7 @@
     </form>
   </div>
 
-  <%= link_to "Add your Recipe", new_recipe_path , class: "nav-link" %>
+  <%= link_to "Add your Recipe", new_recipe_path , class: "nav-link link" %>
 
   <div class="containerindex">
     <div class="cards">
@@ -25,8 +25,8 @@
             <% end %>
             <div class="card-body">
               <h5 class="card-title"><strong><%= category.name %></strong></h5>
+              <%= link_to "", recipes_index_path(category.name), class: "nav-link card-link" %>
             </div>
-              <%= link_to "See all recipes",recipes_index_path(category.name) , class: "nav-link" %>
           </div>
         <% end %>
         </div>

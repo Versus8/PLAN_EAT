@@ -6,6 +6,7 @@
 .cards{
   display: flex;
   justify-content: space-evenly;
+  position: relative;
 }
 .card{
   border-radius: 10px;
@@ -18,7 +19,7 @@
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 30px;
-  position: relative
+
 }
 
 .card3{
@@ -29,6 +30,7 @@
   padding: 2px; /* Espace interne dans les cellules */
   text-align: center;
   height: 175px;
+  position: relative
 }
 
 .card-link {
