@@ -18,6 +18,7 @@
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 30px;
+  position: relative
 }
 
 .card3{
@@ -28,6 +29,14 @@
   padding: 2px; /* Espace interne dans les cellules */
   text-align: center;
   height: 175px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 
