@@ -6,6 +6,7 @@
 .cards{
   display: flex;
   justify-content: space-evenly;
+  position: relative;
 }
 .card{
   border-radius: 10px;
@@ -16,8 +17,9 @@
 
 .card2{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   margin-top: 30px;
+
 }
 
 .card3{
@@ -28,6 +30,16 @@
   padding: 2px; /* Espace interne dans les cellules */
   text-align: center;
   height: 175px;
+  position: relative /* Necessaire pour faire une carte cliquable */
+}
+
+/* Permet de faire qu'un lien prend toute une carte pour en faire une carte cliquable */
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 
