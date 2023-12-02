@@ -11,11 +11,6 @@
 @import "components/index";
 @import "pages/index";
 
-
-html{
-  height: 100vh;
-}
-
 body{
   background-color: #FFFFFF;
 }
@@ -23,12 +18,16 @@ body{
 .search_bar{
   margin: 0 auto;
   margin-bottom: 40px;
+  margin-top: 40px;
   background-color: white;
+  border-radius: 12px;
 }
 
 .search-btn{
   background-color: white;
   border-right: 0;
+  color: #FEC0A0;
+  border-radius: 12px 0px 0px 12px;
 }
 
 .form-control{
@@ -125,4 +124,11 @@ h4 + p{
     width: 100px;
   }
 
+}
+
+.ingredients{
+  width: 100%;
+  background-color: #FEC0A0;
+  border-radius: 9px;
+  justify-content: center;
 }

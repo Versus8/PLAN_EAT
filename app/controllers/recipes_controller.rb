@@ -43,7 +43,7 @@ class RecipesController < ApplicationController
     if @recipe.save
       recipe_category_creation
 
-      redirect_to recipes_path(@recipe)
+      redirect_to recipe_path(@recipe)
     else
       render :new, status: :unprocessable_entity
     end

@@ -1,7 +1,12 @@
 <%= link_to "Back", recipes_path %>
 <div class="container-show">
   <div class="cards-recipe">
-    <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701342761/assiette_q1j5pc.jpg",height: 100, alt: "Le Wagon", class: "img-recipe" %>
+
+    <% if @recipe.photo.key? %>
+          <%= cl_image_tag @recipe.photo.key, height: 100, class: "img-recipe" %>
+    <% else %>
+          <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
+    <% end %>
     <h1><strong><%= @recipe.name %></strong></h1>
     <h3><%= @recipe.description %></h3>
     <p><%= @recipe.preparation %></p>

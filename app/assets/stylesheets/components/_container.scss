@@ -3,11 +3,12 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 100px;   // Pour eviter que les cartes se retrouvent coincees sous la navbar en bas
+  padding-bottom: 100px;   // Pour eviter que les cartes se retrouvent coincees sous la navbar en bas
 }
 .containernew {
-  width: 500px;
+  width: 80%;
   margin: 0 auto;
+  margin-bottom: 100px;
   // display: flex;
   // justify-content: space-evenly;
 }
@@ -17,16 +18,24 @@
 }
 
 .container-show {
+  margin: 0 auto;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center; /* Cette propriété est ajoutée pour centrer le texte à l'intérieur des éléments h2. Vous pouvez la modifier selon vos besoins. */
-  height: 100vh;
+  padding-bottom: 100px;
 }
 
 .img-recipe {
   max-width: 30%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
   border-radius: 20px;
   background-size: cover;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 100px;
 }
