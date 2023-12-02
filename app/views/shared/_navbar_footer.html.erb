@@ -6,7 +6,8 @@
       <li><%= link_to(image_tag('cart-logo.png', alt: 'Texte alternatif'), ingredients_list_path) %></li>
       <% if current_user %>
         <% if current_user.photo.key? %>
-          <li><%= cl_image_tag current_user.photo.key, class: "avatar", width: 500, alt: "dropdown menu"%></li>
+          <%= link_to ( cl_image_tag current_user.photo.key, class: "avatar", width: 500, alt: "dropdown menu"), user_path(current_user) %>
+
         <% else %>
           <%= image_tag "none_image_user.png", class: "avatar" %>
         <% end %>
