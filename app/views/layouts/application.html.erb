@@ -36,11 +36,14 @@
     </script>
   </head>
 
-  <body><%= render "shared/navbar" %>
+  <body>
+    <%= render "shared/navbar" unless current_page?(root_path) %>
+
     <%= render "shared/flashes" %>
 
-    <%= yield %>
+    <div class="content-wrapper"><%= yield %></div>
 
-    <%= render "shared/navbar_footer" %>
+
+    <%= render "shared/navbar_footer" unless current_page?(root_path) %>
   </body>
 </html>
