@@ -762,7 +762,8 @@ fast.photo.attach(io: fast_photo, filename: "fast.png", content_type: "image/png
 dessert_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222616/development/vw1wqkbdqpzqjgoxqugc.jpg")
 dessert.photo.attach(io: dessert_photo, filename: "dessert.png", content_type: "image/png")
 
-
+recipe_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222740/development/cgn038lbuu6tglpibcj9.jpg")
+recipe_four.photo.attach(io: recipe_four_photo, filename: "recipe_four.png", content_type: "image/png")
 
 
 puts "Linking recipes to their categories"
