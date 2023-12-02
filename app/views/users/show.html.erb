@@ -1,4 +1,35 @@
 <div class="container">
+
+  <div class="profile-image">
+    <% if current_user.photo.key? %>
+        <%= cl_image_tag current_user.photo.key, class: "profile-image-thumbnail", crop: :fill, alt: "dropdown menu"%>
+    <% else %>
+        <%= image_tag "none_image_user.png", class: "profile-image-thumbnail" %>
+    <% end %>
+    <h4>current_user.name</h4>
+    <h4>current_user.description</h4>
+  </div>
+  <div class="profile-infos">
+    <div class="infos-planning-count">
+      <h4>infos-planning-count</h4>
+      <h4>10</h4>
+    </div>
+    <div class="infos-last-visit">
+      <h4>infos-last-visit</h4>
+      <h4>2023-11-28</h4>
+    </div>
+
+  </div>
+  <div class="total-point">
+    <div class="infos-points">
+      <h2>Total points</h2>
+      <h2>100</h2>
+    </div>
+  </div>
+  <div class="badge-count">
+
+  </div>
+
   <h1 class="my-5 text-center">Your profile</h1>
   <div class="row">
     <div class="col-6">

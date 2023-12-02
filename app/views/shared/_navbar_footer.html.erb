@@ -5,9 +5,14 @@
       <li><%= link_to(image_tag('home-logo.png', alt: 'Texte alternatif', class: "active"), recipes_path) %></li>
       <li><%= link_to(image_tag('cart-logo.png', alt: 'Texte alternatif'), ingredients_list_path) %></li>
       <% if current_user %>
-        <li><%= link_to "", user_path(current_user), class: "fa-solid fa-user" %></li>
+        <% if current_user.photo.key? %>
+          <%= link_to ( cl_image_tag current_user.photo.key, class: "avatar", width: 500, alt: "dropdown menu"), user_path(current_user) %>
+
+        <% else %>
+          <%= image_tag "none_image_user.png", class: "avatar" %>
+        <% end %>
       <% else %>
-        <li> <%= link_to "",  new_user_session_path, class: "fa-solid fa-user" %> </li>
+        <li> <%= link_to "",  new_user_session_path, class: "fa-solid fa-user none-user" %> </li>
       <% end %>
     </ul>
   </div>

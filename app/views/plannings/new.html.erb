@@ -1,6 +1,12 @@
-<%= simple_form_for [@recipe, @planning] do |f| %>
-  <%= f.input :date %>
-  <%= f.submit "Create", class: "btn button-6 my-3" %>
-<% end %>
+<div data-controller="calendar">
+  <%= simple_form_for [@recipe, @planning] do |f| %>
+    <%= f.input :date %>
+    <%= f.submit "Create", class: "btn button-6 my-3" %>
+  <% end %>
 
-<%= render "calendar" %>
+
+  <div class="container-fluid" data-user-id="24" data-calendar-recipe-id-value="<%= @recipe.id %>">
+    <div id="calendar"></div>
+  </div>
+
+</div>
