@@ -1,4 +1,5 @@
-<div class="main-container">
+<div class="main-container mt-5 pb-5">
+
 
   <div class="profile-image">
     <% if current_user.photo.key? %>
@@ -7,57 +8,34 @@
         <%= image_tag "none_image_user.png", class: "profile-image-thumbnail" %>
     <% end %>
     <h4>current_user.name</h4>
-    <h4>current_user.description</h4>
+    <p>current_user.description</p>
   </div>
   <div class="profile-infos">
     <div class="infos-planning-count">
       <h4>infos-planning-count</h4>
-      <h4>10</h4>
+      <p>10</p>
     </div>
     <div class="infos-last-visit">
       <h4>infos-last-visit</h4>
-      <h4>2023-11-28</h4>
+      <p>2023-11-28</p>
     </div>
 
   </div>
   <div class="total-point">
     <div class="infos-points">
       <h2>Total points</h2>
-      <h2>100</h2>
-    </div>
-  </div>
-  <div class="badge-count">
 
-  </div>
-
-  <h1 class="my-5 text-center">Your profile</h1>
-  <div class="row">
-    <div class="col-6">
-      <% if current_user.photo.key? %>
-        <%= cl_image_tag current_user.photo.key, class: "img-fluid", width: 500, crop: :fill, alt: "dropdown menu"%>
-      <% else %>
-        <%= image_tag "none_image_user.png", class: "img-fluid", width: 500 %>
-      <% end %>
-      <%# <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid" %>
+        <p>100</p>
 
     </div>
-    <div class="col-6 ps-5">
-      <h5>Name</h5>
-      <p><%= current_user.name %></p>
-      <%#<% console %>
 
-      <h5>Email</h5>
-      <p><%= current_user.email %></p>
+    <div class="badge-count">
+      <h2>Badge Count</h2>
+      <%= image_tag "badge_image.png", class: "img-fluid", crop: :fill %>
 
-      <h5>Password</h5>
-      <p>************</p>
-
+    </div>
+  </div>
+      <%= link_to "Edit", edit_user_path(current_user), class: "btn btn-secondary" %>
       <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-secondary m-2" %>
 
-      <%= link_to "Edit", edit_user_path(current_user), class: "btn btn-secondary" %>
-      <%= link_to "Back", root_path, class: "btn btn-secondary" %>
-
-
-    </div>
-  </div>
 </div>
