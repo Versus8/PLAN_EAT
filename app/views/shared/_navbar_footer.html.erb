@@ -7,7 +7,7 @@
       <% if current_user %>
         <li><%= link_to "", user_path(current_user), class: "fa-solid fa-user" %></li>
       <% else %>
-        <li> <%= link_to "",  new_user_session_path(current_user), class: "fa-solid fa-user" %> </li>
+        <li> <%= link_to "",  new_user_session_path, class: "fa-solid fa-user" %> </li>
       <% end %>
     </ul>
   </nav>
