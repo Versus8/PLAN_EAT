@@ -1,5 +1,6 @@
 class PlanningsController < ApplicationController
   before_action :set_recipe, only: %i[new create]
+  skip_before_action :verify_authenticity_token
 
   def index
     @plannings = Planning.where(user: current_user)

@@ -11,19 +11,12 @@ export default class extends Controller {
   }
    connect() {
     this.initializeCalendar();
-    console.log(this.recipeIdValue)
   }
 
   initializeCalendar() {
     const calendarEl = this.element.querySelector("#calendar");
 
     this.calendar = new Calendar(calendarEl, {
-      titleFormat: {
-        month: "short",
-        year: "numeric",
-        day: "numeric",
-        weekday: "short"
-      },
       plugins: [dayGridPlugin, interactionPlugin],
       initialView: "dayGridMonth",
       // Other FullCalendar options can be added here...
@@ -34,7 +27,6 @@ export default class extends Controller {
   }
 
   addPlanning(event) {
-    console.log(event)
     const user = this.userIdValue;
     const recipe = this.recipeIdValue;
     const date = moment(event.date).format("ddd, DD MMM YYYY")
@@ -43,9 +35,6 @@ export default class extends Controller {
     // For example:
     // You can use fetch API to send data to your backend endpoint
 
-    console.log(user)
-    console.log(recipe)
-    console.log(date)
     fetch(`/recipes/${recipe}/plannings`, {
       method: 'POST',
       headers: {
@@ -62,8 +51,10 @@ export default class extends Controller {
       // Handle the response accordingly
       // For example, close the form and update the calendar if successful
       if (response.ok) {
-        this.calendar.getApi().refetchEvents(); // Refresh events in calendar
+        // this.calendar.refetchEvents(); // Refresh events in calendar
+        alert("The planning has been added !")
         // You might need to handle other responses accordingly
+        window.location = "/plannings"
       } else {
         // Handle error responses
         console.log(response)
