@@ -11,29 +11,6 @@
     <script src="https://kit.fontawesome.com/1161a32a4b.js" crossorigin="anonymous"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.js'></script>
-    <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          selectable: true,
-          fixedWeekCount: false,
-
-          dateClick: function(info) {
-            alert('Clicked on: ' + info.dateStr);
-              var queryString = "date=" + encodeURIComponent(info.dateStr);
-
-              window.location.href = "../recipes?" + queryString;
-
-
-            // change the day's background color just for fun
-          }
-        });
-        calendar.render();
-      });
-
-    </script>
   </head>
 
   <body><%= render "shared/navbar" %>
