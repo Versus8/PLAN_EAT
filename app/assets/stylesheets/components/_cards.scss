@@ -16,17 +16,18 @@
 
 .card2{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   margin-top: 30px;
 }
 
 .card3{
   background-color: #FEC0A0;
   border-radius: 15px;
-  margin: 20px;
+  margin: 5px;
 
-  padding: 10px; /* Espace interne dans les cellules */
+  padding: 2px; /* Espace interne dans les cellules */
   text-align: center;
+  height: 175px;
 }
 
 
@@ -39,7 +40,7 @@
 
 @media(max-width: 768px) {
   .card2 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
