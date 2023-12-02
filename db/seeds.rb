@@ -738,32 +738,65 @@ puts "creating 10 categories"
 
 italian = Category.create(name: "Italian")
 healthy = Category.create(name: "Healthy")
-asiatique = Category.create(name: "Asiatique")
+asiatique = Category.create(name: "Asian food")
 lunch = Category.create(name: "Lunch&Diner")
 fast = Category.create(name: "Fast")
 dessert = Category.create(name: "Dessert")
 
 
-italian_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222740/development/cgn038lbuu6tglpibcj9.jpg")
+italian_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701551146/l-intro-1643403830_waxgzh.jpg")
 italian.photo.attach(io: italian_photo, filename: "italian.png", content_type: "image/png")
 
 healthy_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701293600/healthy_frosqp.jpg")
 healthy.photo.attach(io: healthy_photo, filename: "healthy.png", content_type: "image/png")
 
-asiatique_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701223761/development/vftxkgvxeis46xjm7i9b.jpg")
+asiatique_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550849/Asian-Street-Kitchen-Festival-2019-min_kvrsvq.jpg")
 asiatique.photo.attach(io: asiatique_photo, filename: "asiatique.png", content_type: "image/png")
 
-lunch_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222536/development/z8iarcjhjhn8l5fyz3j7.jpg")
+lunch_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701551821/Homemade-Lunch-1-horiz_n3cqth.jpg")
 lunch.photo.attach(io: lunch_photo, filename: "lunch.png", content_type: "image/png")
 
-fast_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222333/development/nhy00jp5mwyqrhnqote7.jpg")
+fast_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701551421/l-intro-1642708415_mkmtmu.jpg")
 fast.photo.attach(io: fast_photo, filename: "fast.png", content_type: "image/png")
 
-dessert_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222616/development/vw1wqkbdqpzqjgoxqugc.jpg")
+dessert_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701551589/2148727_w472h265c1cx1311cy572cxt0cyt0cxb2622cyb1143_m1rleu.webp")
 dessert.photo.attach(io: dessert_photo, filename: "dessert.png", content_type: "image/png")
 
-recipe_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701222740/development/cgn038lbuu6tglpibcj9.jpg")
+
+
+
+
+recipe_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701548838/veggie-burgers-1-2_zmrbuf.webp")
+recipe_one.photo.attach(io: recipe_one_photo, filename: "recipe_one.png", content_type: "image/png")
+
+recipe_two_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549236/greeksalad_ctfmou.jpg")
+recipe_two.photo.attach(io: recipe_two_photo, filename: "recipe_four.png", content_type: "image/png")
+
+recipe_three_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549433/Cheeseburger-Recipe-9_f9y2xi.jpg")
+recipe_three.photo.attach(io: recipe_three_photo, filename: "recipe_three.png", content_type: "image/png")
+
+recipe_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549578/carbonara_zwyvfa.jpg")
 recipe_four.photo.attach(io: recipe_four_photo, filename: "recipe_four.png", content_type: "image/png")
+
+recipe_five_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549865/Futomaki-1-500x500_ukj6ug.jpg")
+recipe_five.photo.attach(io: recipe_five_photo, filename: "recipe_five.png", content_type: "image/png")
+
+recipe_six_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550136/Vegan-Brazilian-Feijoada-FI_uohlc6.jpg")
+recipe_six.photo.attach(io: recipe_six_photo, filename: "recipe_six.png", content_type: "image/png")
+
+recipe_seven_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550195/tiramisu-square-500x500_jbcoyq.jpg")
+recipe_seven.photo.attach(io: recipe_seven_photo, filename: "recipe_seven.png", content_type: "image/png")
+
+recipe_eight_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550286/banana-split-scaled_weempr.jpg")
+recipe_eight.photo.attach(io: recipe_eight_photo, filename: "recipe_eight.png", content_type: "image/png")
+
+recipe_nine_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550345/1200px-Phat_Thai_kung_Chang_Khien_street_stall_poxd1q.jpg")
+recipe_nine.photo.attach(io: recipe_nine_photo, filename: "recipe_nine.png", content_type: "image/png")
+
+recipe_ten_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550505/antipasto-calabrese-pizza---gluten-free-64374_640x480_10794d8b_hetc3z.jpg")
+recipe_ten.photo.attach(io: recipe_ten_photo, filename: "recipe_ten.png", content_type: "image/png")
+
+
 
 
 puts "Linking recipes to their categories"
