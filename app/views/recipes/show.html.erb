@@ -1,7 +1,7 @@
 <%= link_to "Back", recipes_path %>
 <div class="container-show">
   <div class="cards-recipe">
-    <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701342761/assiette_q1j5pc.jpg", alt: "Le Wagon", class: "img-recipe" %>
+    <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701342761/assiette_q1j5pc.jpg",height: 100, alt: "Le Wagon", class: "img-recipe" %>
     <h1><strong><%= @recipe.name %></strong></h1>
     <h3><%= @recipe.description %></h3>
     <p><%= @recipe.preparation %></p>
