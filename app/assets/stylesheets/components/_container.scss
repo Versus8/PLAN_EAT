@@ -1,8 +1,9 @@
 .containerindex {
-  width: 900px;
+
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 100px;   // Pour eviter que les cartes se retrouvent coincees sous la navbar en bas
 }
 .containernew {
   width: 500px;
