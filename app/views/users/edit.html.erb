@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container edit-page-profile mt-5">
   <h1 class="my-5 text-center">Edit your profile</h1>
 
   <div class="profile-image">
@@ -20,8 +20,8 @@
                 label: "Confirm your new password",
                 input_html: { autocomplete: "new-password" } %>
 
-        <%= f.submit "Edit your profile", class: "btn btn-secondary" %>
-        <%= link_to "Cancel", user_path(current_user), class: "btn btn-secondary" %>
+        <%= f.submit "Save", class: "btn btn-profile" %>
+        <%= link_to "Cancel", user_path(current_user), class: "btn btn-profile" %>
       <% end %>
   </div>
 
