@@ -16,9 +16,9 @@
       </div>
       <div class="right col-5">
         <% if planning.recipe.photo.key? %>
-          <%= cl_image_tag planning.recipe.photo.key, height: 100, class: "img-list-planning" %>
+          <%= cl_image_tag planning.recipe.photo.key, height: 100, class: "img-fluid" %>
         <% else %>
-          <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", alt: "Le Wagon", class: "img-list-planning" %>
+          <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", alt: "Le Wagon", class: "img-fluid" %>
         <% end %>
       </div>
     </div>
