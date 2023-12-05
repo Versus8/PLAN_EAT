@@ -19,6 +19,7 @@ export default class extends Controller {
     this.calendar = new Calendar(calendarEl, {
       plugins: [dayGridPlugin, interactionPlugin],
       initialView: "dayGridMonth",
+      themeSystem: 'bootstrap',
       // Other FullCalendar options can be added here...
       dateClick: this.addPlanning.bind(this)
     });
