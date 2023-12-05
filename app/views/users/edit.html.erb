@@ -1,18 +1,14 @@
-<div class="container">
+<div class="container edit-page-profile mt-5">
   <h1 class="my-5 text-center">Edit your profile</h1>
-  <div class="row">
-    <div class="col-6">
 
-      <% if current_user.photo.key? %>
-        <%= cl_image_tag current_user.photo.key, class: "img-fluid", width: 500, alt: "dropdown menu"%>
-      <% else %>
-        <%= image_tag "none_image_user.png", class: "img-fluid" %>
-      <% end %>
+  <div class="profile-image">
+    <% if current_user.photo.key? %>
+        <%= cl_image_tag current_user.photo.key, class: "profile-image-thumbnail", crop: :fill, alt: "dropdown menu"%>
+    <% else %>
+        <%= image_tag "none_image_user.png", class: "profile-image-thumbnail" %>
+    <% end %>
 
-      <%# <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid" %>
-    </div>
-    <div class="col-6 ps-5">
-      <%= simple_form_for(@user) do |f| %>
+    <%= simple_form_for(@user) do |f| %>
 
         <%= f.input :photo, as: :file %>
         <%= f.input :name %>
@@ -24,9 +20,9 @@
                 label: "Confirm your new password",
                 input_html: { autocomplete: "new-password" } %>
 
-        <%= f.submit "Edit your profile", class: "btn btn-secondary" %>
-        <%= link_to "Cancel", user_path(current_user), class: "btn btn-secondary" %>
+        <%= f.submit "Save", class: "btn btn-profile" %>
+        <%= link_to "Cancel", user_path(current_user), class: "btn btn-profile" %>
       <% end %>
-    </div>
   </div>
+
 </div>

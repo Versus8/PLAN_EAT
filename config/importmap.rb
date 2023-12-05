@@ -15,3 +15,4 @@ pin "preact/hooks", to: "https://ga.jspm.io/npm:preact@10.12.1/hooks/dist/hooks.
 pin "@fullcalendar/daygrid", to: "https://ga.jspm.io/npm:@fullcalendar/daygrid@6.1.10/index.js"
 pin "@fullcalendar/core/", to: "https://ga.jspm.io/npm:@fullcalendar/core@6.1.10/"
 pin "@fullcalendar/interaction", to: "https://ga.jspm.io/npm:@fullcalendar/interaction@6.1.10/index.js"
+pin "moment", to: "https://ga.jspm.io/npm:moment@2.29.4/moment.js"

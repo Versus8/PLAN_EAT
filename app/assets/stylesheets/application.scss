@@ -51,7 +51,53 @@ ul {
   display: none;
 }
 
+/* Calendar Style */
+
+#calendar{
+  margin-top: 100px;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: 150px;
+  border-radius: 11.265px;
+  background: #FFF;
+  box-shadow: 0px 1.94837px 1.5587px 0px rgba(0, 0, 0, 0.02), 0px 4.68221px 3.74577px 0px rgba(0, 0, 0, 0.03), 0px 8.81619px 7.05296px 0px rgba(0, 0, 0, 0.04), 0px 15.72658px 12.58127px 0px rgba(0, 0, 0, 0.04), 0px 29.41485px 23.53188px 0px rgba(0, 0, 0, 0.05), 0px 70.40816px 56.32653px 0px rgba(0, 0, 0, 0.07);
+  border: 0;
+  padding: 30px;
+}
+
+.container-calendar .btn-create-planning{
+  background-color: #24997F;
+  color: white;
+}
+
+#calendar .fc-col-header-cell-cushion{
+  padding: 10px;
+}
+
+#calendar .fc-next-button{
+  background-color: #24997F;
+  border: 0;
+}
+
+#calendar .fc-prev-button{
+  background-color: #24997F;
+  border: 0;
+}
+
+#calendar .fc-toolbar-chunk{
+  display: flex;
+}
 /* Page de profile */
+
+h4{
+  color: #24997F;
+  font-weight: 900;
+}
+
+h4 + p{
+  font-weight: 700;
+}
 
 .profile-image{
   display: flex;
@@ -62,6 +108,7 @@ ul {
 .profile-image-thumbnail{
   border-radius: 50%;
   width: 150px;
+  margin-bottom: 20px;
 }
 
 .profile-infos{
@@ -71,8 +118,64 @@ ul {
   margin-top: 45px;
 }
 
+.main-container .btn-profile{
+  background-color: #24997F;
+  color: white;
+}
+
+.edit-page-profile{
+  padding-bottom: 150px;
+}
+
+.edit-page-profile .btn-profile{
+  background-color: #24997F;
+  color: white;
+}
+
 .total-point{
-  border: 1px solid #24997F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.infos-points{
+  border: 5px solid #24997F;
+  border-radius: 10%;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  h2{
+    color: #24997F;
+    font-weight: 900;
+  }
+
+  p{
+    background-color: #FD8061;
+    padding: 15px;
+    color: white;
+    font-weight: 1000;
+    border-radius: 50%;
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.badge-count{
+  text-align: center;
+  margin-top: 40px;
+
+  h2{
+    font-weight: 1000;
+    color: #24997F;
+  }
+
+  img{
+    width: 100px;
+  }
+
 }
 
 .ingredients{
