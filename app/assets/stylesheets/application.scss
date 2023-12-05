@@ -13,6 +13,7 @@
 
 body{
   background-color: #FFFFFF;
+  font-family: Inter;
 }
 
 .search_bar{
@@ -36,8 +37,8 @@ body{
 }
 
 .category {
-  border-radius: 20px;
-  background-size: cover;
+  border-radius: 50px;
+  object-fit: cover;
 }
 
 ul {
