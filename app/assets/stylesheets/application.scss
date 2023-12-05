@@ -184,3 +184,51 @@ h4 + p{
   border-radius: 9px;
   justify-content: center;
 }
+
+/* List all planning */
+.list-plannings{
+  display: flex;
+  flex-direction: column;
+}
+
+.list-planning .date-list-planning{
+  color: white;
+}
+
+.list-planning{
+  background-color: #24997F;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.list-planning .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-planning .right{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.title-list-planning{
+  display: flex;
+  flex-direction: column;
+}
+
+// .img-list-planning{
+//   width: 40%;
+//   height: auto;
+// }
+
+.recipe-name-list-planning{
+  color: black;
+}
+
+.list-planning .btn-list-planning{
+  border: 1px solid white;
+  border-radius: 8.459px;
+  padding: 7px 30px;
+}
