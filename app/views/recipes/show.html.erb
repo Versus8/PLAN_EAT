@@ -1,16 +1,16 @@
-<%= link_to "Back", recipes_path %>
+<%= link_to "Back", recipes_path, class:"back-button m-3" %>
 <div class="container-show">
-  <div class="cards-recipe">
+  <div class="cards-recipe py-5 px-3 mt-3 mx-0">
 
     <% if @recipe.photo.key? %>
-          <%= cl_image_tag @recipe.photo.key, height: 100, class: "img-recipe" %>
+          <%= cl_image_tag @recipe.photo.key, class: "img-recipe mb-4" %>
     <% else %>
           <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
     <% end %>
     <h1><strong><%= @recipe.name %></strong></h1>
     <h3><%= @recipe.description %></h3>
     <p><%= @recipe.preparation %></p>
-    <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn btn-primary btn-lg mb-5" %>
+    <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn btn-primary btn-lg mb-4 mt-3" %>
 
     <% if @recipe.user == current_user %>
       <%= link_to "Delete", recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-6 m-3" %>

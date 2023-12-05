@@ -18,7 +18,7 @@
 
 .container-show {
   margin: 0 auto;
-  width: 80%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .img-recipe {
-  max-width: 30%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+  max-width: 70%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
   border-radius: 20px;
   background-size: cover;
 }
