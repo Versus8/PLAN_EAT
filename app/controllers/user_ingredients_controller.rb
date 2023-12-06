@@ -28,7 +28,7 @@ class UserIngredientsController < ApplicationController
     @user_ingredient = UserIngredient.find(params[:id])
     @user_ingredient.destroy
 
-    redirect_to user_ingredient_path, status: :see_other
+    redirect_to user_ingredients_path, status: :see_other
   end
 
 end
