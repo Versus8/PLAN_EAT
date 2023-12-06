@@ -1,5 +1,4 @@
-<div class="container">
-
+<div class="main-container">
   <div class="row d-flex justify-content-center search_bar">
     <form class="d-flex col-md-6 rounded" role="search" id="search-form">
         <span type="submit" class="input-group-text search-btn" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -18,17 +17,17 @@
     <div class="cards">
       <div class="card1">
         <div class="card2">
-        <% @categories.each do |category| %>
-          <div class="card3">
-            <% if category.photo.key? %>
-            <%= cl_image_tag category.photo.key, height: 100, width: 100, class: "category" %>
-            <% end %>
-            <div class="card-body">
-              <h5 class="card-title"><strong><%= category.name %></strong></h5>
-              <%= link_to "", recipes_index_path(category.name), class: "nav-link card-link" %>
+          <% @categories.each do |category| %>
+            <div class="card3">
+              <% if category.photo.key? %>
+                <%= cl_image_tag category.photo.key, height: 100, width: 100, class: "category" %>
+              <% end %>
+              <div class="card-body">
+                <h5 class="card-title"><strong><%= category.name %></strong></h5>
+                <%= link_to "", recipes_index_path(category.name), class: "nav-link card-link" %>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
         </div>
       </div>
     </div>
