@@ -1,13 +1,38 @@
-<style>
-    body {
-      background-image: url("homebackground.jpg"); /* Remplacez par le chemin réel de votre image */
-      background-size: 100%; /* Ajustez les valeurs pour définir la taille de l'image */
-      background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+<div class="container">
+  <h1 class="card-title-pages"><strong>PLAN-EAT</strong></h1>
+  <div class="cards-pages">
+      <%= image_tag 'logo_plan_eat.png', alt: 'plan-eat' %>
+      <%= link_to "", recipes_path(@recipe), class: "nav-link card-link"  %>
+  </div>
+    <div class="progress">
+    <div id="progressBar" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <!-- Votre code JavaScript pour mettre à jour la barre de progression -->
+  <script>
+    function progresserJusqua100() {
+      var progressBar = $('#progressBar');
+      var valeurActuelle = parseInt(progressBar.css('width')) || 0;
+      var nouvelleValeur = valeurActuelle + 10;
+      nouvelleValeur = Math.min(nouvelleValeur, 100);
+      progressBar.css('width', nouvelleValeur + '%').attr('aria-valuenow', nouvelleValeur);
+
+      if (nouvelleValeur < 100) {
+        // Continuer à progresser jusqu'à 100%
+        setTimeout(progresserJusqua100, 1000);
+      }
     }
 
-    /* Ajoutez d'autres styles CSS pour le contenu de votre page ici */
-</style>
+    // Démarrer la progression
+    progresserJusqua100();
+  </script>
+  </div>
 
-<%= link_to "Plan-Eat", recipes_path(@recipe), class: "btn button-6"  %>
+  <style>
+      body {
+        background-image: url("homebackground.jpg");
+        background-size: 100%;
+        background-position: center;
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+      }
+  </style>
+</div>

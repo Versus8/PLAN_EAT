@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
     @categories = Category.all
     if params[:query].present?
-      @recipes = Recipe.search_by_name_and_description(params[:query])
+      @categories = @categories.where("name ILIKE ?", "%#{params[:query]}%")
     end
   end
 
@@ -25,6 +25,10 @@ class RecipesController < ApplicationController
     @category = Category.find_by(name: params[:category])
     # @recipes = RecipeCategory.where(category: @category)
     @recipes = Recipe.joins(:categories).where(categories: {name: @category.name})
+
+    if params[:query].present?
+      @recipes = @recipes.where("recipes.name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def recipe_ingredients_index
