@@ -178,11 +178,16 @@ h4 + p{
 
 }
 
-.ingredients{
+.list-ingredients{
   width: 100%;
   background-color: #FEC0A0;
   border-radius: 9px;
   justify-content: center;
+}
+
+.ingredient{
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.16);
 }
 
 /* List all planning */
@@ -230,10 +235,90 @@ h4 + p{
 .list-planning .btn-list-planning{
   border: 1px solid white;
   border-radius: 8.459px;
-  padding: 7px 30px;
 }
 
 .list-planning .btn-delete-list-planning{
   align-self: end;
   color: white;
+}
+
+/* Ingredients page */
+.list-ingredients{
+  padding: 10px;
+}
+
+.ingredient-li{
+  margin-bottom: 8px;
+}
+
+.ingredient{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 18px 14px
+}
+
+.main-container .btn-ingredient-done{
+  border: 2px solid #FEC0A0;
+  color: #FEC0A0;
+}
+
+.main-container .btn-ingredient-done:hover{
+  border: 0;
+  background-color: #FEC0A0;
+  color: white;
+}
+
+.checkbox-ingredient{
+  border: 4px solid greenyellow;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px; /* Espace pour l'icône ou le style personnalisé */
+  cursor: pointer;
+}
+
+    /* Style du checkbox réel (masqué) */
+.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+    /* Style de l'icône ou du style personnalisé */
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eeeeee00; /* Couleur de fond du checkbox */
+  border: 1px solid #000000; /* Bordure du checkbox */
+  border-radius: 50%; /* Coins arrondis */
+}
+
+    /* Style de l'icône à l'intérieur du checkbox (optionnel) */
+.custom-checkbox .checkmark:after {
+  content: '\2713'; /* Caractère Unicode pour la coche (vérifiez la compatibilité du caractère) */
+  font-size: 20px;
+  color: #333; /* Couleur de la coche */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+    /* Style du checkbox lorsqu'il est coché */
+.custom-checkbox input:checked + .checkmark {
+  background-color: #2195f300; /* Nouvelle couleur de fond du checkbox lorsqu'il est coché */
+  border: 1px solid #000000; /* Nouvelle bordure du checkbox lorsqu'il est coché */
+}
+
+/* Style de l'icône à l'intérieur du checkbox lorsqu'il est coché */
+.custom-checkbox input:checked + .checkmark:after {
+  display: block;
 }
