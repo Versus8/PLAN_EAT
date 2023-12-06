@@ -3,16 +3,21 @@
   <p>Ingredients</p>
 
 
-  <div class="ingredients">
       <%= simple_form_for @user_ingredient, url: recipe_user_ingredients_path(@recipe), method: :post do |f| %>
-    <% @ingredients.each do |ingredient| %>
-      <div class="form-check">
-        <%= check_box_tag "user_ingredient[ingredient_ids][]", ingredient.id, false, id: "ingredient_#{ingredient.id}" %>
-        <%= f.label "ingredient_#{ingredient.id}", ingredient.name.capitalize, class:"form-checked-label"%>
-      </div>
+        <ul class="list-ingredients">
+          <% @ingredients.each do |ingredient| %>
+            <%# <div class="form-check"> %>
+              <li class="ingredient-li p-2">
+                <div class="ingredient">
+                  <%= image_tag "link.png", class: "", crop: :fill %>
+                  <%= f.label "ingredient_#{ingredient.id}", ingredient.name.capitalize, class:"form-checked-label"%>
+                  <%= check_box_tag "user_ingredient[ingredient_ids][]", ingredient.id, id: "ingredient_#{ingredient.id}" %>
+                </div>
+              </li>
+            <%# </div> %>
+          <% end %>
+        </ul>
+      <%= f.button :submit, "Add to shopping list", class:"btn btn-primary btn-lg mb-4 mt-1" %>
     <% end %>
-    <%= f.button :submit, "Add to shopping list" %>
-  <% end %>
-  </div>
 
 </div>
