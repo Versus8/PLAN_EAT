@@ -6,12 +6,9 @@
           <%= link_to "#{planning.recipe.name}", recipe_path(planning.recipe), class: "recipe-name-list-planning" %>
 
         <div class="btn-list-plannings">
-          <%= link_to "Edit", planning_path(planning), class: "btn btn-list-planning" %>
+          <%= link_to "Add to Shopping List", recipe_ingredients_index_path(planning.recipe), class: "btn btn-list-planning" %>
+          <%# # <%= link_to "Edit", planning_path(planning) %>
 
-          <%# <%= link_to "Add ingredients to list", recipe_ingredients_index_path(planning.recipe) %>
-          <% if planning.user == current_user %>
-            <%= link_to "Delete", planning_path(planning), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-list-planning" %>
-          <% end %>
         </div>
       </div>
       <div class="right col-5">
@@ -19,6 +16,9 @@
           <%= cl_image_tag planning.recipe.photo.key, height: 100, class: "img-fluid" %>
         <% else %>
           <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", alt: "Le Wagon", class: "img-fluid" %>
+        <% end %>
+        <% if planning.user == current_user %>
+          <%= link_to '<i class="fa-solid fa-trash"></i>'.html_safe, planning_path(planning), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-delete-list-planning" %>
         <% end %>
       </div>
     </div>
