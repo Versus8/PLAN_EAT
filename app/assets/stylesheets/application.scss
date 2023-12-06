@@ -210,7 +210,7 @@ h4 + p{
 
 .list-planning .right{
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .title-list-planning{
@@ -231,4 +231,9 @@ h4 + p{
   border: 1px solid white;
   border-radius: 8.459px;
   padding: 7px 30px;
+}
+
+.list-planning .btn-delete-list-planning{
+  align-self: end;
+  color: white;
 }
