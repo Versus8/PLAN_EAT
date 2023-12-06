@@ -2,17 +2,26 @@
   <h2><%= @recipe.name %></h2>
   <p>Ingredients</p>
 
-  <ul class="ingredients">
+  <ul class="list-ingredients">
       <% @ingredients.each do |ingredient| %>
-        <li class="ingredients p-2">
-          <div>
-            <input type="checkbox" name="my-checkbox" id="opt-in" />
+        <li class="ingredient-li p-2">
+          <div class="ingredient">
+            <%= image_tag "link.png", class: "", crop: :fill %>
+
+
             <label for="opt-in"><%= ingredient.quantity %>
               <%= ingredient.unit %>
               of <%= ingredient.name %></label>
+            <%# <%= image_tag "check-circle.png", class: "img-fluid", crop: :fill %>
+            <%# <input type="checkbox" name="my-checkbox" id="opt-in" class="checkbox-ingredient" /> %>
+            <label class="custom-checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
           </div>
         </li>
       <% end %>
   </ul>
-  <%= link_to "DONE", ingredients_list_path %>
+  <%= link_to "Done", ingredients_list_path, class: "btn btn-ingredient-done"  %>
 </div>
