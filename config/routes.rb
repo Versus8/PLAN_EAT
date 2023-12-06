@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :recipes do
     resources :plannings, only: [:new, :create]
+    resources :user_ingredients, only: [:new, :create]
   end
   resources :users, only: [:show, :edit, :update]
   resources :plannings, only: [:index, :edit, :update, :destroy]
+  resources :user_ingredients, only: [:index, :destroy]
 
   # Defines the root path route ("/")
   # root "articles#index"

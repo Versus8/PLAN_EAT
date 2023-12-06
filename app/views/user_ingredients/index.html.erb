@@ -1,0 +1,20 @@
+<div class="main-container">
+  <h2 class="my-4 text-center">My shopping list</h2>
+
+  <ul class="ingredients py-4">
+      <% @user_ingredients.each do |user_ingredient| %>
+        <li>
+        <div>
+          <input type="checkbox" name="my-checkbox" id="opt-in" />
+          <label for="opt-in">
+            <%= user_ingredient.ingredient.quantity %>
+            <%= user_ingredient.ingredient.unit %>
+            of <%= user_ingredient.ingredient.name %>
+            <%= link_to "X", user_ingredients_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "" %>
+          </label>
+
+        </div>
+      <% end %>
+        </li>
+  </ul>
+</div>
