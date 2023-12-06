@@ -1,18 +1,15 @@
-<div class="main-container">
-  <h2><%= @recipe.name %></h2>
-  <p>Ingredients</p>
+<h2>Which ingredients do you already have?</h2>
 
-  <ul class="ingredients">
-      <% @ingredients.each do |ingredient| %>
-        <li class="ingredients p-2">
-          <div>
-            <input type="checkbox" name="my-checkbox" id="opt-in" />
-            <label for="opt-in"><%= ingredient.quantity %>
-              <%= ingredient.unit %>
-              of <%= ingredient.name %></label>
-          </div>
-        </li>
-      <% end %>
-  </ul>
-  <%= link_to "DONE", ingredients_list_path %>
-</div>
+<ul>
+    <% @ingredients.each do |ingredient| %>
+      <li class="ingredients">
+      <p> <%= ingredient.quantity %>
+          <%= ingredient.unit %>
+          of <%= ingredient.name %>
+          <%= link_to "", recipe_ingredients_index_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fas fa-check-square" %>
+      </p>
+    <% end %>
+      </li>
+
+    <%= link_to "DONE", ingredients_list_path %>
+</ul>
