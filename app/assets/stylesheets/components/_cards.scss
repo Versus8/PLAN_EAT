@@ -65,3 +65,10 @@
   border-radius: 2px;
   margin: 20px;
 }
+
+.cards-pages {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  padding-top: 100px;
+}

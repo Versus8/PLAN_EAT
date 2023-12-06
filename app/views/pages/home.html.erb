@@ -1,13 +1,16 @@
-<style>
-    body {
-      background-image: url("homebackground.jpg"); /* Remplacez par le chemin réel de votre image */
-      background-size: 100%; /* Ajustez les valeurs pour définir la taille de l'image */
-      background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-    }
-
-    /* Ajoutez d'autres styles CSS pour le contenu de votre page ici */
-</style>
-
-<%= link_to "Plan-Eat", recipes_path(@recipe), class: "btn button-6"  %>
+<div class="container">
+  <h1 class="card-title-pages"><strong>PLAN-EAT</strong></h1>
+  <div class="cards-pages">
+      <%= image_tag 'logo_plan_eat.png', alt: 'plan-eat' %>
+      <%= link_to "", recipes_path(@recipe), class: "nav-link card-link"  %>
+  </div>
+  <style>
+      body {
+        background-image: url("homebackground.jpg");
+        background-size: 100%;
+        background-position: center;
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+      }
+  </style>
+</div>
