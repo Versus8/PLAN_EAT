@@ -10,7 +10,7 @@
             <%= user_ingredient.ingredient.quantity %>
             <%= user_ingredient.ingredient.unit %>
             of <%= user_ingredient.ingredient.name %>
-            <%= link_to "X", user_ingredient_path(user_ingredient), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "" %>
+            <%= link_to "X", user_ingredients_path(user_ingredient), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "" %>
           </label>
 
         </div>
