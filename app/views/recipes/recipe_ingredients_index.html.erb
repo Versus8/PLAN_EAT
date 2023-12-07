@@ -1,4 +1,6 @@
-<h2>Which ingredients do you already have?</h2>
+<div class="container">
+  <h2>Which ingredients do you already have?</h2>
+</div>
 
   <ul class="list-ingredients">
       <% @ingredients.each do |ingredient| %>
@@ -21,5 +23,7 @@
         </li>
       <% end %>
   </ul>
-  <%= link_to "Done", ingredients_list_path, class: "btn btn-ingredient-done"  %>
+  <div class="btn-ingredient-done d-flex justify-content-center">
+    <%= link_to "Done", ingredients_list_path, class: "btn btn-ingredient-done" %>
+  </div>
 </div>
