@@ -221,8 +221,14 @@ h4 + p{
 }
 
 .list-planning .right{
+  padding: 0;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+}
+
+img.img-fluid{
+  width: 70%;
 }
 
 .title-list-planning{
@@ -265,15 +271,23 @@ h4 + p{
   padding: 18px 14px
 }
 
-.main-container .btn-ingredient-done{
-  border: 2px solid #FEC0A0;
+// .btn-ingredient-done{
+//   display: flex;
+
+// }
+
+.btn-ingredient-done a{
+  font-weight: 600;
   color: #FEC0A0;
 }
 
-.main-container .btn-ingredient-done:hover{
-  border: 0;
-  background-color: #FEC0A0;
-  color: white;
+a.btn-ingredient-done{
+
+    &:hover{
+    border: 0;
+    background-color: #FEC0A0;
+    color: white;
+  }
 }
 
 .checkbox-ingredient{
