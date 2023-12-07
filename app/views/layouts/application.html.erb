@@ -6,6 +6,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter&display=swap" rel="stylesheet">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet'>
@@ -21,10 +25,10 @@
   <body>
     <%= render "shared/navbar" unless current_page?(root_path) %>
 
-    <%= render "shared/flashes" %>
 
     <div class="content-wrapper"><%= yield %></div>
 
+    <%= render "shared/flashes" %>
 
     <%= render "shared/navbar_footer" unless current_page?(root_path) %>
   </body>

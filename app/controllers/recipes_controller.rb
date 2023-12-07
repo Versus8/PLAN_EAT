@@ -4,11 +4,14 @@ class RecipesController < ApplicationController
   def index
     @date = params[:date]
     @user = current_user
-    @recipes = Recipe.all
     @categories = Category.all
     if params[:query].present?
       @categories = @categories.where("name ILIKE ?", "%#{params[:query]}%")
     end
+  end
+
+  def all_recipes
+    @recipes = Recipe.all
   end
 
   def show

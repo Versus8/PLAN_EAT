@@ -9,6 +9,7 @@
     <% end %>
     <h1><strong><%= @recipe.name %></strong></h1>
     <h3><%= @recipe.description %></h3>
+    <p>Preparation: </p>
     <p><%= @recipe.preparation %></p>
     <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn btn-primary btn-lg mb-4 mt-3" %>
 

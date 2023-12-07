@@ -1,5 +1,6 @@
-<div class="row d-flex justify-content-center search_bar">
-  <form class="d-flex col-md-6" role="search">
+<div class="main-container">
+  <div class="row d-flex justify-content-center search_bar">
+    <form class="d-flex col-md-6" role="search">
       <span type="submit" class="input-group-text search-btn" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
     <%= text_field_tag :query,
           params[:query],
@@ -7,32 +8,36 @@
           placeholder: "Search"
     %>
       <%# <button class="search-btn btn btn-success mx-3" ></button> %>
-  </form>
-</div>
+    </form>
+  </div>
 
-<div class="m-2">
-  <%= link_to "Create recipe", new_recipe_path, class:"link" %>
-</div>
+  <div class="m-2">
+    <%= link_to "Create recipe", new_recipe_path, class:"link" %>
+  </div>
 
-<div class="m-2 fw-bold text-secondary">
-  <%= "Category: #{@category.name}" %>
-</div>
+  <div class="m-2 fw-bold text-secondary">
+    <%= "Category: #{@category.name}" %>
+  </div>
 
-<div class="containerindex">
-  <div class="cards">
-    <div class="card2">
-      <% @recipes.each do |recipe| %>
-
-      <div class="card3">
-          <% if recipe.photo.key? %>
-          <%= cl_image_tag recipe.photo.key, height: 100, class: "category" %>
-          <% else %>
-          <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
+  <div class="containerindex">
+    <div class="cards">
+      <div class="card1">
+        <div class="card2">
+          <% @recipes.each do |recipe| %>
+            <div class="card3">
+              <% if recipe.photo.key? %>
+                <%= cl_image_tag recipe.photo.key, height: 100, width: 100, class: "category" %>
+              <% else %>
+                <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
+              <% end %>
+              <div class="card-body">
+                <h5 class="card-title"><strong><%= recipe.name %></strong></h5>
+              <%= link_to "", recipe_path(recipe), class: "nav-link card-link" %>
+              </div>
+            </div>
           <% end %>
-          <h2><%= recipe.name %></h2>
-          <%= link_to "", recipe_path(recipe), class: "btn button-6 card-link" %>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 class UserIngredientsController < ApplicationController
   def index
     @user_ingredients = UserIngredient.where(user: current_user)
+    @user = current_user
   end
 
   def new
@@ -18,9 +19,9 @@ class UserIngredientsController < ApplicationController
       params[:user_ingredient][:ingredient_ids]&.each do |ingredient_id|
         UserIngredient.create(ingredient_id: ingredient_id, user: current_user)
       end
-      redirect_to user_ingredients_path, notice: "Ingredients added successfully"
+      redirect_to ingredients_list_path, notice: "Ingredients added successfully"
     else
-      render :new, notice: "Must add ingredient"
+      render :new, status: :unprocessable_entity
     end
   end
 
