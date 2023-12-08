@@ -347,7 +347,6 @@ a.btn-ingredient-done{
 .container h1 {
   color: #24997F;
   text-align: center;
-  padding-top: 150px;
 }
 
 .image-with-padding {
@@ -357,4 +356,48 @@ a.btn-ingredient-done{
 .progress {
 
   color: #24997F;
+}
+
+/* Create Recipe page */
+.form-new-recipe .input-photo-list-ingredient{
+  border: 1px solid rgb(110, 101, 101);
+  padding: 35px 30px;
+  width: 178px;
+  height: 100px;
+  background-color: #ffffff24;
+
+}
+
+.recipe_categories{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px
+}
+
+.recipe_categories legend{
+  display: none;
+}
+
+.list-ingredients-new{
+  width: 90%;
+  margin: 0 auto;
+  background-color: #FEC0A0;
+  border-radius: 9px;
+  justify-content: center;
+  min-height: 570px;
+  padding: 20px;
+}
+
+.list-ingredients-new input[type="text"], .list-ingredients-new input[type="number"]{
+  border-radius: 38px;
+  fill: #FFF;
+
+stroke-width: 1.618px;
+stroke: var(--mono-mono-20, #BFC6DC);
+}
+
+.recipe_photo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
