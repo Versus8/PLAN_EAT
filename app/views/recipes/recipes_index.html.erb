@@ -24,7 +24,7 @@
       <div class="card1">
         <div class="card2">
           <% @recipes.each do |recipe| %>
-            <div class="card3">
+            <div class="card4">
               <% if recipe.photo.key? %>
                 <%= cl_image_tag recipe.photo.key, height: 100, width: 100, class: "category" %>
               <% else %>

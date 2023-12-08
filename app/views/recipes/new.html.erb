@@ -30,8 +30,10 @@
           <%= link_to_add_association "+ Add ingredient", f, :ingredients, force_non_association_create: true, class:"link text-black-75" %>
         </div>
     </div>
-    <div class="d-grid gap-2 d-md-block mb-5">
-      <%= f.submit "Create", class: "btn btn-primary mx-auto my-3 px-5" %>
+
+    <div class="d-grid gap-2 d-md-block">
+      <%= f.submit "Create", class: "btn-orange-new" %>
+
     </div>
     <% end %>
   </div>

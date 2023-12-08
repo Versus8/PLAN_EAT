@@ -26,7 +26,23 @@
   background-color: #FEC0A0;
   border-radius: 15px;
   margin: 5px;
+  padding: 2px; /* Espace interne dans les cellules */
+  padding-top: 15px;
+  text-align: center;
+  height: 175px;
+  width: 175px;
+  position: relative /* Necessaire pour faire une carte cliquable */
+}
 
+.card3{
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.60)
+}
+
+
+.card4{
+  background-color: #FEC0A0;
+  border-radius: 15px;
+  margin: 5px;
   padding: 2px; /* Espace interne dans les cellules */
   text-align: center;
   height: 175px;
@@ -34,6 +50,9 @@
   position: relative /* Necessaire pour faire une carte cliquable */
 }
 
+.card4{
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.60)
+}
 /* Permet de faire qu'un lien prend toute une carte pour en faire une carte cliquable */
 .card-link {
   position: absolute;
