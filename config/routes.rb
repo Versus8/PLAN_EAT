@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :edit, :update]
   resources :plannings, only: [:index, :edit, :update, :destroy]
-  resources :user_ingredients, only: [:index, :destroy]
+  resources :user_ingredients, only: [:index]
+  resources :user_ingredients do
+    post 'delete', on: :collection
+  end
 
   # Defines the root path route ("/")
   # root "articles#index"
@@ -18,4 +21,5 @@ Rails.application.routes.draw do
   get "recipes/:id/ingredients_list", to: "recipes#recipe_ingredients_index", as: :recipe_ingredients_index
   get "ingredients_list", to: "recipes#ingredients_list", as: :ingredients_list
   get "all_recipes", to: "recipes#all_recipes", as: :all_recipes
+  get 'delete_and_update', to: "user_ingredients#delete_and_update", as: :delete_and_update
 end
