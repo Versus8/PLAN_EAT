@@ -1,10 +1,19 @@
-.btn-primary {
+.btn-orange {
   color: #fff;
   background-color: #FD8061;
   border-color: #FD8061;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 1.25)
+}
+
+.btn-orange-new {
+  color: #fff;
+  background-color: #FD8061;
+  border-color: #FD8061;
+  margin: 4px, 2px;
+  padding: 6px, 12px;
 }
 
 .link {
