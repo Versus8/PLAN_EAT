@@ -53,7 +53,6 @@ export default class extends Controller {
       // For example, close the form and update the calendar if successful
       if (response.ok) {
         // this.calendar.refetchEvents(); // Refresh events in calendar
-        alert("The planning has been added !")
         // You might need to handle other responses accordingly
         window.location = "/plannings"
       } else {
