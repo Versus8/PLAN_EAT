@@ -1,6 +1,7 @@
-<div class="main-container">
-  <h2><%= @recipe.name %></h2>
-  <p>Ingredients</p>
+<div class="main-container container">
+  <h1><%= @recipe.name %></h1>
+  <h5>Add ingredients to the shopping list:</h5>
+
 
 
       <%= simple_form_for @user_ingredient, url: recipe_user_ingredients_path(@recipe), method: :post do |f| %>
@@ -9,7 +10,7 @@
             <%# <div class="form-check"> %>
               <li class="ingredient-li p-2">
                 <div class="ingredient">
-                  <%= image_tag "link.png", class: "", crop: :fill %>
+                  <%= image_tag "task_list.png", height: 30, width: 30 %>
                   <%= f.label "ingredient_#{ingredient.id}", ingredient.name.capitalize, class:"form-checked-label"%>
                   <%= check_box_tag "user_ingredient[ingredient_ids][]", ingredient.id, id: "ingredient_#{ingredient.id}" %>
                 </div>

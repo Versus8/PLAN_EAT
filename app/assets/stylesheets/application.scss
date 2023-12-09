@@ -173,6 +173,11 @@ h4 + p{
   padding: 10px;
 }
 
+.legend {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* List all planning */
 .list-plannings{
   display: flex;
