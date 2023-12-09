@@ -1,38 +1,39 @@
 <div class="main-container">
   <h2 class="my-4 text-center">My shopping list</h2>
 
-  <%= form_tag url_for(:controller => "user_ingredients", :action => "delete_and_update"), {:method => "delete"} do %>
-  <% @user_ingredients.each do |user_ingredient| %>
-    <div class="user-ingredient">
-      <%= hidden_field_tag 'user_ingredient_ids[]', user_ingredient.id %>
+<%= simple_form_for :user_ingredients, url: delete_user_ingredients_path, method: :post do |f| %>
+  <div class="list-ingredients">
+    <fieldset>
+      <legend >Bio, Vrac, Local</legend>
+      <% @user_ingredients.each do |user_ingredient| %>
 
-      <div class="form-check form-check-inline">
-        <%= check_box_tag "user_ingredient_ids[]", user_ingredient.id, false, id: "user_ingredient_#{user_ingredient.id}" %>
-        <%= label_tag "user_ingredient_#{user_ingredient.id}", '', class: "form-check-label" %>
-      </div>
+        <div class="user-ingredient ingredient-li">
+          <div class="form-check form-check-inline">
+            <%= check_box_tag "user_ingredient[ingredient_ids][]", user_ingredient.id %>
+          </div>
 
-      <div class="ingredient-name form-check-inline">
-        <%= user_ingredient.ingredient.name %>
-      </div>
+          <div class="ingredient-name form-check-inline">
+            <%= user_ingredient.ingredient.name %>
+          </div>
 
-      <div class="form-check form-check-inline">
-        <%= check_box_tag "category_#{user_ingredient.id}_bio", 'bio', false, id: "category_bio_#{user_ingredient.id}" %>
-        <%= label_tag "category_bio_#{user_ingredient.id}", 'Bio', class: "form-check-label" %>
-      </div>
+          <div class="form-check form-check-inline">
+            <%= check_box_tag "category_bio#{user_ingredient.id}", "bio" %>
+          </div>
 
-      <div class="form-check form-check-inline">
-        <%= check_box_tag "category_#{user_ingredient.id}_vrac", 'vrac', false, id: "category_vrac_#{user_ingredient.id}" %>
-        <%= label_tag "category_vrac_#{user_ingredient.id}", 'Vrac', class: "form-check-label" %>
-      </div>
+          <div class="form-check form-check-inline">
+            <%= check_box_tag "category_vrac#{user_ingredient.id}", "vrac" %>
+          </div>
 
-      <div class="form-check form-check-inline">
-        <%= check_box_tag "category_#{user_ingredient.id}_local", 'local', false, id: "category_local_#{user_ingredient.id}" %>
-        <%= label_tag "category_local_#{user_ingredient.id}", 'Local', class: "form-check-label" %>
-      </div>
-    </div>
-  <% end %>
+          <div class="form-check form-check-inline">
+            <%= check_box_tag "category_local#{user_ingredient.id}", "local" %>
+          </div>
+        </div>
+      <% end %>
+    </fieldset>
+  </div>
 
-  <%= hidden_field_tag '_method', 'delete' %>
-  <%= submit_tag 'Delete Selected Ingredients and Update Score' %>
+  <%= f.input_field :_method, as: :hidden, value: 'delete' %>
+
+  <%= f.submit 'Delete Selected Ingredients and Update Score' %>
 <% end %>
 </div>
