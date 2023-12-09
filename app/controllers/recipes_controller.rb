@@ -12,6 +12,9 @@ class RecipesController < ApplicationController
 
   def all_recipes
     @recipes = Recipe.all
+    if params[:query].present?
+      @recipes = @recipes.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show
