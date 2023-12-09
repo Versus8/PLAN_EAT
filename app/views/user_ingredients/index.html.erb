@@ -9,12 +9,16 @@
   </div>
 </div>
 <div class="main-container">
-  <h2 class="my-4 text-center">My shopping list</h2>
+  <h3 class="text-center">My shopping list</h3>
+  <p>Check ingredients you bought. Was it bio, vrac, or local?</p>
 
 <%= simple_form_for :user_ingredients, url: delete_user_ingredients_path, method: :post do |f| %>
   <div class="list-ingredients">
     <fieldset>
-      <legend class="text-end pe-3">Bio Vrac Local</legend>
+      <div class="legend">
+        <%= image_tag "cart-logo.png", height: 30, width: 30, class:"item" %>
+        <legend class="text-end pe-3 item">Bio Vrac Local</legend>
+      </div>
       <% @user_ingredients.each do |user_ingredient| %>
 
         <div class="user-ingredient ingredient-li">
@@ -24,7 +28,7 @@
             </div>
 
             <div class="ingredient-name form-check-inline">
-              <%= user_ingredient.ingredient.name %>
+              <%= user_ingredient.ingredient.name.capitalize %>
             </div>
           </div>
           <div class="item form-check-inline">
@@ -47,6 +51,6 @@
 
   <%= f.input_field :_method, as: :hidden, value: 'delete' %>
 
-  <%= f.button :submit, 'Delete Ingredients / Update Score', id: 'btn-submit', class:'my-3' %>
+  <%= f.button :submit, 'Submit your shopping list', id: 'btn-submit', class:'my-3' %>
 <% end %>
 </div>

@@ -39,7 +39,7 @@ class UserIngredientsController < ApplicationController
       current_user.update(points: current_user.points + calculate_points(category_bio, category_vrac, category_local))
     end
 
-    redirect_to user_ingredients_path, notice: 'Ingredients deleted and user score updated successfully!'
+    redirect_to user_ingredients_path, notice: 'Go see your profil to discover your shopping score!'
   end
 
   private
