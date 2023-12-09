@@ -3,7 +3,7 @@
 
   <div class="profile-image">
     <% if current_user.photo.key? %>
-        <%= cl_image_tag current_user.photo.key, class: "profile-image-thumbnail", crop: :fill, alt: "dropdown menu"%>
+        <%= cl_image_tag current_user.photo.key, class: "profile-image-thumbnail",width: 100, heigth: 100, alt: "dropdown menu"%>
     <% else %>
         <%= image_tag "none_image_user.png", class: "profile-image-thumbnail" %>
     <% end %>

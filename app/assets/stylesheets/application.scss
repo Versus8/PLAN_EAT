@@ -197,6 +197,19 @@ h4 + p{
   background: rgba(0, 0, 0, 0.16);
 }
 
+.user-ingredient {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: none;
+  border:0.704px dashed #04052256;
+  padding-left: 10px;
+}
+
+.user-ingredient .checkbox {
+  margin-bottom: 0;
+  padding: 10px;
+}
+
 /* List all planning */
 .list-plannings{
   display: flex;
@@ -260,9 +273,9 @@ img.img-fluid{
   padding: 10px;
 }
 
-.ingredient-li{
-  margin-bottom: 8px;
-}
+// .ingredient-li{
+//   margin-bottom: 8px;
+// }
 
 .ingredient{
   display: flex;
@@ -279,6 +292,16 @@ img.img-fluid{
 .btn-ingredient-done a{
   font-weight: 600;
   color: #FEC0A0;
+}
+
+#btn-submit {
+  color: #fff;
+  background-color: #FD8061;
+  border-color: #FD8061;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 1.25)
 }
 
 a.btn-ingredient-done{
