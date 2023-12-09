@@ -1,6 +1,14 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <div class="">
+      <%= link_to 'Back', recipes_path, class: 'btn btn-back' %>
+    </div>
+          <a href="/" class="avatar">
+            <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701295547/logo_plan_eat_rqt7kp.png", class: "avatar", alt: "dropdown menu" %>
+          </a>
+  </div>
+</div>
 <div class="main-container mt-5 pb-5">
-
-
   <div class="profile-image">
     <% if current_user.photo.key? %>
         <%= cl_image_tag current_user.photo.key, class: "profile-image-thumbnail",width: 100, heigth: 100, alt: "dropdown menu"%>
