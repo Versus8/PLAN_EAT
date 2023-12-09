@@ -15,13 +15,13 @@
     <% else %>
         <%= image_tag "none_image_user.png", class: "profile-image-thumbnail" %>
     <% end %>
-    <h4>current_user.name</h4>
-    <p>current_user.description</p>
+    <h2><%= current_user.name %></h2>
+
   </div>
   <div class="profile-infos">
     <div class="infos-planning-count">
       <h4>infos-planning-count</h4>
-      <p>10</p>
+      <p><%= current_user.plannings.count %></p>
     </div>
     <div class="infos-last-visit">
       <h4>infos-last-visit</h4>
