@@ -2,10 +2,13 @@
 
 <div class="container container-calendar" data-user-id="24" >
   <div data-controller="calendar" data-calendar-recipe-id-value="<%= @recipe.id %>" data-calendar-user-id-value="<%= current_user.id %>">
-    <%= simple_form_for [@recipe, @planning] do |f| %>
-      <%= f.input :date %>
-      <%= f.submit "Create", class: "btn btn-create-planning button-6 my-3" %>
-    <% end %>
+    <div class="d-flex justify-content-center mt-5">
+      <%= image_tag "small_image_calendar.png", alt: "Petit icone d'un calendrier" %>
+    </div>
+    <%# <%= simple_form_for [@recipe, @planning] do |f| %>
+      <%# <%= f.input :date %>
+      <%# <%= f.submit "Create", class: "btn btn-create-planning button-6 my-3" %>
+    <%# <% end %>
     <div id="calendar"></div>
   </div>
 

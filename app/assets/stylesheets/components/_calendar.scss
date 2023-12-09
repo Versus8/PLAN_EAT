@@ -11,3 +11,41 @@
   background-color: #24997F;
   color: white
 }
+
+/* Calendar Style */
+
+#calendar{
+  margin-top: 50px;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: 150px;
+  border-radius: 11.265px;
+  background: #FFF;
+  box-shadow: 0px 1.94837px 1.5587px 0px rgba(0, 0, 0, 0.02), 0px 4.68221px 3.74577px 0px rgba(0, 0, 0, 0.03), 0px 8.81619px 7.05296px 0px rgba(0, 0, 0, 0.04), 0px 15.72658px 12.58127px 0px rgba(0, 0, 0, 0.04), 0px 29.41485px 23.53188px 0px rgba(0, 0, 0, 0.05), 0px 70.40816px 56.32653px 0px rgba(0, 0, 0, 0.07);
+  border: 0;
+  padding: 30px;
+}
+
+.container-calendar .btn-create-planning{
+  background-color: #24997F;
+  color: white;
+}
+
+#calendar .fc-col-header-cell-cushion{
+  padding: 10px;
+}
+
+#calendar .fc-next-button{
+  background-color: #24997F;
+  border: 0;
+}
+
+#calendar .fc-prev-button{
+  background-color: #24997F;
+  border: 0;
+}
+
+#calendar .fc-toolbar-chunk{
+  display: flex;
+}
