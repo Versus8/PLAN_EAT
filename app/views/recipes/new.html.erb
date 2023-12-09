@@ -1,14 +1,15 @@
-<div class="container mt-5 pb-5">
+<div class="container">
 
   <div class="text-center">
   <h1>Create your recipe</h1>
   </div>
 
   <div class="form-new-recipe">
-    <div class="list-ingredients-new p-5">
+    <div class="p-5">
       <%= simple_form_for(@recipe) do |f| %>
+    <div class="list-ingredients-new">
         <%= f.input :photo,  label: false, as: :file, input_html: { class: 'input-photo-list-ingredient mb-3' } %>
-        <%= f.input :name, label: false, placeholder: 'Name', input_html: { class: 'mb-3' }  %>
+        <%= f.input :name, label: false, placeholder: 'Name', input_html: { class: 'mb-3', autocomplete: "off" }  %>
         <%= f.input :description, label: false, placeholder: 'Description', input_html: { class: 'mb-3' } %>
         <%= f.input :preparation, label: false, placeholder: 'Preparation', input_html: { class: 'mb-3' } %>
         <p class="text-center">Choose categories *</p>
@@ -29,12 +30,12 @@
         <div class="links">
           <%= link_to_add_association "+ Add ingredient", f, :ingredients, force_non_association_create: true, class:"link text-black-75" %>
         </div>
+
     </div>
-
-    <div class="d-grid gap-2 d-md-block">
+    <div class="div-btn">
       <%= f.submit "Create", class: "btn-orange-new" %>
-
     </div>
     <% end %>
+    </div>
   </div>
 </div>

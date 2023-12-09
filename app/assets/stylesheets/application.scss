@@ -347,6 +347,11 @@ a.btn-ingredient-done{
 .container h1 {
   color: #24997F;
   text-align: center;
+}
+
+.containerpages h1 {
+  color: #24997F;
+  text-align: center;
   padding-top: 150px;
 }
 
@@ -355,7 +360,6 @@ a.btn-ingredient-done{
 }
 
 .progress {
-
   color: #24997F;
 }
 
@@ -401,4 +405,10 @@ stroke: var(--mono-mono-20, #BFC6DC);
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.div-btn {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 85px;
 }
