@@ -13,6 +13,7 @@ require "faker"
 puts "cleaning database"
 
 Planning.delete_all
+UserIngredient.delete_all
 Ingredient.delete_all
 RecipeCategory.delete_all
 Category.delete_all
@@ -436,13 +437,13 @@ recipe_seven = Recipe.create(
   name: "Tiramisu",
   description: "This delicious and unbelievably easy Tiramisu recipe is made with coffee soaked lady fingers, sweet and creamy mascarpone (no raw eggs!), and cocoa powder dusted on top. It requires no baking and can be made in advance!",
   preparation: "1 1/2 cups heavy whipping cream
-  ▢8 ounce container mascarpone cheese ,room temperature
-  ▢1/3 cup granulated sugar
-  ▢1 teaspoon vanilla extract
-  ▢1 1/2 cups cold espresso
-  ▢3 Tablespoons coffee flavored liqueur ,optional (Kahlua or DaVinci brands)
-  ▢1 package Lady Fingers ,Savoiardi brand can be found in the cookie aisle at your local grocery store, or online
-  ▢Cocoa powder for dusting the top
+  8 ounce container mascarpone cheese ,room temperature
+  1/3 cup granulated sugar
+  1 teaspoon vanilla extract
+  1 1/2 cups cold espresso
+  3 Tablespoons coffee flavored liqueur ,optional (Kahlua or DaVinci brands)
+  1 package Lady Fingers ,Savoiardi brand can be found in the cookie aisle at your local grocery store, or online
+  Cocoa powder for dusting the top
   Add coffee and liqueur to a shallow bowl. Dip the lady fingers in the coffee (Don't soak them--just quickly dip them on both sides to get them wet) and lay them in a single layer on the bottom of an 8x8'' or similar size pan.
   Smooth half of the mascarpone mixture over the top. Add another layer of dipped lady fingers. Smooth remaining mascarpone cream over the top.
   Dust cocoa powder generously over the top (I use a fine mesh strainer to do this). Refrigerate for at least 3-4 hours or up to overnight before serving.
@@ -560,22 +561,22 @@ recipe_nine = Recipe.create(
   name: "Pad Thai",
   description: "This amazing Pad Thai recipe is easy and comes together in under 30 minutes. It starts with fresh ingredients including rice noodles, chicken, shrimp, tofu, peanuts, scrambled eggs, and fresh vegetables all tossed together in a delicious homemade pad thai sauce.",
   preparation: "8 ounces flat rice noodles
-  ▢3 Tablespoons oil
-  ▢3 cloves garlic , minced
-  ▢8 ounces uncooked shrimp, chicken, or extra-firm tofu , cut into small pieces
-  ▢2 eggs
-  ▢1 cup fresh bean sprouts
-  ▢1 red bell pepper , thinly sliced
-  ▢3 green onions , chopped
-  ▢1/2 cup dry roasted peanuts
-  ▢2 limes
-  ▢1/2 cup Fresh cilantro , chopped
+  3 Tablespoons oil
+  3 cloves garlic , minced
+  8 ounces uncooked shrimp, chicken, or extra-firm tofu , cut into small pieces
+  2 eggs
+  1 cup fresh bean sprouts
+  1 red bell pepper , thinly sliced
+  3 green onions , chopped
+  1/2 cup dry roasted peanuts
+  2 limes
+  1/2 cup Fresh cilantro , chopped
   3 Tablespoons fish sauce
-  ▢1 Tablespoon low-sodium soy sauce
-  ▢5 Tablespoons light brown sugar
-  ▢2 Tablespoons rice vinegar , or Tamarind Paste*
-  ▢1 Tablespoon Sriracha hot sauce , or more, to taste
-  ▢2 Tablespoons creamy peanut butter* (optional)",
+  1 Tablespoon low-sodium soy sauce
+  5 Tablespoons light brown sugar
+  2 Tablespoons rice vinegar , or Tamarind Paste*
+  1 Tablespoon Sriracha hot sauce , or more, to taste
+  2 Tablespoons creamy peanut butter* (optional)",
   user: michael
 )
 
