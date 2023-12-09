@@ -2,7 +2,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  padding-bottom: 100px;   // Pour eviter que les cartes se retrouvent coincees sous la navbar en bas
+  padding-bottom: 20px;   // Pour eviter que les cartes se retrouvent coincees sous la navbar en bas
 }
 .containernew {
   width: 80%;
@@ -40,5 +40,5 @@
 }
 
 .container{
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
