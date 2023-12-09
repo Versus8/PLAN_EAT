@@ -5,7 +5,10 @@ class PlanningsController < ApplicationController
   def index
     @plannings = Planning.where(user: current_user)
     @owner_plannings = current_user.owner_plannings
-    flash[:notice] = 'Planning added successfull !!!'
+    if session[:show_flash_notice]
+      flash.now[:notice] = 'Planning added successfull !!!'
+      session.delete(:show_flash_notice)
+    end
   end
 
   def new
@@ -18,7 +21,9 @@ class PlanningsController < ApplicationController
     @planning.recipe = @recipe
 
     if @planning.save
-      redirect_to plannings_path
+      flash[:notice] = 'Planning added successfull !!!'
+      session[:show_flash_notice] = true
+      redirect_to plannings_path, notice: 'Planning added successfull !!!'
     else
       render :new, status: :unprocessable_entity
     end

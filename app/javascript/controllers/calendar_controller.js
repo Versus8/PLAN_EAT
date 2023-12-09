@@ -54,7 +54,7 @@ export default class extends Controller {
       if (response.ok) {
         // this.calendar.refetchEvents(); // Refresh events in calendar
         // You might need to handle other responses accordingly
-        window.location = "/plannings"
+        // window.location = "/plannings"
       } else {
         // Handle error responses
         console.log(response)
