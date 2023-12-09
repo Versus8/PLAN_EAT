@@ -38,7 +38,9 @@
   <% @plannings.each do |planning| %>
     <div class="list-planning row">
       <div class="left col-7">
-          <%= link_to "#{planning.date}", recipe_path(planning.recipe), class: "date-list-planning" %>
+          <div class="date-list-planning">
+            <span class="day-date-list-planning"><%= planning.date.strftime('%A') %></span> <span class="year-date-list-planning"><%= planning.date %></span>
+          </div>
           <%= link_to "#{planning.recipe.name}", recipe_path(planning.recipe), class: "recipe-name-list-planning" %>
 
         <div class="btn-list-plannings">
