@@ -4,28 +4,31 @@
 <%= simple_form_for :user_ingredients, url: delete_user_ingredients_path, method: :post do |f| %>
   <div class="list-ingredients">
     <fieldset>
-      <legend >Bio, Vrac, Local</legend>
+      <legend class="text-end pe-3">Bio Vrac Local</legend>
       <% @user_ingredients.each do |user_ingredient| %>
 
         <div class="user-ingredient ingredient-li">
-          <div class="form-check form-check-inline">
-            <%= check_box_tag "user_ingredient[ingredient_ids][]", user_ingredient.id %>
-          </div>
+          <div class="item form-check-inline">
+            <div class="form-check form-check-inline">
+              <%= check_box_tag "user_ingredient[ingredient_ids][]", user_ingredient.id %>
+            </div>
 
-          <div class="ingredient-name form-check-inline">
-            <%= user_ingredient.ingredient.name %>
+            <div class="ingredient-name form-check-inline">
+              <%= user_ingredient.ingredient.name %>
+            </div>
           </div>
+          <div class="item form-check-inline">
+            <div class="form-check form-check-inline checkbox">
+              <%= check_box_tag "category_bio#{user_ingredient.id}", "bio", class:"custom-checkbox checkmark" %>
+            </div>
 
-          <div class="form-check form-check-inline">
-            <%= check_box_tag "category_bio#{user_ingredient.id}", "bio" %>
-          </div>
+            <div class="form-check form-check-inline checkbox">
+              <%= check_box_tag "category_vrac#{user_ingredient.id}", "vrac" %>
+            </div>
 
-          <div class="form-check form-check-inline">
-            <%= check_box_tag "category_vrac#{user_ingredient.id}", "vrac" %>
-          </div>
-
-          <div class="form-check form-check-inline">
-            <%= check_box_tag "category_local#{user_ingredient.id}", "local" %>
+            <div class="form-check form-check-inline checkbox">
+              <%= check_box_tag "category_local#{user_ingredient.id}", "local" %>
+            </div>
           </div>
         </div>
       <% end %>
@@ -34,6 +37,6 @@
 
   <%= f.input_field :_method, as: :hidden, value: 'delete' %>
 
-  <%= f.submit 'Delete Selected Ingredients and Update Score' %>
+  <%= f.button :submit, 'Delete Ingredients / Update Score', id: 'btn-submit', class:'my-3' %>
 <% end %>
 </div>
