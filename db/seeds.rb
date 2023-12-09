@@ -13,6 +13,7 @@ require "faker"
 puts "cleaning database"
 
 Planning.delete_all
+UserIngredient.delete_all
 Ingredient.delete_all
 RecipeCategory.delete_all
 Category.delete_all
@@ -27,7 +28,7 @@ michael = User.create(name: "Michael", email: "michael@gmail.com", password: "12
 
 puts "Creating 10 recipes and their ingredients"
 
-recipe_one = Recipe.create(
+recipe_one = Recipe.new(
   name: "Vege Burger",
   description: "These veggie burgers from hit every satisfying, savory note with a hearty mix of pearl barley, chickpeas, mushrooms, and crispy panko.",
   preparation: "1 pound 85% lean ground beef
@@ -53,6 +54,10 @@ recipe_one = Recipe.create(
   6 tablespoons Hatch Chile Salsa",
   user: veronique
 )
+
+recipe_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701548838/veggie-burgers-1-2_zmrbuf.webp")
+recipe_one.photo.attach(io: recipe_one_photo, filename: "recipe_one.png", content_type: "image/png")
+recipe_one.save
 
   Ingredient.create(
     name: "onion",
@@ -95,7 +100,7 @@ recipe_one = Recipe.create(
   )
 
 
-recipe_two = Recipe.create(
+recipe_two = Recipe.new(
   name: "Greek Salad",
   description: "This easy Greek salad recipe is our new favorite summer side dish! Just 7 ingredients + a simple Greek salad dressing make it refreshing & delicious.",
   preparation: " English cucumber, cut lengthwise, seeded, and sliced ¼-inch thick
@@ -109,6 +114,10 @@ recipe_two = Recipe.create(
   Season to taste and serve.",
   user: francoise
 )
+
+recipe_two_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549236/greeksalad_ctfmou.jpg")
+recipe_two.photo.attach(io: recipe_two_photo, filename: "recipe_four.png", content_type: "image/png")
+recipe_two.save
 
   Ingredient.create(
     name: "tomatoes",
@@ -146,7 +155,7 @@ recipe_two = Recipe.create(
     recipe: recipe_two
   )
 
-recipe_three = Recipe.create(
+recipe_three = Recipe.new(
   name: "Cheeseburger",
   description: "How to make THE BEST cheeseburger! Perfect burger patties every. single. time. Includes an epic burger sauce too!",
   preparation: "½ cup mayonnaise
@@ -169,6 +178,9 @@ recipe_three = Recipe.create(
   user: veronique
 )
 
+recipe_three_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549433/Cheeseburger-Recipe-9_f9y2xi.jpg")
+recipe_three.photo.attach(io: recipe_three_photo, filename: "recipe_three.png", content_type: "image/png")
+recipe_three.save
 
   Ingredient.create(
     name: "bread",
@@ -228,7 +240,7 @@ recipe_three = Recipe.create(
   )
 
 
-recipe_four = Recipe.create(
+recipe_four = Recipe.new(
   name: "Pasta Carbonara",
   description: "With crispy bits of pork, a peppery bite, and a velvety cheese sauce enriched with eggs, carbonara is just as easy to make for dinner as it is at 2 a.m",
   preparation: "3
@@ -255,6 +267,10 @@ recipe_four = Recipe.create(
   lb. spaghetti, bucatini, or rigatoni",
   user: michael
 )
+
+recipe_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549578/carbonara_zwyvfa.jpg")
+recipe_four.photo.attach(io: recipe_four_photo, filename: "recipe_four.png", content_type: "image/png")
+recipe_four.save
 
   Ingredient.create(
     name: "eggs",
@@ -296,7 +312,7 @@ recipe_four = Recipe.create(
 
 
 
-recipe_five = Recipe.create(
+recipe_five = Recipe.new(
   name: "Sushi Futomaki",
   description: "Learn how to make Futomaki or Maki Sushi, a traditional thick sushi roll filled with colorful ingredients. You can make this delicious sushi roll ahead of time and pack it for picnics, potlucks, and celebrations.",
   preparation: "Tamagoyaki / Dashimaki Tamago
@@ -308,6 +324,10 @@ recipe_five = Recipe.create(
   Sakura Denbu (Seasoned Codfish Flakes).",
   user: francoise
 )
+
+recipe_five_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549865/Futomaki-1-500x500_ukj6ug.jpg")
+recipe_five.photo.attach(io: recipe_five_photo, filename: "recipe_five.png", content_type: "image/png")
+recipe_five.save
 
   Ingredient.create(
     name: "groud strip",
@@ -339,7 +359,7 @@ recipe_five = Recipe.create(
   )
 
 
-recipe_six = Recipe.create(
+recipe_six = Recipe.new(
   name: "Feijoada",
   description: "Brazilian Feijoada is a black bean and pork stew that Brazilians often serve topped with farofa, toasted cassava flour. Many call this comfort food the national dish of Brazil.",
   preparation: "1 pound dry black beans (soaked overnight)*
@@ -367,6 +387,10 @@ recipe_six = Recipe.create(
   Serve with white rice and sprinkle some farofa on top.",
   user: francoise
 )
+
+recipe_six_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550136/Vegan-Brazilian-Feijoada-FI_uohlc6.jpg")
+recipe_six.photo.attach(io: recipe_six_photo, filename: "recipe_six.png", content_type: "image/png")
+recipe_six.save
 
   Ingredient.create(
     name: "onion",
@@ -432,23 +456,27 @@ recipe_six = Recipe.create(
     recipe: recipe_six
   )
 
-recipe_seven = Recipe.create(
+recipe_seven = Recipe.new(
   name: "Tiramisu",
   description: "This delicious and unbelievably easy Tiramisu recipe is made with coffee soaked lady fingers, sweet and creamy mascarpone (no raw eggs!), and cocoa powder dusted on top. It requires no baking and can be made in advance!",
   preparation: "1 1/2 cups heavy whipping cream
-  ▢8 ounce container mascarpone cheese ,room temperature
-  ▢1/3 cup granulated sugar
-  ▢1 teaspoon vanilla extract
-  ▢1 1/2 cups cold espresso
-  ▢3 Tablespoons coffee flavored liqueur ,optional (Kahlua or DaVinci brands)
-  ▢1 package Lady Fingers ,Savoiardi brand can be found in the cookie aisle at your local grocery store, or online
-  ▢Cocoa powder for dusting the top
+  8 ounce container mascarpone cheese ,room temperature
+  1/3 cup granulated sugar
+  1 teaspoon vanilla extract
+  1 1/2 cups cold espresso
+  3 Tablespoons coffee flavored liqueur ,optional (Kahlua or DaVinci brands)
+  1 package Lady Fingers ,Savoiardi brand can be found in the cookie aisle at your local grocery store, or online
+  Cocoa powder for dusting the top
   Add coffee and liqueur to a shallow bowl. Dip the lady fingers in the coffee (Don't soak them--just quickly dip them on both sides to get them wet) and lay them in a single layer on the bottom of an 8x8'' or similar size pan.
   Smooth half of the mascarpone mixture over the top. Add another layer of dipped lady fingers. Smooth remaining mascarpone cream over the top.
   Dust cocoa powder generously over the top (I use a fine mesh strainer to do this). Refrigerate for at least 3-4 hours or up to overnight before serving.
   Add whipping cream to a mixing bowl and beat on medium speed with electric mixers (or use a stand mixer). Slowly add sugar and vanilla and continue to beat until stiff peaks. Add mascarpone cheese and fold in until combined. Set aside.",
   user: michael
 )
+
+recipe_seven_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550195/tiramisu-square-500x500_jbcoyq.jpg")
+recipe_seven.photo.attach(io: recipe_seven_photo, filename: "recipe_seven.png", content_type: "image/png")
+recipe_seven.save
 
   Ingredient.create(
     name: "sugar",
@@ -500,7 +528,7 @@ recipe_seven = Recipe.create(
     recipe: recipe_six
   )
 
-recipe_eight = Recipe.create(
+recipe_eight = Recipe.new(
   name: "Banana Split",
   description: "Banana Split-this classic ice cream dessert starts with a fresh banana, three scoops of ice cream (vanilla, chocolate, and strawberry), pineapple, chocolate syrup, and strawberries. Oh, and don't forget the whipped cream, nuts, and maraschino cherries. Grab a spoon and dig in!",
   preparation: "Ice cream- a scoop of vanilla, chocolate, and strawberry
@@ -512,6 +540,10 @@ recipe_eight = Recipe.create(
   Chopped peanuts",
   user: veronique
 )
+
+recipe_eight_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550286/banana-split-scaled_weempr.jpg")
+recipe_eight.photo.attach(io: recipe_eight_photo, filename: "recipe_eight.png", content_type: "image/png")
+recipe_eight.save
 
   Ingredient.create(
     name: "banana",
@@ -556,28 +588,32 @@ recipe_eight = Recipe.create(
     recipe: recipe_eight
   )
 
-recipe_nine = Recipe.create(
+recipe_nine = Recipe.new(
   name: "Pad Thai",
   description: "This amazing Pad Thai recipe is easy and comes together in under 30 minutes. It starts with fresh ingredients including rice noodles, chicken, shrimp, tofu, peanuts, scrambled eggs, and fresh vegetables all tossed together in a delicious homemade pad thai sauce.",
   preparation: "8 ounces flat rice noodles
-  ▢3 Tablespoons oil
-  ▢3 cloves garlic , minced
-  ▢8 ounces uncooked shrimp, chicken, or extra-firm tofu , cut into small pieces
-  ▢2 eggs
-  ▢1 cup fresh bean sprouts
-  ▢1 red bell pepper , thinly sliced
-  ▢3 green onions , chopped
-  ▢1/2 cup dry roasted peanuts
-  ▢2 limes
-  ▢1/2 cup Fresh cilantro , chopped
+  3 Tablespoons oil
+  3 cloves garlic , minced
+  8 ounces uncooked shrimp, chicken, or extra-firm tofu , cut into small pieces
+  2 eggs
+  1 cup fresh bean sprouts
+  1 red bell pepper , thinly sliced
+  3 green onions , chopped
+  1/2 cup dry roasted peanuts
+  2 limes
+  1/2 cup Fresh cilantro , chopped
   3 Tablespoons fish sauce
-  ▢1 Tablespoon low-sodium soy sauce
-  ▢5 Tablespoons light brown sugar
-  ▢2 Tablespoons rice vinegar , or Tamarind Paste*
-  ▢1 Tablespoon Sriracha hot sauce , or more, to taste
-  ▢2 Tablespoons creamy peanut butter* (optional)",
+  1 Tablespoon low-sodium soy sauce
+  5 Tablespoons light brown sugar
+  2 Tablespoons rice vinegar , or Tamarind Paste*
+  1 Tablespoon Sriracha hot sauce , or more, to taste
+  2 Tablespoons creamy peanut butter* (optional)",
   user: michael
 )
+
+recipe_nine_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550345/1200px-Phat_Thai_kung_Chang_Khien_street_stall_poxd1q.jpg")
+recipe_nine.photo.attach(io: recipe_nine_photo, filename: "recipe_nine.png", content_type: "image/png")
+recipe_nine.save
 
 Ingredient.create(
   name: "garlic",
@@ -647,7 +683,7 @@ Ingredient.create(
 
 
 
-recipe_ten = Recipe.create(
+recipe_ten = Recipe.new(
   name: "Pizza Calabrese",
   description: "This Calabrese pizza highlights the wonderful flavors of Southern Italy - olives, anchovies and capers with a hint of heat. It's the perfect combination!",
   preparation: "bread flour - preferred but if you don't have it just use all purpose/plain
@@ -664,6 +700,10 @@ recipe_ten = Recipe.create(
   red pepper (chilli) flakes - can't be Calabrese pizza without heat",
   user: veronique
 )
+
+recipe_ten_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550505/antipasto-calabrese-pizza---gluten-free-64374_640x480_10794d8b_hetc3z.jpg")
+recipe_ten.photo.attach(io: recipe_ten_photo, filename: "recipe_ten.png", content_type: "image/png")
+recipe_ten.save
 
   Ingredient.create(
     name: "salt",
@@ -761,43 +801,6 @@ fast.photo.attach(io: fast_photo, filename: "fast.png", content_type: "image/png
 
 dessert_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701551589/2148727_w472h265c1cx1311cy572cxt0cyt0cxb2622cyb1143_m1rleu.webp")
 dessert.photo.attach(io: dessert_photo, filename: "dessert.png", content_type: "image/png")
-
-
-
-
-
-recipe_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701548838/veggie-burgers-1-2_zmrbuf.webp")
-recipe_one.photo.attach(io: recipe_one_photo, filename: "recipe_one.png", content_type: "image/png")
-
-recipe_two_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549236/greeksalad_ctfmou.jpg")
-recipe_two.photo.attach(io: recipe_two_photo, filename: "recipe_four.png", content_type: "image/png")
-
-recipe_three_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549433/Cheeseburger-Recipe-9_f9y2xi.jpg")
-recipe_three.photo.attach(io: recipe_three_photo, filename: "recipe_three.png", content_type: "image/png")
-
-recipe_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549578/carbonara_zwyvfa.jpg")
-recipe_four.photo.attach(io: recipe_four_photo, filename: "recipe_four.png", content_type: "image/png")
-
-recipe_five_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701549865/Futomaki-1-500x500_ukj6ug.jpg")
-recipe_five.photo.attach(io: recipe_five_photo, filename: "recipe_five.png", content_type: "image/png")
-
-recipe_six_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550136/Vegan-Brazilian-Feijoada-FI_uohlc6.jpg")
-recipe_six.photo.attach(io: recipe_six_photo, filename: "recipe_six.png", content_type: "image/png")
-
-recipe_seven_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550195/tiramisu-square-500x500_jbcoyq.jpg")
-recipe_seven.photo.attach(io: recipe_seven_photo, filename: "recipe_seven.png", content_type: "image/png")
-
-recipe_eight_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550286/banana-split-scaled_weempr.jpg")
-recipe_eight.photo.attach(io: recipe_eight_photo, filename: "recipe_eight.png", content_type: "image/png")
-
-recipe_nine_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550345/1200px-Phat_Thai_kung_Chang_Khien_street_stall_poxd1q.jpg")
-recipe_nine.photo.attach(io: recipe_nine_photo, filename: "recipe_nine.png", content_type: "image/png")
-
-recipe_ten_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701550505/antipasto-calabrese-pizza---gluten-free-64374_640x480_10794d8b_hetc3z.jpg")
-recipe_ten.photo.attach(io: recipe_ten_photo, filename: "recipe_ten.png", content_type: "image/png")
-
-
-
 
 puts "Linking recipes to their categories"
 
