@@ -5,6 +5,7 @@ class PlanningsController < ApplicationController
   def index
     @plannings = Planning.where(user: current_user)
     @owner_plannings = current_user.owner_plannings
+    flash[:notice] = 'Planning added successfull !!!'
   end
 
   def new

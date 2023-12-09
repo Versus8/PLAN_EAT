@@ -1,4 +1,30 @@
 <div class="main-container list-plannings">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Sélectionnez l'élément d'alerte Bootstrap
+      const myAlert = document.getElementById('myAlert');
+
+      // Définissez le délai en millisecondes (par exemple, 3000 pour 3 secondes)
+      const delay = 3000;
+
+      // Utilisez setTimeout pour masquer l'alerte après le délai spécifié
+      setTimeout(function () {
+        myAlert.style.display = 'none';
+      }, delay);
+    });
+
+  </script>
+  <div class="container mt-5">
+    <div id="myAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= image_tag "si_Check_circle.png", class: "img-alert" %>
+        <% if flash[:notice].present? %>
+          <div class="notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
   <% @plannings.each do |planning| %>
     <div class="list-planning row">
       <div class="left col-7">
