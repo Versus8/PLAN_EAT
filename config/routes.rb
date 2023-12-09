@@ -21,8 +21,4 @@ Rails.application.routes.draw do
   get "recipes/:id/ingredients_list", to: "recipes#recipe_ingredients_index", as: :recipe_ingredients_index
   get "ingredients_list", to: "recipes#ingredients_list", as: :ingredients_list
   get "all_recipes", to: "recipes#all_recipes", as: :all_recipes
-
-  resources :user_ingredients do
-    post 'delete', on: :collection
-  end
 end
