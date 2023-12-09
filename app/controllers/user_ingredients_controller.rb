@@ -25,12 +25,31 @@ class UserIngredientsController < ApplicationController
     end
   end
 
-  def delete_and_update
-    raise
-    @user_ingredient = UserIngredient.find(params[:id])
-    @user_ingredient.destroy
+  def delete
+    user_ingredient_ids = Array(params[:user_ingredient][:ingredient_ids])
 
-    redirect_to user_ingredient_path, status: :see_other
+    user_ingredient_ids.each do |ingredient_id|
+      category_bio = params["category_bio#{ingredient_id}"] == "bio" # Assuming checkbox value for bio is 'bio'
+      category_vrac = params["category_vrac#{ingredient_id}"] == "vrac" # Assuming checkbox value for vrac is 'vrac'
+      category_local = params["category_local#{ingredient_id}"] == "local" # Assuming checkbox value for local is 'local'
+
+      user_ingredient = UserIngredient.find(ingredient_id)
+      user_ingredient.destroy
+
+      current_user.update(points: current_user.points + calculate_points(category_bio, category_vrac, category_local))
+    end
+
+    redirect_to user_ingredients_path, notice: 'Ingredients deleted and user score updated successfully!'
+  end
+
+  private
+
+  def calculate_points(category_bio, category_vrac, category_local)
+    points = 0
+    points += 50 if category_bio
+    points += 50 if category_vrac
+    points += 50 if category_local
+    points
   end
 
 end
