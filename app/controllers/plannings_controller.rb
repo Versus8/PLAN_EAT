@@ -21,8 +21,8 @@ class PlanningsController < ApplicationController
     @planning.recipe = @recipe
 
     if @planning.save
-      flash[:notice] = 'Planning added successfull !!!'
-      session[:show_flash_notice] = true
+      # flash[:notice] = 'Planning added successfull !!!'
+      # session[:show_flash_notice] = true
       redirect_to plannings_path, notice: 'Planning added successfull !!!'
     else
       render :new, status: :unprocessable_entity
