@@ -742,7 +742,302 @@ recipe_ten.save
     recipe: recipe_ten
   )
 
+
+  recipe_eleven = Recipe.new(
+    name: "Pizza Margarita",
+    description: "These gluten free margarita pizza is the best meal that you can have at night while whatching netflix",
+    preparation: "1 ¾ cup Robin Hood® Gluten Free Flour Blend
+    1 tbsp instant quick rise yeast
+    1 tsp granulated sugar
+    1 tsp salt
+    1 1/4 cups warm water (105°-115°F/40°-56°C)
+    2 tbsp olive oil, divided
+    ½ cup tomato sauce
+    2 cups grated mozzarella cheese
+    ¼ cup chopped fresh basil
+    ",
+    user: veronique
+  )
+
+  recipe_eleven_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702240295/pizza-sans-gluten_dxjeqg.jpg")
+  recipe_eleven.photo.attach(io: recipe_eleven_photo, filename: "recipe_eleven.png", content_type: "image/png")
+  recipe_eleven.save
+
+    Ingredient.create(
+      name: "sugar",
+      unit: "cup
+  ",
+      quantity: 1,
+      recipe: recipe_eleven
+    )
+
+    Ingredient.create(
+      name: "salt",
+      unit: "cup
+  ",
+      quantity: 1,
+      recipe: recipe_eleven
+    )
+
+    Ingredient.create(
+      name: "oil",
+      unit: "cup
+  ",
+      quantity: 1,
+      recipe: recipe_eleven
+    )
+
+    Ingredient.create(
+      name: "tomatoes",
+      unit: "cup
+  ",
+      quantity: 1,
+      recipe: recipe_eleven
+    )
+
+    Ingredient.create(
+      name: "mozzarella",
+      unit: "cup
+  ",
+      quantity: 1,
+      recipe: recipe_eleven
+    )
+
+
+
+    recipe_twelve = Recipe.new(
+      name: "Kumquat Achaar",
+      description: "The best one of halaal meals",
+      preparation: "
+      • 6 tbsp Chillies, red rough
+      • 2 tbsp Garlic
+      • 900 Grms apricot jam
+      • 400 Grm methi
+      • 3 tbsp Mustard seed
+      • 2 1/2 tbsp Salt adjust to your liking, fine
+      • 4 tbsp Sesame seed
+      ",
+      user: veronique
+    )
+
+    recipe_twelve_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702241815/2020-09-22-13-55-52-AQzfY_uyfd30.jpg")
+    recipe_twelve.photo.attach(io: recipe_twelve_photo, filename: "recipe_twelve.png", content_type: "image/png")
+    recipe_twelve.save
+
+      Ingredient.create(
+        name: "red rough",
+        unit: "cup
+    ",
+        quantity: 1,
+        recipe: recipe_twelve
+      )
+
+      Ingredient.create(
+        name: "garlic",
+        unit: "cup
+    ",
+        quantity: 1,
+        recipe: recipe_twelve
+      )
+
+      Ingredient.create(
+        name: "apricot",
+        unit: "cup
+    ",
+        quantity: 1,
+        recipe: recipe_twelve
+      )
+
+      Ingredient.create(
+        name: "mustard",
+        unit: "cup
+    ",
+        quantity: 1,
+        recipe: recipe_twelve
+      )
+
+      Ingredient.create(
+        name: "sesame seed",
+        unit: "cup
+    ",
+        quantity: 1,
+        recipe: recipe_twelve
+      )
+
+      recipe_thirteen = Recipe.new(
+        name: "Napolitan Pizza",
+        description: "Our Pizza Flour is milled from 100% American-grown wheat to precise “00” standards: perfect for homemade Neapolitan-style pizza. Its silky smooth texture creates an easy-to-shape dough that yields a wonderfully chewy, crispy crust. This is destined to be your new go-to recipe for pizza night!",
+        preparation: "
+        2 cups (232g) King Arthur, Pizza Flour
+        1/8 teaspoon instant yeast or active dry yeast
+        1/2 teaspoon granulated sugar
+        1 1/4 teaspoons (8g) table salt
+        3/4 cup (170g) water, lukewarm, (105° to 115°F)
+        ",
+        user: veronique
+      )
+
+      recipe_thirteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702242684/1500x1500-Photo-1_1968-How-to-MAKE-NEAPOLITAN-PIZZA-with-Dry-Yeast-at-Home-Better-than-a-Pizzeria-in-Naples-V1_tmhgcg.jpg")
+      recipe_thirteen.photo.attach(io: recipe_thirteen_photo, filename: "recipe_thirteen.png", content_type: "image/png")
+      recipe_thirteen.save
+
+        Ingredient.create(
+          name: "pizza flour",
+          unit: "cup
+      ",
+          quantity: 1,
+          recipe: recipe_thirteen
+        )
+
+        Ingredient.create(
+          name: "dry yeast",
+          unit: "cup
+      ",
+          quantity: 1,
+          recipe: recipe_thirteen
+        )
+
+        Ingredient.create(
+          name: "sugar",
+          unit: "cup
+      ",
+          quantity: 1,
+          recipe: recipe_thirteen
+        )
+
+        Ingredient.create(
+          name: "salt",
+          unit: "cup
+      ",
+          quantity: 1,
+          recipe: recipe_thirteen
+        )
+
+        recipe_fourteen = Recipe.new(
+          name: "Beef Ragu",
+          description: "Beef ragu—a traditional Italian dish—is a slow-simmered sauce made with beef, tomatoes, pasta, etc. Many newer ragu recipes use sambal oelek or anchovy paste to help build flavor, so I've used harissa, but feel free to replace with 1/2 teaspoon crushed red pepper or 1 teaspoon fennel seeds or omit. If you like you can add rosemary sprigs to the sauce as it simmers.",
+          preparation: "
+          2 tablespoons olive oil
+
+          1 (2 pound) boneless beef chuck roast, cut into 2-inch cubes
+
+          1 teaspoon ground black pepper
+
+          3 teaspoons kosher salt, divided
+
+          1 yellow onion, chopped
+
+          6 cloves garlic, chopped
+
+          2 tablespoons harissa (Optional)
+
+          2 tablespoons tomato paste
+
+          1 cup dry red wine
+
+          1 (28 ounce) can crushed tomatoes
+
+          1 bay leaf
+
+          1 pound pappardelle pasta, cooked and drained
+
+          grated Parmesan cheese, for serving
+          ",
+          user: veronique
+        )
+
+        recipe_fourteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+        recipe_fourteen.photo.attach(io: recipe_fourteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+        recipe_fourteen.save
+
+          Ingredient.create(
+            name: "black pepper",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "oil",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "onion",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "garlic",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "tomatoes",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "red wine",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "cheese",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "beef",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+          Ingredient.create(
+            name: "pasta",
+            unit: "cup
+        ",
+            quantity: 1,
+            recipe: recipe_fourteen
+          )
+
+
+
+
+
+
+
+
+
+
+
+
+
 puts "creating 5 plannings"
+
+
+
 
 Planning.create(
   date: Date.today,
@@ -782,6 +1077,8 @@ asiatique = Category.create(name: "Asian food")
 lunch = Category.create(name: "Lunch&Diner")
 fast = Category.create(name: "Fast")
 dessert = Category.create(name: "Dessert")
+halal = Category.create(name: "Halal")
+gluten = Category.create(name: "Gluten free")
 
 
 italian_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701551146/l-intro-1643403830_waxgzh.jpg")
@@ -801,6 +1098,12 @@ fast.photo.attach(io: fast_photo, filename: "fast.png", content_type: "image/png
 
 dessert_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1701551589/2148727_w472h265c1cx1311cy572cxt0cyt0cxb2622cyb1143_m1rleu.webp")
 dessert.photo.attach(io: dessert_photo, filename: "dessert.png", content_type: "image/png")
+
+halal_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702239444/halal_fcn7ih.jpg")
+halal.photo.attach(io: halal_photo, filename: "halal.png", content_type: "image/png")
+
+gluten_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702239562/sans_gluten_zdbslr.webp")
+gluten.photo.attach(io: gluten_photo, filename: "gluten.png", content_type: "image/png")
 
 puts "Linking recipes to their categories"
 
@@ -822,3 +1125,11 @@ RecipeCategory.create(recipe: recipe_four, category: lunch)
 RecipeCategory.create(recipe: recipe_five, category: lunch)
 RecipeCategory.create(recipe: recipe_nine, category: lunch)
 RecipeCategory.create(recipe: recipe_ten, category: lunch)
+RecipeCategory.create(recipe: recipe_eleven, category: lunch)
+RecipeCategory.create(recipe: recipe_eleven, category: gluten)
+RecipeCategory.create(recipe: recipe_twelve, category: halal)
+RecipeCategory.create(recipe: recipe_twelve, category: lunch)
+RecipeCategory.create(recipe: recipe_thirteen, category: italian)
+RecipeCategory.create(recipe: recipe_thirteen, category: lunch)
+RecipeCategory.create(recipe: recipe_fourteen, category: lunch)
+RecipeCategory.create(recipe: recipe_fourteen, category: italian)
