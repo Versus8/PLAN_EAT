@@ -76,7 +76,6 @@ h4 + p{
 }
 
 .profile-infos{
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 45px;
@@ -101,7 +100,7 @@ h4 + p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .infos-points{
@@ -420,4 +419,11 @@ stroke: var(--mono-mono-20, #BFC6DC);
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 85px;
+}
+
+.infos-planning-count {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
