@@ -346,6 +346,8 @@ a.btn-ingredient-done{
 .container h1 {
   color: #24997F;
   text-align: center;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .containerpages h1 {
@@ -418,7 +420,8 @@ stroke: var(--mono-mono-20, #BFC6DC);
 .div-btn {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 85px;
+  display: flex;
+  justify-content: center;
 }
 
 .infos-planning-count {

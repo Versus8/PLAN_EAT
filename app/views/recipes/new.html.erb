@@ -1,23 +1,23 @@
 <div class="container">
   <div class="text-center">
-  <h1>Create your recipe</h1>
+  <h1 class=" my-3">Create your recipe</h1>
   </div>
 
   <div class="form-new-recipe">
-    <div class="p-5">
+    <div class="pb-5">
       <%= simple_form_for(@recipe) do |f| %>
     <div class="list-ingredients-new">
         <%= f.input :photo,  label: false, as: :file, input_html: { class: 'input-photo-list-ingredient mb-3' } %>
         <%= f.input :name, label: false, placeholder: 'Name', input_html: { class: 'mb-3', autocomplete: "off" }  %>
         <%= f.input :description, label: false, placeholder: 'Description', input_html: { class: 'mb-3' } %>
         <%= f.input :preparation, label: false, placeholder: 'Preparation', input_html: { class: 'mb-3' } %>
-        <p class="text-center">Choose categories *</p>
+        <p class="text-center fw-bold">Choose categories *</p>
         <div class="checkbox-category">
         <%= f.association :categories, as: :check_boxes, include_hidden: false, legend: false %>
 
         </div>
 
-        <p class="text-center">Ingredients list</p>
+        <p class="text-center fw-bold">Ingredients list</p>
 
 
         <%= f.simple_fields_for :ingredients do |r| %>
