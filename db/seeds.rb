@@ -946,9 +946,9 @@ recipe_ten.save
           user: veronique
         )
 
-        recipe_fourteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
-        recipe_fourteen.photo.attach(io: recipe_fourteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
-        recipe_fourteen.save
+recipe_fourteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_fourteen.photo.attach(io: recipe_fourteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_fourteen.save
 
           Ingredient.create(
             name: "black pepper",
@@ -1022,22 +1022,233 @@ recipe_ten.save
             recipe: recipe_fourteen
           )
 
+# A partir d'ici, photos a changer!
 
+recipe_fifteen = Recipe.new(
+  name: "Lasagna soup",
+  description: "This incredible lasagna soup tastes exactly like a really good lasagna,
+  but is a very rich, very meaty tomato soup. The little bit of extra work you'll do—precooking the noodles,
+  then baking them in the oven—is absolutely worth the time and effort. The buttery, baked,
+  and toasted noodles that are then added to the soup make this absolutely phenomenal.",
+  preparation: "Fill a large pot with lightly salted water and bring to a rolling boil.
+  Stir in lasagna noodles and return to a boil. Cook pasta uncovered, stirring occasionally,
+  until just flexible, 4 to 5 minutes. Transfer noodles into cold water until cooled; drain very well.
+  Preheat the oven to 475 degrees F (245 degrees C). Line a baking sheet with parchment paper,
+  and grease parchment with 1 tablespoon olive oil.
+  Cut noodles in half lengthwise. Arrange noodles in evenly overlapping rows on the prepared baking sheet.
+  Brush with melted butter, and use fingers to rub some butter between the noodles.
+  Bake noodles in the preheated oven until they are golden, blistered,
+  and are beginning to brown with crispy outside edges.
+  Let cool; cut into bite-sized pieces.
+  Add 2 tablespoons olive oil to a soup pot, and place over high heat. Add beef and sausage.
+  Use a spatula to break up the meat into small pieces; cook without stirring until liquid evaporates and meat begins
+  to sizzle in its own fat, then continue to cook and stir until meat begins to brown, about 7 minutes.
+  Add onions, garlic, tomato paste, red pepper flakes, dried oregano, black pepper, and kosher salt.
+  Cook and stir until onions begin to turn translucent, 3 to 4 minutes.
+  Stir in chicken broth, tomato sauce, and water. Bring to a simmer, reduce heat to medium low, and simmer for 45 minutes.
+  In a bowl, stir ricotta cheese, mozzarella cheese, and Parmesan cheese together; set aside.
+  Increase the heat under soup to medium high; stir in noodle pieces. Cook, stirring, until pasta is tender,
+  about 10 minutes. Reduce heat to low, and stir in the 2 tablespoons Italian parsley.",
+  user: veronique
+)
 
+recipe_fifteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_fifteen.photo.attach(io: recipe_fifteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_fifteen.save
 
+Ingredient.create(
+  name: "olive oil",
+  unit: "tablespoon",
+  quantity: 2,
+  recipe: recipe_fifteen
+)
 
+Ingredient.create(
+  name: "ground beef",
+  unit: "pound",
+  quantity: 1,
+  recipe: recipe_fifteen
+)
 
+Ingredient.create(
+  name: "Italian sausage",
+  unit: "onces",
+  quantity: 6,
+  recipe: recipe_fifteen
+)
 
+Ingredient.create(
+  name: "yellow onion",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_fifteen
+)
 
+Ingredient.create(
+  name: "chicken broth",
+  unit: "cups",
+  quantity: 4,
+  recipe: recipe_fifteen
+)
 
+recipe_sixteen = Recipe.new(
+  name: "Italian Calzones",
+  description: "These calzones are the real deal because there is no tomato sauce inside!
+  We eat them at least once a week. Have a bowl of tomato or spaghetti sauce on the table
+  for people to top their calzone if desired.",
+  preparation: "Make the dough, knead, and let rise.
+  Make the filling and chill in the fridge.
+  Punch the dough down and divide into two pieces.
+  Roll the dough out into circles and fill.
+  Fold the dough and use a fork to seal.
+  Brush with a beaten egg and bake until golden brown. ",
+  user: veronique
+)
 
+recipe_sixteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_sixteen.photo.attach(io: recipe_sixteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_sixteen.save
 
+Ingredient.create(
+  name: "Cheddar cheese",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_sixteen
+)
 
+Ingredient.create(
+  name: "pepperoni",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_sixteen
+)
+
+Ingredient.create(
+  name: "mushrooms",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_sixteen
+)
+
+Ingredient.create(
+  name: "ricotta cheese",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_sixteen
+)
+
+Ingredient.create(
+  name: "basil leaves",
+  unit: "tablespoon",
+  quantity: 1,
+  recipe: recipe_fifteen
+)
+
+recipe_seventeen = Recipe.new(
+  name: "Mushroom Risotto",
+  description: "This savory wild mushroom risotto uses dried chanterelles.
+  It's delicious topped with tangy Gorgonzola cheese.",
+  preparation: "Cover chanterelle mushrooms with hot water, cover,
+  and set aside to soften for 30 minutes. Once soft, remove mushrooms
+  from water and chop; discard water.
+  Melt butter along with truffle oil in a large saucepan over medium-high heat.
+  Add onion, shallot, and garlic; cook and stir two minutes until the onion begins
+  to soften. Add fresh mushrooms; continue cooking until mushroom softens and begin
+  to release their liquid. Stir in chopped chanterelle mushrooms, and cook 3 minutes more.
+  Add Arborio rice; cook and stir for a few minutes until rice looks glossy and
+  is well coated with onion mixture. Stir in white wine and cook until nearly evaporated.
+  Reduce heat to medium; add 1/3 of the hot chicken stock. Cook and stir until
+  chicken stock has been mostly absorbed, about 5 minutes. The risotto should be
+  simmering gently while you stir in chicken stock. Add 1/2 of the remaining stock, and stir for 5 minutes more.
+  Finally add remaining stock, and continue cooking until risotto is creamy and rice is tender, about 5 minutes more.
+  The rice should not be completely soft, but still have a little firmness when you bite into it.
+  You can add a little water if needed to cook the rice to this state.
+  Remove risotto from the heat, and stir in heavy cream and Gorgonzola cheese.
+  Season to taste with salt and pepper, and serve.",
+  user: veronique
+)
+
+recipe_seventeen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_seventeen.photo.attach(io: recipe_seventeen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_seventeen.save
+
+Ingredient.create(
+  name: "chanterelle mushrooms",
+  unit: "ounces",
+  quantity: 2,
+  recipe: recipe_seventeen
+)
+Ingredient.create(
+  name: "butter",
+  unit: "tablespoons",
+  quantity: 2,
+  recipe: recipe_seventeen
+)
+Ingredient.create(
+  name: "onion",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_seventeen
+)
+Ingredient.create(
+  name: "Arborio rice",
+  unit: "ounces",
+  quantity: 12,
+  recipe: recipe_seventeen
+)
+Ingredient.create(
+  name: "white wine",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_seventeen
+)
+
+recipe_eighteen = Recipe.new(
+  name: "Italian BLT",
+  description: "This sandwich is a nod to the classic BLT,
+  with a touch of pesto and ricotta to bring an elevated touch.",
+  preparation: "Slice bread on the diagonal to get 12 slices.
+  Brush each slice of bread with olive oil. Mix Italian seasoning and garlic granules together;
+  sprinkle over bread slices.
+  Heat a grill pan over medium-high heat, and place bread oil-side-down on the pan until grill marks form,
+  about 3 minutes. Remove bread to a board.
+  Mix spinach and basil leaves together. Divide leaves evenly over 6 slices of bread; layer these 6 bread
+  slices with equal amounts prosciutto, sliced tomato, and sliced mozzarella.
+  Stir pesto and ricotta together in a small bowl. Spread a generous 1 tablespoon mixture onto remaining 6
+  bread slices, and place on top of each sandwich.",
+  user: veronique
+)
+
+recipe_eighteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_eighteen.photo.attach(io: recipe_eighteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_eighteen.save
+
+Ingredient.create(
+  name: "italian bread",
+  unit: "loaf",
+  quantity: 1,
+  recipe: recipe_eighteen
+)
+Ingredient.create(
+  name: "spinach",
+  unit: "cups",
+  quantity: 2,
+  recipe: recipe_eighteen
+)
+Ingredient.create(
+  name: "tomatoes",
+  unit: "cups",
+  quantity: 2,
+  recipe: recipe_eighteen
+)
+Ingredient.create(
+  name: "fresh mozzarella cheese",
+  unit: "ounces",
+  quantity: 8,
+  recipe: recipe_eighteen
+)
 
 puts "creating 5 plannings"
-
-
-
 
 Planning.create(
   date: Date.today,
@@ -1133,3 +1344,7 @@ RecipeCategory.create(recipe: recipe_thirteen, category: italian)
 RecipeCategory.create(recipe: recipe_thirteen, category: lunch)
 RecipeCategory.create(recipe: recipe_fourteen, category: lunch)
 RecipeCategory.create(recipe: recipe_fourteen, category: italian)
+RecipeCategory.create(recipe: recipe_fifteen, category: italian)
+RecipeCategory.create(recipe: recipe_sixteen, category: italian)
+RecipeCategory.create(recipe: recipe_seventeen, category: italian)
+RecipeCategory.create(recipe: recipe_eighteen, category: italian)
