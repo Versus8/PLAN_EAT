@@ -178,6 +178,11 @@ h4 + p{
 }
 
 /* List all planning */
+.title-all-planning{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 20px;
+}
+
 .list-plannings{
   display: flex;
   flex-direction: column;
