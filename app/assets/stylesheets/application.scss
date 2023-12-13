@@ -35,6 +35,7 @@ body{
 .form-control{
   background-color: white;
   border-left: 0;
+  border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .category {
@@ -282,7 +283,14 @@ img.img-fluid{
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
-  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 1.25)
+  // box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 1.25)
+}
+
+#btn-submit:hover{
+  background-color: white;
+  color: #FD8061;
+  border: 3px solid #FD8061;
+  text-decoration: none;
 }
 
 a.btn-ingredient-done{
@@ -351,7 +359,7 @@ a.btn-ingredient-done{
 .container h1 {
   color: #24997F;
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
 }
 
@@ -434,4 +442,9 @@ stroke: var(--mono-mono-20, #BFC6DC);
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+// Petite modification de style
+.title-recipe-description{
+  font-size: 1.55rem;
 }

@@ -36,7 +36,8 @@
               <%= check_box_tag "category_bio#{user_ingredient.id}", "bio" %>
             </div>
 
-            <div class="form-check form-check-inline checkbox">
+            <div class="form-check form-check-inline checkbox d-flex justify-content-center
+        ">
               <%= check_box_tag "category_vrac#{user_ingredient.id}", "vrac" %>
             </div>
 
@@ -50,7 +51,8 @@
   </div>
 
   <%= f.input_field :_method, as: :hidden, value: 'delete' %>
-
-  <%= f.button :submit, 'Submit your shopping list', id: 'btn-submit', class:'my-3' %>
+  <div class="d-flex justify-content-center">
+    <%= f.button :submit, 'Submit', id: 'btn-submit', class:'my-3' %>
+  </div>
 <% end %>
 </div>

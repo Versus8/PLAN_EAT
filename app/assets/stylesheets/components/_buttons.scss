@@ -5,7 +5,14 @@
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
-  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 1.25)
+  // box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 1.25)
+}
+
+.btn-orange:hover{
+  background-color: white;
+  color: #FD8061;
+  border: 3px solid #FD8061;
+  text-decoration: none;
 }
 
 .btn-orange-new {
@@ -19,8 +26,14 @@
 
 .link {
   color: #FD8061;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
+  font-size: 16px;
+}
+
+.link:hover{
+  text-decoration: none;
+  color: #ff6944;
 }
 
 .back-button {

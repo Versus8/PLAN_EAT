@@ -17,8 +17,8 @@
           <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
     <% end %>
     <h1><strong><%= @recipe.name %></strong></h1>
-    <h3><%= @recipe.description %></h3>
-    <p>Preparation: </p>
+    <h3 class="title-recipe-description"><%= @recipe.description %></h3>
+    <p class="fw-bold">Preparation: </p>
     <p><%= @recipe.preparation %></p>
     <%= link_to "Add to Planning", new_recipe_planning_path(@recipe), class: "btn-orange" %>
 

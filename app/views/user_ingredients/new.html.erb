@@ -1,3 +1,13 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <div class="">
+      <%= link_to 'Back', plannings_path, class: 'btn btn-back' %>
+    </div>
+          <a href="/" class="avatar">
+            <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701295547/logo_plan_eat_rqt7kp.png", class: "avatar", alt: "dropdown menu" %>
+          </a>
+  </div>
+</div>
 <div class="main-container container">
   <h1><%= @recipe.name %></h1>
   <h5>Add ingredients to the shopping list:</h5>
@@ -18,7 +28,9 @@
             <%# </div> %>
           <% end %>
         </ul>
-      <%= f.button :submit, "Add to shopping list", class:"mb-4 mt-1", id:"btn-submit" %>
+        <div class="d-flex justify-content-center">
+          <%= f.button :submit, "Submit", class:"mb-4 mt-1", id:"btn-submit" %>
+        </div>
     <% end %>
 
 </div>
