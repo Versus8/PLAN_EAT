@@ -35,8 +35,8 @@ class UserIngredientsController < ApplicationController
 
       user_ingredient = UserIngredient.find(ingredient_id)
       user_ingredient.destroy
-
-      current_user.update(points: current_user.points + calculate_points(category_bio, category_vrac, category_local))
+      score = calculate_points(category_bio, category_vrac, category_local)
+      current_user.update(points: current_user.points + score)
     end
 
     redirect_to user_ingredients_path, notice: 'Go see your profil to discover your shopping score!'
@@ -51,5 +51,4 @@ class UserIngredientsController < ApplicationController
     points += 50 if category_local
     points
   end
-
 end
