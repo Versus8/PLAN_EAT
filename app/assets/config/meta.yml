@@ -1,0 +1,11 @@
+# config/meta.yml
+
+meta_product_name: “Plan-Eat”
+
+meta_title: “Plan-Eat – Plan your meal and help the planet”
+
+meta_description: “Find an easy way to plan your meals and buy your ingredients more consciously”
+
+meta_image: “logo_plan_eat.png” # should exist in `app/assets/images/`
+
+twitter_account: “@planeat_twitter_account” # required for Twitter Cards
