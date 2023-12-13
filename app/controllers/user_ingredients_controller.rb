@@ -39,7 +39,7 @@ class UserIngredientsController < ApplicationController
       current_user.update(points: current_user.points + score)
     end
 
-    redirect_to user_ingredients_path, notice: 'Go see your profil to discover your shopping score!'
+    redirect_to user_path(current_user), notice: 'Go see your profil to discover your shopping score!'
   end
 
   private
