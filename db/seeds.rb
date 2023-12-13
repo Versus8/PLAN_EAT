@@ -1248,12 +1248,377 @@ Ingredient.create(
   recipe: recipe_eighteen
 )
 
+recipe_nineteen = Recipe.new(
+  name: "Gnocchi Pomodoro",
+  description: "Fluffy potato dumplings sautéed for a crispy exterior and tender
+  interior with a simple tomato sauce. I used the oil from the marinated mozzarella
+  ball container for the sauce with great success.",
+  preparation: "Open marinated mozzarella balls and measure out 1/4 cup of the oil.
+  Pour oil into a heavy skillet over medium-high heat. Cook gnocchi in batches in the
+  hot oil until golden and heated through. Divide gnocchi evenly amongst 4 gratin dishes.
+  Add garlic and red chili flakes to the oil in the same skillet. Cook until garlic
+  is fragrant, about 30 seconds. Stir in salt and sugar. Pour in tomatoes. Use a wooden
+  spoon to break up and crush the tomatoes
+  Bring sauce to a boil, reduce heat, cover and simmer tomatoes for 15 minutes.
+  Set an oven rack about 6 inches from the heat source and preheat the oven's broiler.
+  Taste sauce and adjust seasonings if desired. Spoon tomato sauce over the gnocchi.
+  Top each dish with 3 marinated mozzarella balls and set on a baking sheet.
+  Add baking sheet to oven and broil until mozzarella balls are melted and golden
+  browned, 3 to 5 minutes. Garnish with parsley or basil if desired and serve immediately.",
+  user: veronique
+)
+
+recipe_nineteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_nineteen.photo.attach(io: recipe_nineteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_nineteen.save
+
+Ingredient.create(
+  name: "gnocchi",
+  unit: "ounces",
+  quantity: 12,
+  recipe: recipe_nineteen
+)
+
+Ingredient.create(
+  name: "Italian plum tomatoes",
+  unit: "ounce",
+  quantity: 1,
+  recipe: recipe_nineteen
+)
+
+Ingredient.create(
+  name: "mozzarella balls",
+  unit: "ounces",
+  quantity: 8,
+  recipe: recipe_nineteen
+)
+
+Ingredient.create(
+  name: "garlic",
+  unit: "cloves",
+  quantity: 3,
+  recipe: recipe_nineteen
+)
+
+recipe_twenty = Recipe.new(
+  name: "Polenta",
+  description: "Polenta is nothing more than coarsely ground cornmeal.
+  The classic ratio is 1 part polenta to 4 parts water, but I like to
+  measure the polenta just a little scant of a full cup. I often use chicken broth
+  instead of water. It's a great base for any kind of saucy meat or mushroom ragout.",
+  preparation: "Bring water and salt to a boil in a large saucepan; pour polenta slowly
+  into boiling water, whisking constantly until there are no lumps.
+  Reduce heat to low and simmer, whisking often, until polenta starts to thicken,
+  about 5 minutes. Polenta mixture should still be slightly loose. Cover and cook for 30 minutes,
+  whisking every 5 to 6 minutes. When polenta is too thick to whisk, stir with a wooden spoon.
+  Polenta is done when texture is creamy and the individual grains are tender.
+  Turn off heat and gently stir 2 tablespoons butter into polenta until butter partially melts;
+  mix 1/2 cup Parmigiano-Reggiano cheese into polenta until cheese has melted. Cover and let stand
+  for 5 minutes to thicken.
+  Stir polenta and transfer to a serving bowl. Top polenta with remaining 1 tablespoon butter and
+  about 1 tablespoon freshly grated Parmigiano-Reggiano cheese for garnish.",
+  user: veronique
+)
+
+recipe_twenty_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty.photo.attach(io: recipe_twenty_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty.save
+
+Ingredient.create(
+  name: "Parmigiano-Reggiano",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty
+)
+
+Ingredient.create(
+  name: "butter",
+  unit: "tablespoons",
+  quantity: 3,
+  recipe: recipe_twenty
+)
+
+Ingredient.create(
+  name: "polenta",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty
+)
+
+Ingredient.create(
+  name: "water",
+  unit: "cups",
+  quantity: 4,
+  recipe: recipe_twenty
+)
+
+recipe_twenty_one = Recipe.new(
+  name: "Pesto Pasta",
+  description: "Pesto pasta is easy to make and full of flavor. It tastes good hot or cold!",
+  preparation: "Fill a large pot with lightly salted water and bring to a rolling boil.
+  Stir in pasta and return to a boil. Cook pasta uncovered, stirring occasionally,
+  until tender yet firm to the bite, about 8 to 10 minutes. Drain and transfer into a large bowl.
+  Meanwhile, heat oil in a frying pan over medium-low heat. Add onion; cook and stir
+  until softened, about 3 minutes. Stir in pesto, salt, and pepper until warmed through.
+  Add pesto mixture to hot pasta; stir in grated cheese and toss well to coat.",
+  user: veronique
+)
+
+recipe_twenty_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_one.photo.attach(io: recipe_twenty_one_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_one.save
+
+Ingredient.create(
+  name: "pasta",
+  unit: "ounces",
+  quantity: 16,
+  recipe: recipe_twenty_one
+)
+
+recipe_twenty_two = Recipe.new(
+  name: "Tiramisu",
+  description: "Tiramisu is a classic Italian layered dessert that's easy to make
+  at home with coffee-soaked ladyfingers, a creamy mascarpone custard, and whipped cream.
+  Dust the top of the tiramisu with cocoa powder for an impressive no-bake dessert!",
+  preparation: "Whisk egg yolks and sugar together in a medium saucepan until well blended.
+  Whisk in milk and cook over medium heat, stirring constantly, until mixture comes to a boil.
+  Overhead of an egg yolk and milk mixture being stirred with a spoon in a sauce pan.
+  DOTDASH MEREDITH FOOD STUDIOS
+  Boil gently for 1 minute, then remove from the heat and allow to cool slightly.
+  Cover tightly and chill in the refrigerator for 1 hour.
+  Beat cream and vanilla in a medium bowl with an electric mixer until stiff peaks form.
+  Cream and vanilla in a medium bowl that has been mixed by and electric mixer.
+  DOTDASH MEREDITH FOOD STUDIOS
+  Remove egg yolk mixture from the refrigerator; add mascarpone cheese and whisk until smooth.
+  Combine coffee and rum in a small bowl. Split ladyfingers in half lengthwise and drizzle with the coffee mixture.
+  Arrange 1/2 of the soaked ladyfingers in the bottom of a 7x11-inch dish.
+  Halved ladyfingers tightly packed in a glass baking dish.
+  DOTDASH MEREDITH FOOD STUDIOS
+  Spread 1/2 of the mascarpone mixture over the ladyfingers, then spread 1/2 of the whipped cream over top.
+  Repeat layers once more.
+  Ladyfingers in a glass baking dish with a mascarpone mixture and whipped cream on top.
+  DOTDASH MEREDITH FOOD STUDIOS
+  Sprinkle cocoa powder over top
+  Cover and refrigerate until set, 4 to 6 hours.
+  Enjoy!",
+  user: veronique
+)
+
+recipe_twenty_two_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_two.photo.attach(io: recipe_twenty_two_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_two.save
+
+Ingredient.create(
+  name: "egg yolks",
+  unit: "grams",
+  quantity: 40,
+  recipe: recipe_twenty_two
+)
+
+Ingredient.create(
+  name: "white sugar",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty_two
+)
+
+Ingredient.create(
+  name: "milk",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty_two
+)
+
+Ingredient.create(
+  name: "mascarpone cheese",
+  unit: "pound",
+  quantity: 1,
+  recipe: recipe_twenty_two
+)
+
+recipe_twenty_three = Recipe.new(
+  name: "Four Cheese Ravioli",
+  description: "This ravioli recipe includes a homemade pesto-Alfredo sauce and marinara.
+  I wanted to recreate the ravioli dish that you get at Maggiano's Italian restaurant and
+  it turned out great! Don't be intimidated by the large list of ingredients, it is well worth it.",
+  preparation: "Mound flour and salt together on a work surface and form a well. Beat eggs, water,
+  and olive oil in a bowl. Pour 1/2 of the egg mixture into the well. Begin mixing egg and flour with
+  one hand; use your other hand to keep the flour mound steady. Add remaining egg mixture and knead to form a dough.
+  Knead dough until smooth, 8 to 10 minutes; add more flour if the dough is too sticky. Form dough into
+  a ball and wrap tightly with plastic. Refrigerate for 1 hour.
+  While the dough is resting, prepare the ravioli filling: Mix ricotta cheese, cream cheese,
+  mozzarella cheese, provolone cheese, egg, and parsley until well combined. Set the filling aside.
+  Heat 2 tablespoons of olive oil in a skillet over medium heat. Stir in crushed garlic and
+  pesto sauce and cook for one minute. Stir in heavy cream; increase the heat to high and bring to a boil.
+  Reduce the heat and simmer for 5 minutes. Whisk in Parmesan cheese until melted.
+  Remove the pan from the heat and keep warm.
+  Meanwhile, warm marinara sauce over medium-low heat in a separate saucepan.
+  Preheat the oven to 375 degrees F (190 degrees C). Beat egg and 1 tablespoon of water together
+  in a small bowl to make the egg wash.
+  Roll out the pasta dough into thin sheets no thicker than a nickel. To assemble the ravioli,
+  brush the egg wash over a sheet of pasta. Drop cheese filling in 1-teaspoon portions onto the dough, 1-inch apart.
+  Cover the filling with the top sheet of pasta; use your fingers to press around each portion
+  of filling, making the seal as airtight as possible. Cut out individual ravioli with a knife
+  or pizza cutter. Use your fingers to seal the edges.
+  Fill a large pot with lightly salted water and bring to a rolling boil over high heat. Stir
+  in the ravioli and return to a boil. Cook uncovered, stirring occasionally, until the ravioli
+  float to the top and the filling is hot, 4 to 8 minutes. Drain well.
+  Grease a baking sheet. Place the cooked ravioli on the baking sheet and bake in the preheated
+  oven until brown, about 4 minutes.
+  To serve, divide ravioli between four warmed serving bowls. Drizzle marinara sauce on top,
+  followed by cream sauce..
+  Enjoy!",
+  user: veronique
+)
+
+recipe_twenty_three_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_three.photo.attach(io: recipe_twenty_three_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_three.save
+
+Ingredient.create(
+  name: "ricotta cheese",
+  unit: "ounces",
+  quantity: 8,
+  recipe: recipe_twenty_three
+)
+
+Ingredient.create(
+  name: "cream cheese",
+  unit: "ounces",
+  quantity: 4,
+  recipe: recipe_twenty_three
+)
+
+Ingredient.create(
+  name: "cream",
+  unit: "cups",
+  quantity: 2,
+  recipe: recipe_twenty_three
+)
+
+Ingredient.create(
+  name: "Raviolis",
+  unit: "ounces",
+  quantity: 12,
+  recipe: recipe_twenty_three
+)
+
+recipe_twenty_four = Recipe.new(
+  name: "Zucchini Spaghetti",
+  description: "After listening to Stanley Tucci lose his mind about this pasta and calling
+  it life-changing and one of the best things he's ever eaten, I decided I'd give it a try.
+  The results were amazing and the key to getting the toasted sweet taste of the zucchini was deep-frying it!",
+  preparation: "Place sunflower oil in a deep fryer and heat to 350 degrees F (175 degrees C).
+  Slice zucchini into 1/8-inch rounds.
+  Add some zucchini to the hot oil and deep-fry until lightly browned, 4 to 5 minutes.
+  Transfer to a single layer on paper towels to drain and repeat to cook remaining zucchini.
+  Let zucchini cool to room temperature.
+  Transfer cooled zucchini to a bowl. Cover and refrigerate, 8 hours to overnight.
+  Bring a large pot of lightly salted water to a boil. Cook spaghetti in the boiling water,
+  stirring occasionally, until it's 2 minutes away from being tender yet firm to the bite, 9 to 10 minutes.
+  As you are cooking the spaghetti, heat olive oil in a skillet over medium heat. Add zucchini
+  and salt and cook, stirring occasionally, until it starts to release juices, soften,
+  and break down, 3 to 5 minutes. Add a couple splashes of the pasta water to the zucchini,
+  but don't overdo it. Break zucchini into small pieces with the edge of a spoon or spatula.
+  Reduce heat to low and toss in basil and butter; stir until butter melts.
+  Grab spaghetti with tongs and transfer it right into the sauce; stir until coated. Mix in
+  Pecorino Romano and Parmigiano-Reggiano cheeses. Add a final splash of pasta water and adjust salt if needed.
+  Serve with more grated cheese and fresh basil.",
+  user: veronique
+)
+
+recipe_twenty_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_four.photo.attach(io: recipe_twenty_four_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_four.save
+
+Ingredient.create(
+  name: "zucchini",
+  unit: "cups",
+  quantity: 6,
+  recipe: recipe_twenty_four
+)
+
+Ingredient.create(
+  name: "spaghetti",
+  unit: "ounces",
+  quantity: 4,
+  recipe: recipe_twenty_four
+)
+
+Ingredient.create(
+  name: "olive oil",
+  unit: "tablespoons",
+  quantity: 2,
+  recipe: recipe_twenty_four
+)
+
+Ingredient.create(
+  name: "unsalted butter",
+  unit: "tablespoons",
+  quantity: 2,
+  recipe: recipe_twenty_four
+)
+
+recipe_twenty_five = Recipe.new(
+  name: "Pasta Salad",
+  description: "A homemade Italian pasta salad dressing takes this simple pasta
+  salad loaded with veggies, cheese, pepperoni, and olives to a whole new level!
+  Serve it right away or make it ahead for packed lunches, picnics, or summer barbecues.",
+  preparation: "Gather all ingredients.
+  Overhead of pasta salad ingredients in various bowls and containers.
+  Bring a large pot of lightly salted water to a boil. Add rotini and
+  cook until tender yet firm to the bite, 8 to 10 minutes.
+  Drain, rinse with cold water, and drain again.
+  Transfer drained, cooked pasta to a large bowl. Add pepperoni, provolone cheese,
+  red onion, cucumber, bell peppers, olives, parsley, and Parmesan cheese.
+  Overhead of unmixed pasta salad ingredients in a glass bowl.
+  Mix olive oil, vinegar, garlic, basil, oregano, ground mustard, salt, and pepper
+  for dressing in a jar with a lid. Seal the jar, and shake until well combined.
+  Overhead of pasta salad dressing ingredients in various bowls and cups.
+  Pasta salad dressing sitting in a mason jar.
+  Pour dressing over the pasta salad; toss until well coated. Serve immediately, or
+  cover and chill in the refrigerator for up to 8 hours before serving.",
+  user: veronique
+)
+
+recipe_twenty_five_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_five.photo.attach(io: recipe_twenty_five_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_five.save
+
+Ingredient.create(
+  name: "tri-color rotini pasta",
+  unit: "ounces",
+  quantity: 8,
+  recipe: recipe_twenty_five
+)
+
+Ingredient.create(
+  name: "pepperoni sausage",
+  unit: "ounces",
+  quantity: 6,
+  recipe: recipe_twenty_five
+)
+
+Ingredient.create(
+  name: "cucumber",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty_five
+)
+
+Ingredient.create(
+  name: "green bell pepper",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty_five
+)
+
 puts "creating 5 plannings"
 
 Planning.create(
   date: Date.today,
   recipe: recipe_three,
-  user: francoise
+  user: veronique
 )
 
 Planning.create(
@@ -1348,3 +1713,10 @@ RecipeCategory.create(recipe: recipe_fifteen, category: italian)
 RecipeCategory.create(recipe: recipe_sixteen, category: italian)
 RecipeCategory.create(recipe: recipe_seventeen, category: italian)
 RecipeCategory.create(recipe: recipe_eighteen, category: italian)
+
+RecipeCategory.create(recipe: recipe_twenty, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_one, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_two, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_three, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_four, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_five, category: italian)
