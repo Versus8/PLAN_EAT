@@ -1052,7 +1052,7 @@ recipe_fifteen = Recipe.new(
   user: veronique
 )
 
-recipe_fifteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_fifteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497948/lasagnasoup_lxm5d1.jpg")
 recipe_fifteen.photo.attach(io: recipe_fifteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_fifteen.save
 
@@ -1105,7 +1105,7 @@ recipe_sixteen = Recipe.new(
   user: veronique
 )
 
-recipe_sixteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_sixteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497856/calzone_svhhjs.jpg")
 recipe_sixteen.photo.attach(io: recipe_sixteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_sixteen.save
 
@@ -1168,7 +1168,7 @@ recipe_seventeen = Recipe.new(
   user: veronique
 )
 
-recipe_seventeen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_seventeen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497976/risotto_rrjvfk.jpg")
 recipe_seventeen.photo.attach(io: recipe_seventeen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_seventeen.save
 
@@ -1219,7 +1219,7 @@ recipe_eighteen = Recipe.new(
   user: veronique
 )
 
-recipe_eighteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_eighteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497941/italian-blt-sl-352568-x_v3awge.jpg")
 recipe_eighteen.photo.attach(io: recipe_eighteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_eighteen.save
 
@@ -1268,7 +1268,7 @@ recipe_nineteen = Recipe.new(
   user: veronique
 )
 
-recipe_nineteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_nineteen_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702498490/Gnocchi-pomodoro-1c5c238_m53ose.jpg")
 recipe_nineteen.photo.attach(io: recipe_nineteen_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_nineteen.save
 
@@ -1320,7 +1320,7 @@ recipe_twenty = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497969/polenta_iibcpg.jpg")
 recipe_twenty.photo.attach(io: recipe_twenty_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty.save
 
@@ -1364,7 +1364,7 @@ recipe_twenty_one = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497955/pasta-al-pesto-24-1_vtmaq4.jpg")
 recipe_twenty_one.photo.attach(io: recipe_twenty_one_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_one.save
 
@@ -1404,7 +1404,7 @@ recipe_twenty_two = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_two_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_two_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702434067/development/caigvz40ixsxo8zl68evuvd948zp.jpg")
 recipe_twenty_two.photo.attach(io: recipe_twenty_two_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_two.save
 
@@ -1471,7 +1471,7 @@ recipe_twenty_three = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_three_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_three_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497906/four-cheese-ravioli-self-proclaimed-foodie-3_vv6fnk.jpg")
 recipe_twenty_three.photo.attach(io: recipe_twenty_three_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_three.save
 
@@ -1527,7 +1527,7 @@ recipe_twenty_four = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_four_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497989/spaguetti_ttuvhg.jpg")
 recipe_twenty_four.photo.attach(io: recipe_twenty_four_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_four.save
 
@@ -1581,7 +1581,7 @@ recipe_twenty_five = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_five_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702243422/HH-Stella-Winter-Feast-for-frineds-Shin-of-Beef-Ragu-002_trans_NvBQzQNjv4BqEfr_C-RcU6GOW0wNlYS1ZsBhiIYFD-DQ23qyGvgesHk_fdssxi.jpg")
+recipe_twenty_five_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
 recipe_twenty_five.photo.attach(io: recipe_twenty_five_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_five.save
 
