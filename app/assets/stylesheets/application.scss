@@ -376,7 +376,25 @@ a.btn-ingredient-done{
   text-align: center;
   padding-top: 50px;
   padding-bottom: 150px;
+  animation: start 2s forwards;
 }
+
+.badge-count {
+  animation: start 4s forwards;
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  99% {
+    opacity: 1;
+  }
+}
+
 
 .image-with-padding {
   padding-left: 100px;
