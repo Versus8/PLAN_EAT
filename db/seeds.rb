@@ -1613,6 +1613,326 @@ Ingredient.create(
   recipe: recipe_twenty_five
 )
 
+recipe_twenty_six = Recipe.new(
+  name: "Lasagna soup",
+  description: "This incredible lasagna soup tastes exactly like a really good lasagna,
+  but is a very rich, very meaty tomato soup. The little bit of extra work you'll
+  do—precooking the noodles, then baking them in the oven—is absolutely worth the time and effort.
+    The buttery, baked, and toasted noodles that are then added to the soup make this absolutely phenomenal.",
+  preparation: "Fill a large pot with lightly salted water and bring to a rolling boil.
+  Stir in lasagna noodles and return to a boil. Cook pasta uncovered, stirring occasionally,
+  until just flexible, 4 to 5 minutes. Transfer noodles into cold water until cooled; drain very well
+  Preheat the oven to 475 degrees F (245 degrees C). Line a baking sheet with parchment paper,
+  and grease parchment with 1 tablespoon olive oil.
+  Cut noodles in half lengthwise. Arrange noodles in evenly overlapping rows on the prepared
+  baking sheet. Brush with melted butter, and use fingers to rub some butter between the noodles.
+  Bake noodles in the preheated oven until they are golden, blistered, and are beginning to
+  brown with crispy outside edges. Let cool; cut into bite-sized pieces.
+  Add 2 tablespoons olive oil to a soup pot, and place over high heat. Add beef and sausage.
+  Use a spatula to break up the meat into small pieces; cook without stirring until liquid
+  evaporates and meat begins to sizzle in its own fat, then continue to cook and stir until
+  meat begins to brown, about 7 minutes.
+  Add onions, garlic, tomato paste, red pepper flakes, dried oregano, black pepper,
+  and kosher salt. Cook and stir until onions begin to turn translucent, 3 to 4 minutes.
+  Stir in chicken broth, tomato sauce, and water. Bring to a simmer, reduce heat to medium low,
+  and simmer for 45 minutes.
+  In a bowl, stir ricotta cheese, mozzarella cheese, and Parmesan cheese together; set aside.
+  Increase the heat under soup to medium high; stir in noodle pieces. Cook, stirring,
+  until pasta is tender, about 10 minutes. Reduce heat to low, and stir in the 2 tablespoons Italian parsley.
+  Serve in bowls with a scoop of cheese mixture, and sprinkle with freshly torn basil and Italian parsley if desired.",
+  user: veronique
+)
+
+recipe_twenty_six_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_six.photo.attach(io: recipe_twenty_six_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_six.save
+
+Ingredient.create(
+  name: "ground beef",
+  unit: "pounds",
+  quantity: 3,
+  recipe: recipe_twenty_six
+)
+
+Ingredient.create(
+  name: "yellow onion",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty_six
+)
+
+Ingredient.create(
+  name: "tomato paste",
+  unit: "tablespoons",
+  quantity: 2,
+  recipe: recipe_twenty_six
+)
+
+Ingredient.create(
+  name: "chicken broth",
+  unit: "cups",
+  quantity: 4,
+  recipe: recipe_twenty_six
+)
+
+recipe_twenty_seven = Recipe.new(
+  name: "Pizza bianca",
+  description: "Grilling pizza allows for a beautiful crisp crust,
+  and this pizza bianca with mozzarella and prosciutto will also
+  be finished before most pizzerias could deliver.",
+  preparation: "Preheat a gas grill with all burners on High for 10 to 15 minutes.
+  Shape pizza dough into an 8 to 10-inch disc. Brush dough with olive oil.
+  Reduce the flame on half the grill burners to Low, to create areas of direct and indirect heat.
+  Carefully place dough onto the grill over direct heat. Close the cover. Grill dough until
+  bottom is just barely cooked and shows char marks, 1 to 3 minutes.
+  Turn crust ninety degrees (do not flip dough over). Grill until crust shows light grill marks, 1 to 3 minutes.
+  Carefully remove par-grilled dough from the grill. Spread ricotta over dough; sprinkle with salt
+  and Italian seasoning. Place cheese on top, add prosciutto evenly over cheese.
+  Return pizza to the grill over indirect heat; grill until cheese is melted, about 3 minutes.
+  Carefully remove pizza from the grill.
+  Preheat the oven's broiler.
+  Broil pizza until cheese is golden, about 5 minutes. Sprinkle torn basil on top of pizza. Allow
+  pizza to rest for a few minutes before cutting into wedges.",
+  user: veronique
+)
+
+recipe_twenty_seven_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_seven.photo.attach(io: recipe_twenty_seven_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_seven.save
+
+Ingredient.create(
+  name: "pizza dough",
+  unit: "pound",
+  quantity: 1,
+  recipe: recipe_twenty_seven
+)
+
+Ingredient.create(
+  name: "ricotta cheese",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_twenty_seven
+)
+
+Ingredient.create(
+  name: "prosciutto",
+  unit: "slices",
+  quantity: 3,
+  recipe: recipe_twenty_seven
+)
+
+Ingredient.create(
+  name: "Italian seasoning",
+  unit: "teaspoon",
+  quantity: 1,
+  recipe: recipe_twenty_seven
+)
+
+recipe_twenty_eight = Recipe.new(
+  name: "Balsamic Bruschetta",
+  description: "Bruschetta is a classic Italian appetizer that is easy to make at home.
+  Toasted bread is topped with tomatoes, Parmesan cheese, garlic, and fresh basil.
+  Use a high-quality balsamic vinegar for best results.",
+  preparation: "Gather all ingredients.
+  Overhead of Bruschetta ingredients in various bowls and containers.
+  Preheat oven to 400 degrees F (200 degrees C).
+  Brush bread slices on both sides lightly with 1 tablespoon oil and place on large baking sheet.
+  Toast bread until golden, 5 to 10 minutes, turning halfway through.
+  Meanwhile, toss together tomatoes, basil, Parmesan cheese, and garlic in a bowl.
+  Overhead of chopped tomatoes, basil, Parmesan cheese, and garlic unmixed in a glass bowl.
+  Mix in balsamic vinegar, 2 teaspoons olive oil, kosher salt, and pepper.
+  Overhead of Bruschetta mixture with added balsamic vinegar, olive oil, kosher salt, and pepper in a glass bowl.
+  Spoon tomato mixture onto toasted bread slices.
+  Overhead of Bruschetta mixture being spooned on to baked slices of bread.
+  Serve immediately and enjoy!",
+  user: veronique
+)
+
+recipe_twenty_eight_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_eight.photo.attach(io: recipe_twenty_eight_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_eight.save
+
+Ingredient.create(
+  name: "French bread",
+  unit: "loaf",
+  quantity: 1,
+  recipe: recipe_twenty_eight
+)
+
+Ingredient.create(
+  name: "tomatoes",
+  unit: "cups",
+  quantity: 2,
+  recipe: recipe_twenty_eight
+)
+
+Ingredient.create(
+  name: "fresh basil",
+  unit: "tablespoons",
+  quantity: 2,
+  recipe: recipe_twenty_eight
+)
+
+Ingredient.create(
+  name: "balsamic vinegar",
+  unit: "tablespoon",
+  quantity: 1,
+  recipe: recipe_twenty_eight
+)
+
+recipe_twenty_nine = Recipe.new(
+  name: "Manicotti",
+  description: "This manicotti recipe makes a comforting dinner your family will love.
+  The kids like to help stuff the noodles too! Delicious served with a crispy salad and garlic bread.",
+  preparation: "Cook manicotti in boiling water until al dente, about 10 to 12 minutes; drain and rinse with cold water.
+  Preheat oven to 350 degrees F (175 degrees C).
+  Mix ricotta, mozzarella, 1/2 cup Parmesan cheese, eggs, parsley, salt, and pepper in a large bowl until well combined.
+  Pour 1/2 cup spaghetti sauce into an 11x17-inch baking dish. Stuff each manicotti shell with 3 tablespoons cheese
+  mixture, and arrange over sauce.
+  Pour remaining sauce over the top of the shells and sprinkle with remaining Parmesan cheese.
+  Bake in the preheated oven until bubbly, about 45 minutes.",
+  user: veronique
+)
+
+recipe_twenty_nine_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_nine.photo.attach(io: recipe_twenty_nine_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_twenty_nine.save
+
+Ingredient.create(
+  name: "manicotti pasta",
+  unit: "ounces",
+  quantity: 5,
+  recipe: recipe_twenty_nine
+)
+
+Ingredient.create(
+  name: "ricotta cheese",
+  unit: "pint",
+  quantity: 1,
+  recipe: recipe_twenty_nine
+)
+
+Ingredient.create(
+  name: "eggs",
+  unit: "tablespoons",
+  quantity: 2,
+  recipe: recipe_twenty_nine
+)
+
+Ingredient.create(
+  name: "spaghetti sauce",
+  unit: "ounces",
+  quantity: 16,
+  recipe: recipe_twenty_nine
+)
+
+recipe_thirty = Recipe.new(
+  name: "Chicken Marsala",
+  description: "Chicken Marsala is an Italian-style recipe for tender pan-fried chicken breasts in a sweet Marsala
+  wine and mushroom sauce. It's super quick and easy to make for a weeknight dinner
+  AND sophisticated enough for company.",
+  preparation: "Gather all ingredients.
+  All ingredients gathered to make chicken marsala.
+  In a shallow dish or bowl, mix together the flour, salt, pepper and oregano.
+  Flour, salt, pepper and oregano whisked together in a bowl.
+  Coat chicken pieces in flour mixture. Chicken coated in flour mixture.
+  In a large skillet, melt butter in olive oil over medium heat. Place chicken in the pan, and lightly brown.
+  Butter and oil in a skillet.
+  Chicken lightly browning in butter and oil.
+  Turn over chicken pieces, and add mushrooms. Pour in wine and sherry.
+  Mushrooms, wine and sherry added to chicken in the skillet.
+  Cover skillet; simmer chicken 10 minutes, turning once, until no longer pink and juices run clear.
+  Chicken and mushrooms after they've been simmering.
+  Serve hot and enjoy!",
+  user: veronique
+)
+
+recipe_thirty_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_thirty.photo.attach(io: recipe_thirty_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_thirty.save
+
+Ingredient.create(
+  name: "chicken breast",
+  unit: "pound",
+  quantity: 1,
+  recipe: recipe_thirty
+)
+
+Ingredient.create(
+  name: "oregano",
+  unit: "tablespoon",
+  quantity: 1,
+  recipe: recipe_thirty
+)
+
+Ingredient.create(
+  name: "mushrooms",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_thirty
+)
+
+Ingredient.create(
+  name: "Marsala wine",
+  unit: "cup",
+  quantity: 1,
+  recipe: recipe_thirty
+)
+
+recipe_thirty_one = Recipe.new(
+  name: "Italian Spaghetti",
+  description: "This is an Italian-style pasta sauce with homemade meatballs that's
+  cooked slowly over low heat for an intense tomato flavor. It's easy to make
+  the spaghetti sauce ahead of time; gently reheat and add meatballs 30 minutes
+  before you're ready to serve with your favorite pasta.",
+  preparation: "Gather all ingredients.
+  Overhead of meatball ingredients in various bowls and containers.
+  Overhead of pasta sauce ingredients in various containers.
+  In a large bowl, combine ground beef, bread crumbs, parsley, Parmesan, 1/4 teaspoon black pepper
+  garlic powder and beaten egg. Mix well and form into 12 balls. Store, covered, in refrigerator until needed.
+  Overhead of formed meatballs in a baking sheet with the meat mixture in a bowl off to the side.
+  In a large saucepan over medium heat, saute onion and garlic in olive oil until onion is translucent.
+  Stir in tomatoes, salt, sugar and bay leaf. Cover, reduce heat to low, and simmer 90 minutes.
+  Overhead of tomatoes, sugar, and a bay leaf being mixed and cooked into onions on a skillet.
+  Stir in tomato paste, basil, 1/2 teaspoon pepper and meatballs and simmer 30 minutes more.
+  Overhead of meatballs being cooked and mixed in to a pasta sauce
+  Cooked meatballs covered in a pasta sauce resting in a skillet.
+  Serve hot and enjoy!",
+  user: veronique
+)
+
+recipe_thirty_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_thirty_one.photo.attach(io: recipe_thirty_one_photo, filename: "recipe_fourteen.png", content_type: "image/png")
+recipe_thirty_one.save
+
+Ingredient.create(
+  name: "ground beef",
+  unit: "pound",
+  quantity: 1,
+  recipe: recipe_thirty_one
+)
+
+Ingredient.create(
+  name: "garlic powder",
+  unit: "teaspoon",
+  quantity: 1,
+  recipe: recipe_thirty_one
+)
+
+Ingredient.create(
+  name: "tomato paste",
+  unit: "ounces",
+  quantity: 6,
+  recipe: recipe_thirty_one
+)
+
+Ingredient.create(
+  name: "dried basil",
+  unit: "teaspoon",
+  quantity: 1,
+  recipe: recipe_thirty_one
+)
+
 puts "creating 5 plannings"
 
 Planning.create(
@@ -1720,3 +2040,10 @@ RecipeCategory.create(recipe: recipe_twenty_two, category: italian)
 RecipeCategory.create(recipe: recipe_twenty_three, category: italian)
 RecipeCategory.create(recipe: recipe_twenty_four, category: italian)
 RecipeCategory.create(recipe: recipe_twenty_five, category: italian)
+
+RecipeCategory.create(recipe: recipe_twenty_six, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_seven, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_eight, category: italian)
+RecipeCategory.create(recipe: recipe_twenty_nine, category: italian)
+RecipeCategory.create(recipe: recipe_thirty, category: italian)
+RecipeCategory.create(recipe: recipe_thirty_one, category: italian)
