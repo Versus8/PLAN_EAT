@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user.assign_attributes(user_params.except(:password))
     @user.assign_attributes(user_params.except(:password_confirmation))
     if @user.save(validate: false)
-      redirect_to @user, notice: 'Updated.'
+      redirect_to user_path, notice: 'Updated.'
     else
       render :edit
     end
