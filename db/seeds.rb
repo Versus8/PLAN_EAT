@@ -1614,7 +1614,7 @@ Ingredient.create(
 )
 
 recipe_twenty_six = Recipe.new(
-  name: "Lasagna soup",
+  name: "Lasagna soup (vegan)",
   description: "This incredible lasagna soup tastes exactly like a really good lasagna,
   but is a very rich, very meaty tomato soup. The little bit of extra work you'll
   do—precooking the noodles, then baking them in the oven—is absolutely worth the time and effort.
@@ -1643,7 +1643,7 @@ recipe_twenty_six = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_six_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_six_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702521387/vegetarian-lasagna-soup-square_hh8bfq.jpg")
 recipe_twenty_six.photo.attach(io: recipe_twenty_six_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_six.save
 
@@ -1696,7 +1696,7 @@ recipe_twenty_seven = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_seven_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_seven_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702521431/7559275_Pizza-Bianca-with-Prosciutto_TheDailyGourmet_4x3-2cd6486cc856409fbfacd64ec21ee729_mgxntn.jpg")
 recipe_twenty_seven.photo.attach(io: recipe_twenty_seven_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_seven.save
 
@@ -1748,7 +1748,7 @@ recipe_twenty_eight = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_eight_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_eight_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702521478/sd-aspect-1501192244-delish-strawberry-balsamic-bruschetta-2_urqr7a.jpg")
 recipe_twenty_eight.photo.attach(io: recipe_twenty_eight_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_eight.save
 
@@ -1794,7 +1794,7 @@ recipe_twenty_nine = Recipe.new(
   user: veronique
 )
 
-recipe_twenty_nine_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_twenty_nine_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702521525/manicotti-1-1_y2bybj.jpg")
 recipe_twenty_nine.photo.attach(io: recipe_twenty_nine_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_twenty_nine.save
 
@@ -1847,7 +1847,7 @@ recipe_thirty = Recipe.new(
   user: veronique
 )
 
-recipe_thirty_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_thirty_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702521575/Chicken-Marsala_iocho3.jpg")
 recipe_thirty.photo.attach(io: recipe_thirty_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_thirty.save
 
@@ -1901,7 +1901,7 @@ recipe_thirty_one = Recipe.new(
   user: veronique
 )
 
-recipe_thirty_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702497869/Creamy-pasta-salad-recipe-3-2_usz0rn.jpg")
+recipe_thirty_one_photo = URI.open("https://res.cloudinary.com/du9ruv4nu/image/upload/v1702521619/BHG-Irish-Italian-Spaghetti-Hero-01-9TV5n_0uqvY86OIshNwYW_-2f8130d0b2b648dc94dc602b96c80bf7_xxcphi.jpg")
 recipe_thirty_one.photo.attach(io: recipe_thirty_one_photo, filename: "recipe_fourteen.png", content_type: "image/png")
 recipe_thirty_one.save
 
