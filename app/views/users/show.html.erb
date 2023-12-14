@@ -8,14 +8,14 @@
           </a>
   </div>
 </div>
-<div class="main-container mt-5 pb-5">
+<div class="main-container">
   <div class="profile-image">
     <% if current_user.photo.key? %>
-        <%= cl_image_tag current_user.photo.key, class: "profile-image-thumbnail",width: 100, heigth: 100, alt: "dropdown menu"%>
+        <%= cl_image_tag current_user.photo.key, class: "profile-image-thumbnail",width: 60, heigth: 60, alt: "dropdown menu"%>
     <% else %>
         <%= image_tag "none_image_user.png", class: "profile-image-thumbnail" %>
     <% end %>
-    <h2><strong><%= current_user.name %></strong></h2>
+    <h3 class="pb-4"><strong><%= current_user.name %></strong></h3>
 
   </div>
   <div class="profile-infos">
@@ -25,8 +25,11 @@
     </div>
 
 
+
   </div>
   <div class="total-point">
+
+    <h4 class="text-center"><strong>You earned: </strong></h5>
     <div class="infos-points">
       <h2>Total points</h2>
 
@@ -34,8 +37,16 @@
 
     </div>
 
+  <% if current_user.points < 300 %>
+    <h5><strong>Next badge at 300 points: Bronze</strong></h5>
+  <% elsif current_user.points < 600 %>
+    <h5><strong>Next badge at 600 points: Silver</strong></h5>
+  <% elsif current_user.points < 900%>
+    <h5><strong>Next badge at 900 points: Gold</strong></h5>
+  <% end %>
+
     <div class="badge-count">
-      <h2>Your badges</h2>
+      <h2>Your badge</h2>
       <%= image_tag "#{current_user.calculate_badge}", class: "img-fluid", crop: :fill %>
 
     </div>

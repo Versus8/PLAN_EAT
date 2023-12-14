@@ -72,14 +72,14 @@ h4 + p{
 
 .profile-image-thumbnail{
   border-radius: 50%;
-  width: 150px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 20px;
 }
 
 .profile-infos{
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 45px;
 }
 
 .main-container .btn-profile{
@@ -101,7 +101,7 @@ h4 + p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .infos-points{
@@ -129,7 +129,7 @@ h4 + p{
 
 .badge-count{
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 
   h2{
     font-weight: 1000;
