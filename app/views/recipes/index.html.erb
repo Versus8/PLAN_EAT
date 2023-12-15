@@ -27,16 +27,32 @@
     <div class="cards">
       <div class="card1">
         <div class="card2">
-          <% @categories.each do |category| %>
-            <div class="card3">
-              <% if category.photo.key? %>
-                <%= cl_image_tag category.photo.key, height: 100, width: 100, class: "category" %>
-              <% end %>
-              <div class="card-body">
-                <h5 class="card-title"><strong><%= category.name %></strong></h5>
-                <%= link_to "", recipes_index_path(category.name), class: "nav-link card-link" %>
+          <% if @recipes %>
+            <% @recipes.each do |recipe| %>
+              <div class="card4">
+                <% if recipe.photo.key? %>
+                  <%= cl_image_tag recipe.photo.key, height: 100, width: 100, class: "category" %>
+                <% else %>
+                  <%= image_tag "https://res.cloudinary.com/du9ruv4nu/image/upload/v1701303120/recettes_vvohs6.jpg", height: 300, alt: "Le Wagon", class: "category" %>
+                <% end %>
+                <div class="card-body">
+                  <h5 class="card-title"><strong><%= recipe.name %></strong></h5>
+                <%= link_to "", recipe_path(recipe), class: "nav-link card-link" %>
+                </div>
               </div>
-            </div>
+            <% end %>
+          <% else %>
+           <% @categories.each do |category| %>
+              <div class="card3">
+                <% if category.photo.key? %>
+                  <%= cl_image_tag category.photo.key, height: 100, width: 100, class: "category" %>
+                <% end %>
+                <div class="card-body">
+                  <h5 class="card-title"><strong><%= category.name %></strong></h5>
+                  <%= link_to "", recipes_index_path(category.name), class: "nav-link card-link" %>
+                </div>
+              </div>
+            <% end %>
           <% end %>
         </div>
       </div>
