@@ -24,15 +24,15 @@
     });
 
   </script>
-    <div id="myAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <%# <div id="myAlert" class="alert alert-success alert-dismissible fade show" role="alert">
       <%= image_tag "si_Check_circle.png", class: "img-alert" %>
-        <% if flash[:notice] %>
-          <div class="notice">
-            <%= flash.now[:notice] %>
-          </div>
-        <% end %>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+        <%# <% if flash[:notice] %>
+          <%# <div class="notice"> %>
+            <%# <%= flash.now[:notice] %>
+          <%# </div> %>
+        <%# <% end %>
+      <%# <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> %>
+    <%# </div> %>
   <h2 class="title-all-planning mb-2">All plannings</h2>
   <% @plannings.each do |planning| %>
     <div class="list-planning row">
