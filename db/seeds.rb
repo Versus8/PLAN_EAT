@@ -1027,28 +1027,12 @@ recipe_fourteen.save
 recipe_fifteen = Recipe.new(
   name: "Lasagna soup",
   description: "This incredible lasagna soup tastes exactly like a really good lasagna,
-  but is a very rich, very meaty tomato soup. The little bit of extra work you'll do—precooking the noodles,
-  then baking them in the oven—is absolutely worth the time and effort. The buttery, baked,
-  and toasted noodles that are then added to the soup make this absolutely phenomenal.",
+  but is a very rich, very meaty tomato soup.",
   preparation: "Fill a large pot with lightly salted water and bring to a rolling boil.
   Stir in lasagna noodles and return to a boil. Cook pasta uncovered, stirring occasionally,
   until just flexible, 4 to 5 minutes. Transfer noodles into cold water until cooled; drain very well.
   Preheat the oven to 475 degrees F (245 degrees C). Line a baking sheet with parchment paper,
-  and grease parchment with 1 tablespoon olive oil.
-  Cut noodles in half lengthwise. Arrange noodles in evenly overlapping rows on the prepared baking sheet.
-  Brush with melted butter, and use fingers to rub some butter between the noodles.
-  Bake noodles in the preheated oven until they are golden, blistered,
-  and are beginning to brown with crispy outside edges.
-  Let cool; cut into bite-sized pieces.
-  Add 2 tablespoons olive oil to a soup pot, and place over high heat. Add beef and sausage.
-  Use a spatula to break up the meat into small pieces; cook without stirring until liquid evaporates and meat begins
-  to sizzle in its own fat, then continue to cook and stir until meat begins to brown, about 7 minutes.
-  Add onions, garlic, tomato paste, red pepper flakes, dried oregano, black pepper, and kosher salt.
-  Cook and stir until onions begin to turn translucent, 3 to 4 minutes.
-  Stir in chicken broth, tomato sauce, and water. Bring to a simmer, reduce heat to medium low, and simmer for 45 minutes.
-  In a bowl, stir ricotta cheese, mozzarella cheese, and Parmesan cheese together; set aside.
-  Increase the heat under soup to medium high; stir in noodle pieces. Cook, stirring, until pasta is tender,
-  about 10 minutes. Reduce heat to low, and stir in the 2 tablespoons Italian parsley.",
+  and grease parchment with 1 tablespoon olive oil.",
   user: veronique
 )
 
@@ -1370,6 +1354,34 @@ recipe_twenty_one.save
 
 Ingredient.create(
   name: "pasta",
+  unit: "ounces",
+  quantity: 16,
+  recipe: recipe_twenty_one
+)
+
+Ingredient.create(
+  name: "pesto",
+  unit: "ounces",
+  quantity: 16,
+  recipe: recipe_twenty_one
+)
+
+Ingredient.create(
+  name: "salt",
+  unit: "ounces",
+  quantity: 16,
+  recipe: recipe_twenty_one
+)
+
+Ingredient.create(
+  name: "butter",
+  unit: "ounces",
+  quantity: 16,
+  recipe: recipe_twenty_one
+)
+
+Ingredient.create(
+  name: "olive oil",
   unit: "ounces",
   quantity: 16,
   recipe: recipe_twenty_one
